@@ -60,6 +60,7 @@ brake = 0.0
 steering = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Motion" ]
+player_id = 1
 MAX_ENGINE_FORCE = 50
 MAX_BRAKE_FORCE = 5.0
 MAX_STEER_ANGLE = 0.5

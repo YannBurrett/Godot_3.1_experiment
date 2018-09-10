@@ -2,6 +2,8 @@ extends VehicleBody
 
 var current_colour = "blue"
 
+export var player_id = 1
+
 ############################################################
 # behaviour values
 
@@ -40,15 +42,15 @@ func _physics_process(delta):
 	var brake_val = brake_mult * Input.get_joy_axis(0, joy_brake)
 	
 	# ovverides for keyboard
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("up_%s" % player_id):
 		throttle_val = 1.0
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("down_%s" % player_id):
 		throttle_val = -1
-	if Input.is_action_pressed("ui_select"):
+	if Input.is_action_pressed("brake_%s" % player_id):
 		brake_val = 1.0
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("left_%s" % player_id):
 		steer_val = 1.0
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("right_%s" % player_id):
 		steer_val = -1.0
 	
 	engine_force = throttle_val * MAX_ENGINE_FORCE
