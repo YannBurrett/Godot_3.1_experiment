@@ -31,9 +31,14 @@ func _ready():
 
 
 func apply_custom_colour():
-	$MeshInstance.set_surface_material(3, load(ApplyCustomization.Cart_material))
-	$MeshInstance.set_surface_material(4, load(ApplyCustomization.Cart_material))
-	$MeshInstance.set_surface_material(1, load(ApplyCustomization.Player_material))
+	if player_id == 1:
+		$MeshInstance.set_surface_material(3, load(ApplyCustomization.Player1_Cart_material))
+		$MeshInstance.set_surface_material(4, load(ApplyCustomization.Player1_Cart_material))
+		$MeshInstance.set_surface_material(1, load(ApplyCustomization.Player1_Player_material))
+	else:
+		$MeshInstance.set_surface_material(3, load(ApplyCustomization.Player2_Cart_material))
+		$MeshInstance.set_surface_material(4, load(ApplyCustomization.Player2_Cart_material))
+		$MeshInstance.set_surface_material(1, load(ApplyCustomization.Player2_Player_material))
 
 
 func _physics_process(delta):
@@ -44,8 +49,8 @@ func _physics_process(delta):
 	# ovverides for keyboard
 	if Input.is_action_pressed("up_%s" % player_id):
 		throttle_val = 1.0
-	if Input.is_action_pressed("down_%s" % player_id):
-		throttle_val = -1
+	if Input.is_action_pressed("back_%s" % player_id):
+		throttle_val = -1.0
 	if Input.is_action_pressed("brake_%s" % player_id):
 		brake_val = 1.0
 	if Input.is_action_pressed("left_%s" % player_id):
@@ -74,7 +79,7 @@ func _physics_process(delta):
 	else:
 		$EngineSound.stop()
 
-func _input(event):
-	if Input.is_action_just_pressed("ui_reset_position"):
-		translation = get_parent().get_node("Position3D").translation
-		rotation_degrees = Vector3(0,-90,0)
+#func _input(event):
+#	if Input.is_action_just_pressed("ui_reset_position"):
+#		translation = get_parent().get_node("Position3D").translation
+#		rotation_degrees = Vector3(0,-90,0)

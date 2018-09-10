@@ -254,5 +254,5 @@ HSlider/styles/grabber_area = null
 HSlider/styles/grabber_disabled = null
 HSlider/styles/grabber_highlight = null
 HSlider/styles/slider = SubResource( 9 )
-_sections_unfolded = [ "Button", "Button/fonts/font", "Button/styles", "Button/styles/disabled", "Button/styles/normal", "Button/styles/pressed", "ButtonGroup/styles", "CheckBox/colors", "CheckBox/fonts", "CheckBox/icons", "CheckBox/icons/unchecked", "CheckButton/constants", "HScrollBar/styles", "HScrollBar/styles/grabber_highlight", "HSlider/icons", "HSlider/icons/tick", "HSlider/styles/slider", "default_font" ]
+_sections_unfolded = [ "Button", "Button/fonts/font", "Button/styles", "Button/styles/disabled", "ButtonGroup/styles", "CheckBox/colors", "CheckBox/fonts", "CheckBox/icons", "CheckBox/icons/unchecked", "CheckButton/constants", "HScrollBar/styles", "HScrollBar/styles/grabber_highlight", "HSlider/icons", "HSlider/icons/tick", "HSlider/styles/slider", "default_font" ]
 
