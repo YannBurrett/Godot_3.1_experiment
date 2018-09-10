@@ -42,7 +42,8 @@ func recolour():
 func _on_StartRaceButton_pressed():
 	ApplyCustomization.Cart_material = materials[current_cart_material_number]
 	ApplyCustomization.Player_material = materials[current_player_material_number]
-	get_tree().change_scene("res://scenes/Track1.tscn")
+	get_tree().change_scene("res://scenes/SplitScreen.tscn")
+#	get_tree().change_scene("res://scenes/Track1.tscn")
 
 
 func _on_CartButtonLeft_pressed():

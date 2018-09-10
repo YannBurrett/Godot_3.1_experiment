@@ -1,127 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://GFX/noon_grass_2k.hdr" type="Texture" id=1]
-[ext_resource path="res://scenes/Camera.gd" type="Script" id=2]
-[ext_resource path="res://scenes/WorldEnvironment.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Mesh Library/track.tres" type="MeshLibrary" id=4]
-[ext_resource path="res://Mesh Library/terrain.tres" type="MeshLibrary" id=5]
-[ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav" type="AudioStream" id=6]
-[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=7]
-
-[sub_resource type="PanoramaSky" id=1]
-
-radiance_size = 4
-panorama = ExtResource( 1 )
-
-[sub_resource type="Environment" id=2]
-
-background_mode = 2
-background_sky = SubResource( 1 )
-background_sky_custom_fov = 0.0
-background_color = Color( 0.378906, 0.941772, 1, 1 )
-background_energy = 1.0
-background_canvas_max_layer = 0
-ambient_light_color = Color( 1, 1, 1, 1 )
-ambient_light_energy = 1.0
-ambient_light_sky_contribution = 0.5
-fog_enabled = false
-fog_color = Color( 0.5, 0.6, 0.7, 1 )
-fog_sun_color = Color( 1, 0.9, 0.7, 1 )
-fog_sun_amount = 0.0
-fog_depth_enabled = true
-fog_depth_begin = 10.0
-fog_depth_curve = 1.0
-fog_transmit_enabled = false
-fog_transmit_curve = 1.0
-fog_height_enabled = false
-fog_height_min = 0.0
-fog_height_max = 100.0
-fog_height_curve = 1.0
-tonemap_mode = 2
-tonemap_exposure = 2.0
-tonemap_white = 0.75
-auto_exposure_enabled = false
-auto_exposure_scale = 0.4
-auto_exposure_min_luma = 0.05
-auto_exposure_max_luma = 8.0
-auto_exposure_speed = 0.5
-ss_reflections_enabled = true
-ss_reflections_max_steps = 64
-ss_reflections_fade_in = 0.15
-ss_reflections_fade_out = 2.0
-ss_reflections_depth_tolerance = 0.2
-ss_reflections_roughness = false
-ssao_enabled = true
-ssao_radius = 2.0
-ssao_intensity = 12.0
-ssao_radius2 = 0.0
-ssao_intensity2 = 0.0
-ssao_bias = 0.01
-ssao_light_affect = 1.0
-ssao_ao_channel_affect = 0.0
-ssao_color = Color( 0.433594, 0.41835, 0.41835, 1 )
-ssao_quality = 2
-ssao_blur = 3
-ssao_edge_sharpness = 4.0
-dof_blur_far_enabled = false
-dof_blur_far_distance = 10.0
-dof_blur_far_transition = 5.0
-dof_blur_far_amount = 0.1
-dof_blur_far_quality = 1
-dof_blur_near_enabled = false
-dof_blur_near_distance = 2.0
-dof_blur_near_transition = 1.0
-dof_blur_near_amount = 0.1
-dof_blur_near_quality = 1
-glow_enabled = true
-glow_levels/1 = false
-glow_levels/2 = false
-glow_levels/3 = true
-glow_levels/4 = false
-glow_levels/5 = true
-glow_levels/6 = false
-glow_levels/7 = false
-glow_intensity = 0.8
-glow_strength = 1.0
-glow_bloom = 0.25
-glow_blend_mode = 2
-glow_hdr_threshold = 1.0
-glow_hdr_scale = 2.0
-glow_bicubic_upscale = false
-adjustment_enabled = true
-adjustment_brightness = 1.0
-adjustment_contrast = 1.0
-adjustment_saturation = 1.5
-_sections_unfolded = [ "Ambient Light", "Background", "Glow", "SS Reflections", "SSAO", "Tonemap" ]
+[ext_resource path="res://Mesh Library/track.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://Mesh Library/terrain.tres" type="MeshLibrary" id=2]
+[ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=4]
 
 [node name="Track1" type="Spatial"]
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.37114e-008, -0.0871557, 0.996195, 0, 0.996195, 0.0871557, -1, 3.8097e-009, -4.35451e-008, 6.08635, 3.20596, 8.83075 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = SubResource( 2 )
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 2
-projection = 0
-current = true
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-script = ExtResource( 2 )
-_sections_unfolded = [ "Script", "Transform" ]
-follow_this_path = NodePath("../Cart")
-target_distance = 2.5
-target_height = 1.0
-
-[node name="WorldEnvironment" parent="Camera" instance=ExtResource( 3 )]
-
 [node name="Track" type="GridMap" parent="."]
-theme = ExtResource( 4 )
-mesh_library = ExtResource( 4 )
+theme = ExtResource( 1 )
+mesh_library = ExtResource( 1 )
 cell_size = Vector3( 4, 2, 4 )
 cell_octant_size = 8
 cell_center_x = true
@@ -131,7 +20,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 2
 data = {
-"cells": PoolIntArray( 1, 0, 5, 3, 0, 655366, 5, 0, 655366, 6, 0, 655366, 12, 0, 655364, 65533, 0, 5, 65535, 0, 5, 65528, 1, 655368, 1, 2, 1441794, 3, 2, 1441794, 4, 2, 1441794, 18, 2, 1048581, 20, 2, 655362, 22, 2, 1441797, 65531, 2, 1048578, 65533, 2, 1048578, 65535, 2, 655360, 7, 3, 655370, 1, 4, 655365, 3, 4, 655366, 4, 4, 655366, 18, 4, 1048581, 20, 4, 1441793, 22, 4, 1441797, 65533, 4, 1074397189, 65535, 4, 655365, 11, 5, 8, 18, 6, 1048585, 20, 6, 1441801, 13, 9, 655368, 17, 9, 1441800, 1, 65520, 1048578, 65527, 65520, 1048585, 65529, 65520, 1048578, 65531, 65520, 1611661314, 65533, 65520, 1048578, 65535, 65520, 1048578, 4, 65521, 8, 1, 65522, 9, 65535, 65522, 1441794, 65528, 65523, 1048579, 65532, 65523, 1611661320, 1, 65524, 2, 5, 65524, 2, 1, 65526, 2, 5, 65526, 2, 65529, 65526, 655362, 65529, 65527, 1048583, 65532, 65527, 1441795, 1, 65528, 1610612738, 5, 65528, 2, 65529, 65528, 655362, 1, 65530, 2, 65533, 65530, 1048583, 4, 65531, 1441800, 65528, 65531, 1441802, 1, 65532, 655369, 65534, 65533, 655368, 1, 65534, 1048578, 3, 65534, 1048578, 4, 65534, 1048578, 6, 65534, 1048578, 12, 65534, 655361, 65527, 65534, 1048577, 9, 65535, 655371, 15, 65535, 655373, 19, 65535, 8 )
+"cells": PoolIntArray( 1, 0, 5, 3, 0, 655366, 5, 0, 655366, 6, 0, 655366, 12, 0, 655364, 65533, 0, 5, 65535, 0, 5, 65528, 1, 655368, 1, 2, 1612054530, 3, 2, 1441794, 4, 2, 1075183618, 18, 2, 1048581, 20, 2, 655362, 22, 2, 1441797, 65531, 2, 1048578, 65533, 2, 1048578, 65535, 2, 655360, 7, 3, 1611268106, 1, 4, 655365, 3, 4, 655366, 4, 4, 655366, 18, 4, 1048581, 20, 4, 1441793, 22, 4, 1612054533, 65533, 4, 655365, 65535, 4, 655365, 11, 5, 8, 18, 6, 1048585, 20, 6, 1441801, 13, 9, 655368, 17, 9, 1441800, 1, 65520, 1048578, 65527, 65520, 1048585, 65529, 65520, 1048578, 65531, 65520, 1048578, 65533, 65520, 1048578, 65535, 65520, 1048578, 4, 65521, 8, 1, 65522, 9, 65535, 65522, 1441794, 65528, 65523, 1048579, 65532, 65523, 1048584, 1, 65524, 2, 5, 65524, 2, 1, 65526, 2, 5, 65526, 2, 65529, 65526, 655362, 65529, 65527, 1048583, 65532, 65527, 1441795, 1, 65528, 2, 5, 65528, 2, 65529, 65528, 655362, 1, 65530, 2, 65533, 65530, 1048583, 4, 65531, 1441800, 65528, 65531, 1441802, 1, 65532, 655369, 65534, 65533, 655368, 1, 65534, 1048578, 3, 65534, 1048578, 4, 65534, 1048578, 6, 65534, 1048578, 12, 65534, 655361, 65527, 65534, 1048577, 9, 65535, 655371, 15, 65535, 655373, 19, 65535, 8 )
 }
 _sections_unfolded = [ "Cell", "Collision" ]
 __meta__ = {
@@ -140,8 +29,8 @@ __meta__ = {
 }
 
 [node name="Terrain" type="GridMap" parent="."]
-theme = ExtResource( 5 )
-mesh_library = ExtResource( 5 )
+theme = ExtResource( 2 )
+mesh_library = ExtResource( 2 )
 cell_size = Vector3( 4, 2, 4 )
 cell_octant_size = 16
 cell_center_x = true
@@ -151,7 +40,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 65531, 0, 537526295, 7, 65518, 537919494, 9, 65518, 536870927, 11, 65518, 536870927, 12, 65518, 536870927, 13, 65518, 536870927, 14, 65518, 536870927, 16, 65518, 536870927, 17, 65518, 536870927, 18, 65518, 536870927, 19, 65518, 536870927, 20, 65518, 536870927, 9, 65519, 536870927, 14, 65519, 536870927, 15, 65519, 15, 16, 65519, 15, 17, 65519, 536870927, 18, 65519, 536870927, 19, 65519, 536870927, 20, 65519, 15, 7, 65520, 537919495, 10, 65520, 536870927, 11, 65520, 536870927, 12, 65520, 536870927, 13, 65520, 15, 14, 65520, 15, 15, 65520, 15, 18, 65520, 536870927, 19, 65520, 536870927, 20, 65520, 15, 7, 65521, 537919495, 9, 65521, 536870927, 11, 65521, 536870927, 12, 65521, 536870927, 15, 65521, 15, 16, 65521, 15, 18, 65521, 15, 19, 65521, 15, 20, 65521, 15, 9, 65522, 15, 11, 65522, 536870927, 12, 65522, 15, 13, 65522, 15, 14, 65522, 536870927, 16, 65522, 15, 17, 65522, 536870927, 19, 65522, 15, 20, 65522, 15, 7, 65523, 1048583, 9, 65523, 536870927, 10, 65523, 15, 11, 65523, 15, 12, 65523, 536870927, 13, 65523, 15, 14, 65523, 15, 15, 65523, 536870927, 17, 65523, 15, 18, 65523, 15, 19, 65523, 15, 3, 65524, 536870925, 9, 65524, 15, 10, 65524, 15, 11, 65524, 15, 12, 65524, 536870927, 13, 65524, 15, 14, 65524, 536870927, 15, 65524, 15, 16, 65524, 536870927, 18, 65524, 536870927, 19, 65524, 536870927, 20, 65524, 15, 65535, 65524, 536870927, 7, 65525, 537919495, 9, 65525, 15, 11, 65525, 15, 12, 65525, 536870927, 14, 65525, 15, 15, 65525, 15, 16, 65525, 15, 19, 65525, 536870927, 3, 65526, 13, 9, 65526, 15, 11, 65526, 15, 12, 65526, 536870927, 13, 65526, 15, 16, 65526, 15, 17, 65526, 15, 19, 65526, 15, 20, 65526, 15, 65527, 65526, 1048604, 65535, 65526, 15, 7, 65527, 1048583, 9, 65527, 536870927, 11, 65527, 15, 13, 65527, 15, 14, 65527, 15, 15, 65527, 15, 16, 65527, 15, 17, 65527, 15, 20, 65527, 15, 3, 65528, 13, 7, 65528, 1048583, 9, 65528, 15, 16, 65528, 15, 17, 65528, 15, 18, 65528, 15, 19, 65528, 15, 20, 65528, 15, 65527, 65528, 28, 65535, 65528, 15, 9, 65529, 15, 10, 65529, 15, 11, 65529, 15, 12, 65529, 15, 13, 65529, 15, 14, 65529, 15, 7, 65530, 537919495, 9, 65530, 15, 10, 65530, 536870927, 11, 65530, 15, 12, 65530, 15, 13, 65530, 15, 14, 65530, 536870927, 15, 65530, 15, 16, 65530, 536870927, 17, 65530, 15, 18, 65530, 15, 19, 65530, 15, 20, 65530, 15, 65531, 65530, 655433, 65535, 65530, 15, 7, 65532, 1048581, 9, 65532, 655367, 11, 65532, 655367, 13, 65532, 655367, 15, 65532, 537526279, 17, 65532, 655367, 19, 65532, 655367, 20, 65532, 655367, 65531, 65532, 655383, 65529, 65534, 1441865, 65531, 65534, 655383 )
+"cells": PoolIntArray( 65531, 0, 537526295, 7, 65518, 537919494, 9, 65518, 15, 11, 65518, 15, 12, 65518, 536870927, 13, 65518, 15, 14, 65518, 15, 16, 65518, 15, 17, 65518, 15, 18, 65518, 536870927, 19, 65518, 536870927, 20, 65518, 15, 9, 65519, 536870927, 14, 65519, 15, 15, 65519, 15, 16, 65519, 15, 17, 65519, 536870927, 18, 65519, 15, 19, 65519, 536870927, 20, 65519, 536870927, 7, 65520, 537919495, 10, 65520, 536870927, 11, 65520, 536870927, 12, 65520, 536870927, 13, 65520, 536870927, 14, 65520, 536870927, 15, 65520, 15, 18, 65520, 15, 19, 65520, 536870927, 20, 65520, 15, 7, 65521, 1048583, 9, 65521, 15, 11, 65521, 15, 12, 65521, 15, 15, 65521, 536870927, 16, 65521, 536870927, 18, 65521, 536870927, 19, 65521, 536870927, 20, 65521, 15, 9, 65522, 536870927, 11, 65522, 15, 12, 65522, 15, 13, 65522, 15, 14, 65522, 15, 16, 65522, 15, 17, 65522, 536870927, 19, 65522, 536870927, 20, 65522, 15, 7, 65523, 1048583, 9, 65523, 15, 10, 65523, 536870927, 11, 65523, 536870927, 12, 65523, 15, 13, 65523, 15, 14, 65523, 536870927, 15, 65523, 15, 17, 65523, 536870927, 18, 65523, 536870927, 19, 65523, 15, 3, 65524, 13, 9, 65524, 15, 10, 65524, 15, 11, 65524, 15, 12, 65524, 15, 13, 65524, 15, 14, 65524, 15, 15, 65524, 15, 16, 65524, 15, 18, 65524, 15, 19, 65524, 15, 20, 65524, 15, 65535, 65524, 15, 7, 65525, 1048583, 9, 65525, 15, 11, 65525, 15, 12, 65525, 15, 14, 65525, 15, 15, 65525, 15, 16, 65525, 15, 19, 65525, 15, 3, 65526, 13, 9, 65526, 15, 11, 65526, 15, 12, 65526, 15, 13, 65526, 15, 16, 65526, 15, 17, 65526, 15, 19, 65526, 15, 20, 65526, 15, 65527, 65526, 537919516, 65535, 65526, 15, 7, 65527, 1048583, 9, 65527, 536870927, 11, 65527, 15, 13, 65527, 15, 14, 65527, 15, 15, 65527, 15, 16, 65527, 15, 17, 65527, 536870927, 20, 65527, 15, 3, 65528, 13, 7, 65528, 1048583, 9, 65528, 536870927, 16, 65528, 15, 17, 65528, 15, 18, 65528, 15, 19, 65528, 15, 20, 65528, 15, 65527, 65528, 536870940, 65535, 65528, 15, 9, 65529, 536870927, 10, 65529, 15, 11, 65529, 536870927, 12, 65529, 536870927, 13, 65529, 15, 14, 65529, 15, 7, 65530, 1048583, 9, 65530, 15, 10, 65530, 15, 11, 65530, 15, 12, 65530, 15, 13, 65530, 15, 14, 65530, 15, 15, 65530, 15, 16, 65530, 15, 17, 65530, 15, 18, 65530, 15, 19, 65530, 15, 20, 65530, 15, 65531, 65530, 655433, 65535, 65530, 15, 7, 65532, 1048581, 9, 65532, 655367, 11, 65532, 655367, 13, 65532, 655367, 15, 65532, 655367, 17, 65532, 655367, 19, 65532, 655367, 20, 65532, 655367, 65531, 65532, 655383, 65529, 65534, 1441865, 65531, 65534, 655383 )
 }
 _sections_unfolded = [ "Transform", "mesh_library" ]
 __meta__ = {
@@ -187,7 +76,7 @@ directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 3 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = true
@@ -195,7 +84,7 @@ stream_paused = false
 mix_target = 0
 bus = "Master"
 
-[node name="Cart" parent="." instance=ExtResource( 7 )]
+[node name="Cart" parent="." instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 7.01728, 2.02588, 10.0138 )
 _sections_unfolded = [ "Collision", "Motion", "Transform" ]
 
