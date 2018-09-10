@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/racetrack-racoon-collision.obj-28b9f5776422ebb95ba4dbd201abb78b.mesh"
+
+[deps]
+
+files=[ "res://.import/racetrack-racoon-collision.obj-28b9f5776422ebb95ba4dbd201abb78b.mesh" ]
+
+source_file="res://racing assets/racetrack-racoon-collision.obj"
+dest_files=[ "res://.import/racetrack-racoon-collision.obj-28b9f5776422ebb95ba4dbd201abb78b.mesh", "res://.import/racetrack-racoon-collision.obj-28b9f5776422ebb95ba4dbd201abb78b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

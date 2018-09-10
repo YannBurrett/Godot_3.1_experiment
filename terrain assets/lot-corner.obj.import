@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot-corner.obj-8a9b144b721049468c932405d2e2aa7c.mesh"
+
+[deps]
+
+files=[ "res://.import/lot-corner.obj-8a9b144b721049468c932405d2e2aa7c.mesh" ]
+
+source_file="res://terrain assets/lot-corner.obj"
+dest_files=[ "res://.import/lot-corner.obj-8a9b144b721049468c932405d2e2aa7c.mesh", "res://.import/lot-corner.obj-8a9b144b721049468c932405d2e2aa7c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

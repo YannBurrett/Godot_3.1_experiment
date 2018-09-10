@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/building-office-small.obj-92a8ad51efff3cf31cedb99576065d01.mesh"
+
+[deps]
+
+files=[ "res://.import/building-office-small.obj-92a8ad51efff3cf31cedb99576065d01.mesh" ]
+
+source_file="res://terrain assets/building-office-small.obj"
+dest_files=[ "res://.import/building-office-small.obj-92a8ad51efff3cf31cedb99576065d01.mesh", "res://.import/building-office-small.obj-92a8ad51efff3cf31cedb99576065d01.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

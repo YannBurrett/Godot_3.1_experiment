@@ -1,0 +1,223 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Cart.gd" type="Script" id=1]
+[ext_resource path="res://model.obj" type="ArrayMesh" id=2]
+
+
+[sub_resource type="BoxShape" id=1]
+
+margin = 0.04
+extents = Vector3( 0.990368, 0.268655, 0.475624 )
+
+[sub_resource type="CylinderMesh" id=2]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+flip_faces = false
+top_radius = 1.0
+bottom_radius = 1.0
+height = 2.0
+radial_segments = 64
+rings = 4
+
+[node name="HoverCar" type="VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238747, 0 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 2
+collision_mask = 1
+mode = 0
+mass = 51.02
+physics_material_override = null
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = false
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+engine_force = 0.0
+brake = 0.0
+steering = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Matrix", "Transform", "physics_material_override" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.242397 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Geometry", "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429969, 0.103216, 0.038 )
+shape = SubResource( 1 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="WheelRearLeft" type="VehicleWheel" parent="."]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.0788265, -0.419685, -0.3 )
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.1
+wheel_radius = 0.5
+wheel_rest_length = 0.25
+wheel_friction_slip = 10.5
+suspension_travel = 3.0
+suspension_stiffness = 5.0
+suspension_max_force = 125.0
+damping_compression = 0.2
+damping_relaxation = 0.4
+_sections_unfolded = [ "Suspension", "Transform", "Wheel" ]
+
+[node name="MeshInstance3" type="MeshInstance" parent="WheelRearLeft"]
+transform = Transform( -2.18557e-008, -0.1, 0, 0.5, -4.37114e-009, 0, 0, 0, 0.5, 0, 0, -4.47035e-008 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="WheelRearRight" type="VehicleWheel" parent="."]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.0788265, -0.419685, 0.3 )
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.1
+wheel_radius = 0.5
+wheel_rest_length = 0.25
+wheel_friction_slip = 10.5
+suspension_travel = 3.0
+suspension_stiffness = 5.0
+suspension_max_force = 125.0
+damping_compression = 0.2
+damping_relaxation = 0.4
+_sections_unfolded = [ "Suspension", "Transform", "Wheel" ]
+
+[node name="MeshInstance2" type="MeshInstance" parent="WheelRearRight"]
+transform = Transform( -2.18557e-008, -0.1, 0, 0.5, -4.37114e-009, 0, 0, 0, 0.5, 0, 0, 0 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="WheelFrontRight" type="VehicleWheel" parent="."]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1.26452, -0.194215, 0.3 )
+use_as_traction = true
+use_as_steering = false
+wheel_roll_influence = 0.1
+wheel_radius = 0.25
+wheel_rest_length = 0.25
+wheel_friction_slip = 10.5
+suspension_travel = 3.0
+suspension_stiffness = 5.0
+suspension_max_force = 125.0
+damping_compression = 0.2
+damping_relaxation = 0.4
+_sections_unfolded = [ "Suspension", "Transform", "Wheel" ]
+
+[node name="MeshInstance2" type="MeshInstance" parent="WheelFrontRight"]
+transform = Transform( -1.09278e-008, -0.1, 0, 0.25, -4.37114e-009, 0, 0, 0, 0.25, 0, 0, 0 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="WheelFrontLeft" type="VehicleWheel" parent="."]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1.26452, -0.194215, -0.3 )
+use_as_traction = true
+use_as_steering = false
+wheel_roll_influence = 0.1
+wheel_radius = 0.25
+wheel_rest_length = 0.25
+wheel_friction_slip = 10.5
+suspension_travel = 3.0
+suspension_stiffness = 5.0
+suspension_max_force = 125.0
+damping_compression = 0.2
+damping_relaxation = 0.4
+_sections_unfolded = [ "Suspension", "Transform", "Wheel" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="WheelFrontLeft"]
+transform = Transform( -1.09278e-008, -0.1, 0, 0.25, -4.37114e-009, 0, 0, 0, 0.25, 0, 0, 0 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+

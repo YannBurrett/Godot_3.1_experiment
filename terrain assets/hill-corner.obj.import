@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hill-corner.obj-2544ae4f799e1c9155ce8a69b9fae416.mesh"
+
+[deps]
+
+files=[ "res://.import/hill-corner.obj-2544ae4f799e1c9155ce8a69b9fae416.mesh" ]
+
+source_file="res://terrain assets/hill-corner.obj"
+dest_files=[ "res://.import/hill-corner.obj-2544ae4f799e1c9155ce8a69b9fae416.mesh", "res://.import/hill-corner.obj-2544ae4f799e1c9155ce8a69b9fae416.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

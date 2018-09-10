@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/terrain-grass.obj-be9398d80c8549bb3e01c5cdb4e6c0f0.mesh"
+
+[deps]
+
+files=[ "res://.import/terrain-grass.obj-be9398d80c8549bb3e01c5cdb4e6c0f0.mesh" ]
+
+source_file="res://racing assets/terrain-grass.obj"
+dest_files=[ "res://.import/terrain-grass.obj-be9398d80c8549bb3e01c5cdb4e6c0f0.mesh", "res://.import/terrain-grass.obj-be9398d80c8549bb3e01c5cdb4e6c0f0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

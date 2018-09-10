@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Cart.obj-5be7378177ae1862fc44a75d33a39373.mesh"
+
+[deps]
+
+files=[ "res://.import/Cart.obj-5be7378177ae1862fc44a75d33a39373.mesh" ]
+
+source_file="res://racing assets/Cart.obj"
+dest_files=[ "res://.import/Cart.obj-5be7378177ae1862fc44a75d33a39373.mesh", "res://.import/Cart.obj-5be7378177ae1862fc44a75d33a39373.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

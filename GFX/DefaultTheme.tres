@@ -1,0 +1,258 @@
+[gd_resource type="Theme" load_steps=26 format=2]
+
+[ext_resource path="res://GFX/fonts/Kenney Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GFX/UI/PNG/yellow_button07.png" type="Texture" id=2]
+[ext_resource path="res://GFX/UI/PNG/red_button04.png" type="Texture" id=3]
+[ext_resource path="res://GFX/UI/PNG/red_button09.png" type="Texture" id=4]
+[ext_resource path="res://GFX/UI/PNG/red_boxCheckmark.png" type="Texture" id=5]
+[ext_resource path="res://GFX/UI/PNG/red_boxTick.png" type="Texture" id=6]
+[ext_resource path="res://GFX/UI/PNG/grey_tickWhite.png" type="Texture" id=7]
+[ext_resource path="res://GFX/UI/PNG/red_boxCross.png" type="Texture" id=8]
+[ext_resource path="res://GFX/UI/PNG/red_cross.png" type="Texture" id=9]
+[ext_resource path="res://GFX/UI/PNG/grey_checkmarkWhite.png" type="Texture" id=10]
+[ext_resource path="res://GFX/UI/PNG/grey_circle.png" type="Texture" id=11]
+[ext_resource path="res://GFX/UI/PNG/red_circle.png" type="Texture" id=12]
+[ext_resource path="res://GFX/UI/PNG/grey_sliderHorizontal.png" type="Texture" id=13]
+[ext_resource path="res://GFX/UI/PNG/grey_sliderUp.png" type="Texture" id=14]
+[ext_resource path="res://GFX/UI/PNG/red_sliderUp.png" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 14
+outline_size = 2
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Content Margin", "Expand Margin", "Resource" ]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 49, 45 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Axis Stretch", "Content Margin", "Expand Margin", "Modulate" ]
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 17, 17 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 34, 34 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Expand Margin", "Margin" ]
+
+[sub_resource type="StyleBoxTexture" id=7]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 36, 36 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Expand Margin" ]
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 190, 4 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=9]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 190, 4 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 16
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Extra Spacing", "Settings", "font_data" ]
+
+[resource]
+
+default_font = SubResource( 10 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 8
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
+CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = ExtResource( 5 )
+CheckBox/icons/radio_checked = ExtResource( 6 )
+CheckBox/icons/radio_unchecked = ExtResource( 7 )
+CheckBox/icons/unchecked = ExtResource( 8 )
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+CheckButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = ExtResource( 9 )
+CheckButton/icons/on = ExtResource( 10 )
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = SubResource( 5 )
+HScrollBar/styles/grabber_highlight = SubResource( 6 )
+HScrollBar/styles/grabber_pressed = SubResource( 7 )
+HScrollBar/styles/scroll = SubResource( 8 )
+HScrollBar/styles/scroll_focus = null
+HSlider/icons/grabber = ExtResource( 14 )
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = ExtResource( 15 )
+HSlider/icons/tick = null
+HSlider/styles/focus = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_disabled = null
+HSlider/styles/grabber_highlight = null
+HSlider/styles/slider = SubResource( 9 )
+_sections_unfolded = [ "Button", "Button/fonts/font", "Button/styles", "Button/styles/disabled", "Button/styles/normal", "Button/styles/pressed", "ButtonGroup/styles", "CheckBox/colors", "CheckBox/fonts", "CheckBox/icons", "CheckBox/icons/unchecked", "CheckButton/constants", "HScrollBar/styles", "HScrollBar/styles/grabber_highlight", "HSlider/icons", "HSlider/icons/tick", "HSlider/styles/slider", "default_font" ]
+

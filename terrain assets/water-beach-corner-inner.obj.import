@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/water-beach-corner-inner.obj-fb8a8e527d242cd1a6aae00a72f54dad.mesh"
+
+[deps]
+
+files=[ "res://.import/water-beach-corner-inner.obj-fb8a8e527d242cd1a6aae00a72f54dad.mesh" ]
+
+source_file="res://terrain assets/water-beach-corner-inner.obj"
+dest_files=[ "res://.import/water-beach-corner-inner.obj-fb8a8e527d242cd1a6aae00a72f54dad.mesh", "res://.import/water-beach-corner-inner.obj-fb8a8e527d242cd1a6aae00a72f54dad.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

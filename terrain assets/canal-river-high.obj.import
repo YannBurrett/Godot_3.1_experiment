@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-river-high.obj-bb4f16bb17ed2acb5a1d6230e79cd5cb.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-river-high.obj-bb4f16bb17ed2acb5a1d6230e79cd5cb.mesh" ]
+
+source_file="res://terrain assets/canal-river-high.obj"
+dest_files=[ "res://.import/canal-river-high.obj-bb4f16bb17ed2acb5a1d6230e79cd5cb.mesh", "res://.import/canal-river-high.obj-bb4f16bb17ed2acb5a1d6230e79cd5cb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

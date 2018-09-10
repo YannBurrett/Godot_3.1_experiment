@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-kart-white.obj-b7d26e40695f161c01f71222798dff5e.mesh"
+
+[deps]
+
+files=[ "res://.import/car-kart-white.obj-b7d26e40695f161c01f71222798dff5e.mesh" ]
+
+source_file="res://racing assets/car-kart-white.obj"
+dest_files=[ "res://.import/car-kart-white.obj-b7d26e40695f161c01f71222798dff5e.mesh", "res://.import/car-kart-white.obj-b7d26e40695f161c01f71222798dff5e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

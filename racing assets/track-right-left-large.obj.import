@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/track-right-left-large.obj-ce94243b2e77964b7da1d4421e36639d.mesh"
+
+[deps]
+
+files=[ "res://.import/track-right-left-large.obj-ce94243b2e77964b7da1d4421e36639d.mesh" ]
+
+source_file="res://racing assets/track-right-left-large.obj"
+dest_files=[ "res://.import/track-right-left-large.obj-ce94243b2e77964b7da1d4421e36639d.mesh", "res://.import/track-right-left-large.obj-ce94243b2e77964b7da1d4421e36639d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

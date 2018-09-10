@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-crossroad-low.obj-7296a56e4ad5ae67b07666c19ddfb43e.mesh"
+
+[deps]
+
+files=[ "res://.import/road-crossroad-low.obj-7296a56e4ad5ae67b07666c19ddfb43e.mesh" ]
+
+source_file="res://terrain assets/road-crossroad-low.obj"
+dest_files=[ "res://.import/road-crossroad-low.obj-7296a56e4ad5ae67b07666c19ddfb43e.mesh", "res://.import/road-crossroad-low.obj-7296a56e4ad5ae67b07666c19ddfb43e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

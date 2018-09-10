@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dirt-low.obj-37b5d48056b83c016b49ee0139850bdb.mesh"
+
+[deps]
+
+files=[ "res://.import/dirt-low.obj-37b5d48056b83c016b49ee0139850bdb.mesh" ]
+
+source_file="res://terrain assets/dirt-low.obj"
+dest_files=[ "res://.import/dirt-low.obj-37b5d48056b83c016b49ee0139850bdb.mesh", "res://.import/dirt-low.obj-37b5d48056b83c016b49ee0139850bdb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

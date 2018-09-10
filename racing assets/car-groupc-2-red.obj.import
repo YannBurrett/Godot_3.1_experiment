@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-groupc-2-red.obj-6e44c9f8e8cca3900b6f7712033e67ee.mesh"
+
+[deps]
+
+files=[ "res://.import/car-groupc-2-red.obj-6e44c9f8e8cca3900b6f7712033e67ee.mesh" ]
+
+source_file="res://racing assets/car-groupc-2-red.obj"
+dest_files=[ "res://.import/car-groupc-2-red.obj-6e44c9f8e8cca3900b6f7712033e67ee.mesh", "res://.import/car-groupc-2-red.obj-6e44c9f8e8cca3900b6f7712033e67ee.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

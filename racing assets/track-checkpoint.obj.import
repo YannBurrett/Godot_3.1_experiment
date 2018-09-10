@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/track-checkpoint.obj-43786ffc6cded95e9b2c24a41bbff1ea.mesh"
+
+[deps]
+
+files=[ "res://.import/track-checkpoint.obj-43786ffc6cded95e9b2c24a41bbff1ea.mesh" ]
+
+source_file="res://racing assets/track-checkpoint.obj"
+dest_files=[ "res://.import/track-checkpoint.obj-43786ffc6cded95e9b2c24a41bbff1ea.mesh", "res://.import/track-checkpoint.obj-43786ffc6cded95e9b2c24a41bbff1ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

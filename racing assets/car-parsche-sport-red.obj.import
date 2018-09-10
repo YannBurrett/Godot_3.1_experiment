@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-parsche-sport-red.obj-c92430cedb40eef58d180747dd6cf8b8.mesh"
+
+[deps]
+
+files=[ "res://.import/car-parsche-sport-red.obj-c92430cedb40eef58d180747dd6cf8b8.mesh" ]
+
+source_file="res://racing assets/car-parsche-sport-red.obj"
+dest_files=[ "res://.import/car-parsche-sport-red.obj-c92430cedb40eef58d180747dd6cf8b8.mesh", "res://.import/car-parsche-sport-red.obj-c92430cedb40eef58d180747dd6cf8b8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

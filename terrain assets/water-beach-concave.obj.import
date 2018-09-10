@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/water-beach-concave.obj-e86108aced70ed6f946ecab1ab26b220.mesh"
+
+[deps]
+
+files=[ "res://.import/water-beach-concave.obj-e86108aced70ed6f946ecab1ab26b220.mesh" ]
+
+source_file="res://terrain assets/water-beach-concave.obj"
+dest_files=[ "res://.import/water-beach-concave.obj-e86108aced70ed6f946ecab1ab26b220.mesh", "res://.import/water-beach-concave.obj-e86108aced70ed6f946ecab1ab26b220.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

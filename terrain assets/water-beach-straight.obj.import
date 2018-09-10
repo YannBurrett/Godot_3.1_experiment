@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/water-beach-straight.obj-f97b2f569fc0da21126f080949f2716d.mesh"
+
+[deps]
+
+files=[ "res://.import/water-beach-straight.obj-f97b2f569fc0da21126f080949f2716d.mesh" ]
+
+source_file="res://terrain assets/water-beach-straight.obj"
+dest_files=[ "res://.import/water-beach-straight.obj-f97b2f569fc0da21126f080949f2716d.mesh", "res://.import/water-beach-straight.obj-f97b2f569fc0da21126f080949f2716d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

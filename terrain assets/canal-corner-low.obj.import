@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-corner-low.obj-c664d32fab22fccb700d9df7f2001b3a.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-corner-low.obj-c664d32fab22fccb700d9df7f2001b3a.mesh" ]
+
+source_file="res://terrain assets/canal-corner-low.obj"
+dest_files=[ "res://.import/canal-corner-low.obj-c664d32fab22fccb700d9df7f2001b3a.mesh", "res://.import/canal-corner-low.obj-c664d32fab22fccb700d9df7f2001b3a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

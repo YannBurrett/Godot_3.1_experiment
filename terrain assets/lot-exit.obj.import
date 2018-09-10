@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot-exit.obj-46a144ae8a4b214186e4c111950baf50.mesh"
+
+[deps]
+
+files=[ "res://.import/lot-exit.obj-46a144ae8a4b214186e4c111950baf50.mesh" ]
+
+source_file="res://terrain assets/lot-exit.obj"
+dest_files=[ "res://.import/lot-exit.obj-46a144ae8a4b214186e4c111950baf50.mesh", "res://.import/lot-exit.obj-46a144ae8a4b214186e4c111950baf50.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

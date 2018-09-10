@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot-border-low.obj-d3f7c6a52ed379f447cedcfa366267db.mesh"
+
+[deps]
+
+files=[ "res://.import/lot-border-low.obj-d3f7c6a52ed379f447cedcfa366267db.mesh" ]
+
+source_file="res://terrain assets/lot-border-low.obj"
+dest_files=[ "res://.import/lot-border-low.obj-d3f7c6a52ed379f447cedcfa366267db.mesh", "res://.import/lot-border-low.obj-d3f7c6a52ed379f447cedcfa366267db.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

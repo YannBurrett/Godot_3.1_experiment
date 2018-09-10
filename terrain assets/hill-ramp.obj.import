@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hill-ramp.obj-0c2e6d51edec95ae4bbcc3f1c09d1953.mesh"
+
+[deps]
+
+files=[ "res://.import/hill-ramp.obj-0c2e6d51edec95ae4bbcc3f1c09d1953.mesh" ]
+
+source_file="res://terrain assets/hill-ramp.obj"
+dest_files=[ "res://.import/hill-ramp.obj-0c2e6d51edec95ae4bbcc3f1c09d1953.mesh", "res://.import/hill-ramp.obj-0c2e6d51edec95ae4bbcc3f1c09d1953.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

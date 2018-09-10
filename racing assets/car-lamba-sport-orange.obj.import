@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-lamba-sport-orange.obj-7acc8dae7af112d5f22cdacca0bb3a05.mesh"
+
+[deps]
+
+files=[ "res://.import/car-lamba-sport-orange.obj-7acc8dae7af112d5f22cdacca0bb3a05.mesh" ]
+
+source_file="res://racing assets/car-lamba-sport-orange.obj"
+dest_files=[ "res://.import/car-lamba-sport-orange.obj-7acc8dae7af112d5f22cdacca0bb3a05.mesh", "res://.import/car-lamba-sport-orange.obj-7acc8dae7af112d5f22cdacca0bb3a05.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

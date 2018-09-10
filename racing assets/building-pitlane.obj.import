@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/building-pitlane.obj-e2df7f1479c1f77d8bac82ff1de6383a.mesh"
+
+[deps]
+
+files=[ "res://.import/building-pitlane.obj-e2df7f1479c1f77d8bac82ff1de6383a.mesh" ]
+
+source_file="res://racing assets/building-pitlane.obj"
+dest_files=[ "res://.import/building-pitlane.obj-e2df7f1479c1f77d8bac82ff1de6383a.mesh", "res://.import/building-pitlane.obj-e2df7f1479c1f77d8bac82ff1de6383a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

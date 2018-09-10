@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-formula-violet.obj-2eea9e0b6d19c770ece9041d427f125f.mesh"
+
+[deps]
+
+files=[ "res://.import/car-formula-violet.obj-2eea9e0b6d19c770ece9041d427f125f.mesh" ]
+
+source_file="res://racing assets/car-formula-violet.obj"
+dest_files=[ "res://.import/car-formula-violet.obj-2eea9e0b6d19c770ece9041d427f125f.mesh", "res://.import/car-formula-violet.obj-2eea9e0b6d19c770ece9041d427f125f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

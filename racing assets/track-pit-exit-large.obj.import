@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/track-pit-exit-large.obj-e5f0716a04c805e965dde18cbe2d0dff.mesh"
+
+[deps]
+
+files=[ "res://.import/track-pit-exit-large.obj-e5f0716a04c805e965dde18cbe2d0dff.mesh" ]
+
+source_file="res://racing assets/track-pit-exit-large.obj"
+dest_files=[ "res://.import/track-pit-exit-large.obj-e5f0716a04c805e965dde18cbe2d0dff.mesh", "res://.import/track-pit-exit-large.obj-e5f0716a04c805e965dde18cbe2d0dff.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

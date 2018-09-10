@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hill-grass.obj-d96b6e00cc175e542711e889227be65c.mesh"
+
+[deps]
+
+files=[ "res://.import/hill-grass.obj-d96b6e00cc175e542711e889227be65c.mesh" ]
+
+source_file="res://terrain assets/hill-grass.obj"
+dest_files=[ "res://.import/hill-grass.obj-d96b6e00cc175e542711e889227be65c.mesh", "res://.import/hill-grass.obj-d96b6e00cc175e542711e889227be65c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-straight-low.obj-02e0bf680e8920a3b34adf659b8d3fe8.mesh"
+
+[deps]
+
+files=[ "res://.import/river-straight-low.obj-02e0bf680e8920a3b34adf659b8d3fe8.mesh" ]
+
+source_file="res://terrain assets/river-straight-low.obj"
+dest_files=[ "res://.import/river-straight-low.obj-02e0bf680e8920a3b34adf659b8d3fe8.mesh", "res://.import/river-straight-low.obj-02e0bf680e8920a3b34adf659b8d3fe8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

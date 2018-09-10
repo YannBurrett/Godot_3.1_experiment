@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-corner-high.obj-d1f580a1899500d307a3167a30e0f11d.mesh"
+
+[deps]
+
+files=[ "res://.import/river-corner-high.obj-d1f580a1899500d307a3167a30e0f11d.mesh" ]
+
+source_file="res://terrain assets/river-corner-high.obj"
+dest_files=[ "res://.import/river-corner-high.obj-d1f580a1899500d307a3167a30e0f11d.mesh", "res://.import/river-corner-high.obj-d1f580a1899500d307a3167a30e0f11d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

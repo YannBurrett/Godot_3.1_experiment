@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-farara-sport-green.obj-71a72f0352f224c1160167c9068b7a06.mesh"
+
+[deps]
+
+files=[ "res://.import/car-farara-sport-green.obj-71a72f0352f224c1160167c9068b7a06.mesh" ]
+
+source_file="res://racing assets/car-farara-sport-green.obj"
+dest_files=[ "res://.import/car-farara-sport-green.obj-71a72f0352f224c1160167c9068b7a06.mesh", "res://.import/car-farara-sport-green.obj-71a72f0352f224c1160167c9068b7a06.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

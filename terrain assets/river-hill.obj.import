@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-hill.obj-46c8af375c03533feee81cf67e169b85.mesh"
+
+[deps]
+
+files=[ "res://.import/river-hill.obj-46c8af375c03533feee81cf67e169b85.mesh" ]
+
+source_file="res://terrain assets/river-hill.obj"
+dest_files=[ "res://.import/river-hill.obj-46c8af375c03533feee81cf67e169b85.mesh", "res://.import/river-hill.obj-46c8af375c03533feee81cf67e169b85.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

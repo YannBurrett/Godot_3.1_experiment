@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-water.obj-d1b38f2a0fcf66ded715572eec8b601d.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-water.obj-d1b38f2a0fcf66ded715572eec8b601d.mesh" ]
+
+source_file="res://terrain assets/road-bridge-water.obj"
+dest_files=[ "res://.import/road-bridge-water.obj-d1b38f2a0fcf66ded715572eec8b601d.mesh", "res://.import/road-bridge-water.obj-d1b38f2a0fcf66ded715572eec8b601d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

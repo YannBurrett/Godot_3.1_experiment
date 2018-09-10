@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/water-beddng-concave.obj-3def899f57b4c6419ae8b0e60e6c73ba.mesh"
+
+[deps]
+
+files=[ "res://.import/water-beddng-concave.obj-3def899f57b4c6419ae8b0e60e6c73ba.mesh" ]
+
+source_file="res://terrain assets/water-beddng-concave.obj"
+dest_files=[ "res://.import/water-beddng-concave.obj-3def899f57b4c6419ae8b0e60e6c73ba.mesh", "res://.import/water-beddng-concave.obj-3def899f57b4c6419ae8b0e60e6c73ba.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

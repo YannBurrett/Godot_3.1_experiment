@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot.obj-55e979030059184a20cffba9900ede80.mesh"
+
+[deps]
+
+files=[ "res://.import/lot.obj-55e979030059184a20cffba9900ede80.mesh" ]
+
+source_file="res://terrain assets/lot.obj"
+dest_files=[ "res://.import/lot.obj-55e979030059184a20cffba9900ede80.mesh", "res://.import/lot.obj-55e979030059184a20cffba9900ede80.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

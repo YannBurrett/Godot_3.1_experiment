@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/track-tire.obj-12230b9a13023e1b018db54c0efd8b27.mesh"
+
+[deps]
+
+files=[ "res://.import/track-tire.obj-12230b9a13023e1b018db54c0efd8b27.mesh" ]
+
+source_file="res://racing assets/track-tire.obj"
+dest_files=[ "res://.import/track-tire.obj-12230b9a13023e1b018db54c0efd8b27.mesh", "res://.import/track-tire.obj-12230b9a13023e1b018db54c0efd8b27.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-tunnel-entry.obj-ae9d7fe7e99cc9862bb85fea12697680.mesh"
+
+[deps]
+
+files=[ "res://.import/road-tunnel-entry.obj-ae9d7fe7e99cc9862bb85fea12697680.mesh" ]
+
+source_file="res://terrain assets/road-tunnel-entry.obj"
+dest_files=[ "res://.import/road-tunnel-entry.obj-ae9d7fe7e99cc9862bb85fea12697680.mesh", "res://.import/road-tunnel-entry.obj-ae9d7fe7e99cc9862bb85fea12697680.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

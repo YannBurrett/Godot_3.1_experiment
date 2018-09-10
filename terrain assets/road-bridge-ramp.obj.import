@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-ramp.obj-addc3777e58817460506737cd2c325a4.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-ramp.obj-addc3777e58817460506737cd2c325a4.mesh" ]
+
+source_file="res://terrain assets/road-bridge-ramp.obj"
+dest_files=[ "res://.import/road-bridge-ramp.obj-addc3777e58817460506737cd2c325a4.mesh", "res://.import/road-bridge-ramp.obj-addc3777e58817460506737cd2c325a4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

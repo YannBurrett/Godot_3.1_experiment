@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-hill-water-low.obj-749576d185111061c3b3b5a720edf16e.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-hill-water-low.obj-749576d185111061c3b3b5a720edf16e.mesh" ]
+
+source_file="res://terrain assets/canal-hill-water-low.obj"
+dest_files=[ "res://.import/canal-hill-water-low.obj-749576d185111061c3b3b5a720edf16e.mesh", "res://.import/canal-hill-water-low.obj-749576d185111061c3b3b5a720edf16e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

@@ -1,0 +1,27 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl Default (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.4 0.97 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Asphalt (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.594 0.716 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Asphalt (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.594 0.716 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Sandstone_4 (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.1393939 0.9570827 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Sandstone_4 (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.1393939 0.9570827 1 
+Ks 0.330000 0.330000 0.330000 
+

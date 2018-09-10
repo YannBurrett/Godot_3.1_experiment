@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-crossroad.obj-991367927b028c354308ff85c5577cf4.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-crossroad.obj-991367927b028c354308ff85c5577cf4.mesh" ]
+
+source_file="res://terrain assets/road-bridge-crossroad.obj"
+dest_files=[ "res://.import/road-bridge-crossroad.obj-991367927b028c354308ff85c5577cf4.mesh", "res://.import/road-bridge-crossroad.obj-991367927b028c354308ff85c5577cf4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

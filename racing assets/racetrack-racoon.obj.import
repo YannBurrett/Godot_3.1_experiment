@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/racetrack-racoon.obj-9c97707631453a26bebc8c303a1b9718.mesh"
+
+[deps]
+
+files=[ "res://.import/racetrack-racoon.obj-9c97707631453a26bebc8c303a1b9718.mesh" ]
+
+source_file="res://racing assets/racetrack-racoon.obj"
+dest_files=[ "res://.import/racetrack-racoon.obj-9c97707631453a26bebc8c303a1b9718.mesh", "res://.import/racetrack-racoon.obj-9c97707631453a26bebc8c303a1b9718.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
