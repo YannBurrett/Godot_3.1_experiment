@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Racing Sandbox"
-run/main_scene="res://scenes/ChararcterCustomisation/CharacterCustomisation.tscn"
+run/main_scene="res://scenes/ChararcterCustomisation/SplitCustomization.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,7 +1,5 @@
 extends VehicleBody
 
-var current_colour = "blue"
-
 export var player_id = 1
 
 ############################################################
@@ -31,14 +29,19 @@ func _ready():
 
 
 func apply_custom_colour():
+	var cart = 4
+	var helmet = 3
+	var suit = 1
+	
+	
 	if player_id == 1:
-		$MeshInstance.set_surface_material(3, load(ApplyCustomization.Player1_Cart_material))
-		$MeshInstance.set_surface_material(4, load(ApplyCustomization.Player1_Cart_material))
-		$MeshInstance.set_surface_material(1, load(ApplyCustomization.Player1_Player_material))
+		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[1]))
+		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[1]))
+		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[1]))
 	else:
-		$MeshInstance.set_surface_material(3, load(ApplyCustomization.Player2_Cart_material))
-		$MeshInstance.set_surface_material(4, load(ApplyCustomization.Player2_Cart_material))
-		$MeshInstance.set_surface_material(1, load(ApplyCustomization.Player2_Player_material))
+		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[2]))
+		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[2]))
+		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[2]))
 
 
 func _physics_process(delta):

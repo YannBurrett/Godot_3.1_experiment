@@ -186,10 +186,5 @@ script = null
 _sections_unfolded = [ "Collision", "Motion", "Script" ]
 
 [connection signal="pressed" from="ChararacterCustomisationGui/RandomizeButton" to="." method="_on_RandomizeButton_pressed"]
-[connection signal="pressed" from="ChararacterCustomisationGui/CenterContainer/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed"]
-[connection signal="pressed" from="ChararacterCustomisationGui/CenterContainer/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed"]
-[connection signal="pressed" from="ChararacterCustomisationGui/CenterContainer/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed"]
-[connection signal="pressed" from="ChararacterCustomisationGui/CenterContainer/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed"]
-[connection signal="pressed" from="ChararacterCustomisationGui/CenterContainer/CartMaterialContainer/StartRaceButton" to="." method="_on_StartRaceButton_pressed"]
 
 [editable path="ChararacterCustomisationGui"]

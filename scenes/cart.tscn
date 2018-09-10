@@ -91,7 +91,7 @@ material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
-_sections_unfolded = [ "Transform", "material" ]
+_sections_unfolded = [ "Transform", "material", "mesh" ]
 
 [node name="FlagPole" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 0.01, 0, 0, 0, 0.125, 0, 0, 0, 0.01, 0.555238, 0.267974, -0.288659 )

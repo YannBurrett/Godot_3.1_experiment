@@ -99,8 +99,6 @@ subdivide_depth = 0
 [node name="CharSelect" type="Spatial"]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-target_rotation_speed = 1
-max_rotation_speed = 10
 rotation_speed_step = 0.025
 
 [node name="Camera" type="Camera" parent="."]
@@ -196,7 +194,8 @@ anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -100.0
+margin_top = -160.0
+margin_bottom = -80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
