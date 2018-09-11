@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/PlayerSelection/PlayerPicker.gd" type="Script" id=2]
-[ext_resource path="res://GFX/UI/PNG/blue_button07.png" type="Texture" id=3]
-[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/PlayerSelection/player_select_cart.gd" type="Script" id=5]
-[ext_resource path="res://scenes/WorldEnvironment.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/PlayerSelection/player_select_cart.gd" type="Script" id=4]
+[ext_resource path="res://scenes/WorldEnvironment.tscn" type="PackedScene" id=5]
 
 [node name="PlayerPicker" type="Control"]
 anchor_left = 0.0
@@ -22,23 +21,18 @@ theme = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Theme" ]
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
-_sections_unfolded = [ "Patch Margin" ]
+color = Color( 0.392157, 0.662745, 0.792157, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.0
@@ -54,6 +48,7 @@ size_flags_vertical = 1
 use_top_left = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -133,11 +128,11 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
-[node name="Cart" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 4 )]
+[node name="Cart" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 3 )]
 collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
@@ -157,7 +152,7 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="WorldEnvironment" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1/Camera1" instance=ExtResource( 6 )]
+[node name="WorldEnvironment" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1/Camera1" instance=ExtResource( 5 )]
 
 [node name="OmniLight" type="OmniLight" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.698758, 0.914679, 1.54954 )
@@ -226,12 +221,12 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
-[node name="Cart2" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer2/Viewport2" instance=ExtResource( 4 )]
+[node name="Cart2" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer2/Viewport2" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -1.5, 0, 1.5 )
 collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
@@ -296,12 +291,12 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
-[node name="Cart3" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer3/Viewport3" instance=ExtResource( 4 )]
+[node name="Cart3" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer3/Viewport3" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0, 3 )
 collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
@@ -366,12 +361,12 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
-[node name="Cart4" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer4/Viewport4" instance=ExtResource( 4 )]
+[node name="Cart4" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer4/Viewport4" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 1.5, 0, 1.5 )
 collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
@@ -392,6 +387,7 @@ far = 100.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

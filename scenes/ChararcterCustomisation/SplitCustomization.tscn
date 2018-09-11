@@ -91,6 +91,19 @@ _sections_unfolded = [ "Ambient Light", "Background", "Glow", "Tonemap" ]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.392157, 0.662745, 0.792157, 1 )
+
 [node name="Materials" type="Node" parent="."]
 script = ExtResource( 2 )
 _sections_unfolded = [ "Script" ]
@@ -159,8 +172,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 502.0
-margin_bottom = 277.0
+margin_right = 510.0
+margin_bottom = 285.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -176,8 +189,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 502.0
-margin_bottom = 173.0
+margin_right = 510.0
+margin_bottom = 181.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -190,7 +203,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View1/ViewportContainer"]
 arvr = false
-size = Vector2( 502, 173 )
+size = Vector2( 510, 181 )
 own_world = false
 world = null
 transparent_bg = true
@@ -241,14 +254,14 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 177.0
-margin_right = 502.0
-margin_bottom = 277.0
+margin_top = 185.0
+margin_right = 510.0
+margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View1/Customiser1" index="0"]
-margin_left = 112.0
+margin_left = 116.0
 margin_top = 0.0
-margin_right = 390.0
+margin_right = 394.0
 margin_bottom = 100.0
 
 [node name="Cart1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 5 )]
@@ -263,9 +276,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 522.0
+margin_left = 514.0
 margin_right = 1024.0
-margin_bottom = 277.0
+margin_bottom = 285.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -281,8 +294,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 502.0
-margin_bottom = 173.0
+margin_right = 510.0
+margin_bottom = 181.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -296,7 +309,7 @@ _sections_unfolded = [ "Size Flags" ]
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View2/ViewportContainer"]
 editor/display_folded = true
 arvr = false
-size = Vector2( 502, 173 )
+size = Vector2( 510, 181 )
 own_world = false
 world = null
 transparent_bg = true
@@ -343,14 +356,14 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 177.0
-margin_right = 502.0
-margin_bottom = 277.0
+margin_top = 185.0
+margin_right = 510.0
+margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View2/Customiser2" index="0"]
-margin_left = 112.0
+margin_left = 116.0
 margin_top = 0.0
-margin_right = 390.0
+margin_right = 394.0
 margin_bottom = 100.0
 
 [node name="Cart2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 5 )]
@@ -365,8 +378,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 297.0
-margin_right = 502.0
+margin_top = 289.0
+margin_right = 510.0
 margin_bottom = 574.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -383,8 +396,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 502.0
-margin_bottom = 173.0
+margin_right = 510.0
+margin_bottom = 181.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -398,7 +411,7 @@ _sections_unfolded = [ "Size Flags" ]
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View3/ViewportContainer"]
 editor/display_folded = true
 arvr = false
-size = Vector2( 502, 173 )
+size = Vector2( 510, 181 )
 own_world = false
 world = null
 transparent_bg = true
@@ -445,14 +458,14 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 177.0
-margin_right = 502.0
-margin_bottom = 277.0
+margin_top = 185.0
+margin_right = 510.0
+margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View3/Customiser3" index="0"]
-margin_left = 112.0
+margin_left = 116.0
 margin_top = 0.0
-margin_right = 390.0
+margin_right = 394.0
 margin_bottom = 100.0
 
 [node name="Cart3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 5 )]
@@ -467,8 +480,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 522.0
-margin_top = 297.0
+margin_left = 514.0
+margin_top = 289.0
 margin_right = 1024.0
 margin_bottom = 574.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -486,8 +499,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 502.0
-margin_bottom = 173.0
+margin_right = 510.0
+margin_bottom = 181.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -500,7 +513,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View4/ViewportContainer"]
 arvr = false
-size = Vector2( 502, 173 )
+size = Vector2( 510, 181 )
 own_world = false
 world = null
 transparent_bg = true
@@ -546,14 +559,14 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 177.0
-margin_right = 502.0
-margin_bottom = 277.0
+margin_top = 185.0
+margin_right = 510.0
+margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View4/Customiser4" index="0"]
-margin_left = 112.0
+margin_left = 116.0
 margin_top = 0.0
-margin_right = 390.0
+margin_right = 394.0
 margin_bottom = 100.0
 
 [node name="Cart4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 5 )]
