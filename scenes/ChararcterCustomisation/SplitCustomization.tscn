@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/CharSelect.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ChararcterCustomisation/Materials.gd" type="Script" id=2]
-[ext_resource path="res://scenes/ChararcterCustomisation/DiscoveringGodot.material" type="Material" id=3]
-[ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Ending.wav" type="AudioStream" id=4]
+[ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=3]
+[ext_resource path="res://scenes/ChararcterCustomisation/Customiser.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=6]
-[ext_resource path="res://scenes/ChararcterCustomisation/Customiser.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/PlayerSelection/player_select_cart.gd" type="Script" id=6]
 
 [sub_resource type="Environment" id=1]
 
@@ -88,38 +87,9 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.5
 _sections_unfolded = [ "Ambient Light", "Background", "Glow", "Tonemap" ]
 
-[sub_resource type="PlaneMesh" id=2]
-
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-flip_faces = false
-size = Vector2( 2, 2 )
-subdivide_width = 0
-subdivide_depth = 0
-
 [node name="CharSelect" type="Spatial"]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-rotation_speed_step = 0.025
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 1.25 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-_sections_unfolded = [ "Transform" ]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera"]
-environment = SubResource( 1 )
-_sections_unfolded = [ "environment" ]
 
 [node name="Materials" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -152,85 +122,511 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Shadow" ]
 
-[node name="Billboard" type="MeshInstance" parent="."]
-transform = Transform( -4, -8.74229e-008, 8.74228e-008, 1.74846e-007, -1.38781e-013, 2, -3.49692e-007, 1, 2.85205e-013, 0, 0, -1.25 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 3 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = true
-stream_paused = false
-mix_target = 0
-bus = "Master"
-
-[node name="Cart1" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0 )
-gravity_scale = 0.0
-script = null
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-
-[node name="Cart2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 0 )
-gravity_scale = 0.0
-script = null
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.0
-anchor_top = 1.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -160.0
-margin_bottom = -80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+alignment = 0
+_sections_unfolded = [ "Theme" ]
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 574.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 6 )
-alignment = 1
-_sections_unfolded = [ "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
+theme = ExtResource( 3 )
+columns = 2
+_sections_unfolded = [ "Margin", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="Customiser1" parent="HBoxContainer" instance=ExtResource( 7 )]
+[node name="View1" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 175.0
-margin_top = 0.0
-margin_right = 453.0
-margin_bottom = 100.0
+margin_right = 502.0
+margin_bottom = 277.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
 
-[node name="CartMaterialContainer" parent="HBoxContainer/Customiser1" index="0"]
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View1"]
 editor/display_folded = true
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 278.0
-margin_bottom = 100.0
-
-[node name="Begin" type="Button" parent="HBoxContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 457.0
-margin_right = 567.0
+margin_right = 502.0
+margin_bottom = 173.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+stretch_shrink = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View1/ViewportContainer"]
+arvr = false
+size = Vector2( 502, 173 )
+own_world = false
+world = null
+transparent_bg = true
+msaa = 0
+hdr = true
+disable_3d = false
+keep_3d_linear = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 3
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+
+[node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View1/ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -1.25 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="VBoxContainer/GridContainer/View1/ViewportContainer/Viewport/Camera"]
+environment = SubResource( 1 )
+_sections_unfolded = [ "environment" ]
+
+[node name="Customiser1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 4 )]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 177.0
+margin_right = 502.0
+margin_bottom = 277.0
+
+[node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View1/Customiser1" index="0"]
+margin_left = 112.0
+margin_top = 0.0
+margin_right = 390.0
 margin_bottom = 100.0
+
+[node name="Cart1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+gravity_scale = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="View2" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_right = 1024.0
+margin_bottom = 277.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View2"]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 502.0
+margin_bottom = 173.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+stretch_shrink = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View2/ViewportContainer"]
+editor/display_folded = true
+arvr = false
+size = Vector2( 502, 173 )
+own_world = false
+world = null
+transparent_bg = true
+msaa = 0
+hdr = true
+disable_3d = false
+keep_3d_linear = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 3
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+
+[node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View2/ViewportContainer/Viewport"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.75, 0.1, 2 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Customiser2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 4 )]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 177.0
+margin_right = 502.0
+margin_bottom = 277.0
+
+[node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View2/Customiser2" index="0"]
+margin_left = 112.0
+margin_top = 0.0
+margin_right = 390.0
+margin_bottom = 100.0
+
+[node name="Cart2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2 )
+gravity_scale = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="View3" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 297.0
+margin_right = 502.0
+margin_bottom = 574.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View3"]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 502.0
+margin_bottom = 173.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+stretch_shrink = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View3/ViewportContainer"]
+editor/display_folded = true
+arvr = false
+size = Vector2( 502, 173 )
+own_world = false
+world = null
+transparent_bg = true
+msaa = 0
+hdr = true
+disable_3d = false
+keep_3d_linear = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 3
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+
+[node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View3/ViewportContainer/Viewport"]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0.1, 4.72 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Customiser3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 4 )]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 177.0
+margin_right = 502.0
+margin_bottom = 277.0
+
+[node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View3/Customiser3" index="0"]
+margin_left = 112.0
+margin_top = 0.0
+margin_right = 390.0
+margin_bottom = 100.0
+
+[node name="Cart3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5 )
+gravity_scale = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="View4" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_top = 297.0
+margin_right = 1024.0
+margin_bottom = 574.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View4"]
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 502.0
+margin_bottom = 173.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+stretch_shrink = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View4/ViewportContainer"]
+arvr = false
+size = Vector2( 502, 173 )
+own_world = false
+world = null
+transparent_bg = true
+msaa = 0
+hdr = true
+disable_3d = false
+keep_3d_linear = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 3
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+
+[node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View4/ViewportContainer/Viewport"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.75, 0.1, 2 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Customiser4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 4 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 177.0
+margin_right = 502.0
+margin_bottom = 277.0
+
+[node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View4/Customiser4" index="0"]
+margin_left = 112.0
+margin_top = 0.0
+margin_right = 390.0
+margin_bottom = 100.0
+
+[node name="Cart4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2 )
+gravity_scale = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 578.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 407.0
+margin_right = 617.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Back" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+
+[node name="Begin" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_right = 210.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -246,35 +642,33 @@ text = "Begin!"
 flat = false
 align = 1
 
-[node name="Customiser2" parent="HBoxContainer" instance=ExtResource( 7 )]
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 571.0
-margin_top = 0.0
-margin_right = 849.0
-margin_bottom = 100.0
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Begin" to="." method="_on_Begin_pressed"]
 
-[node name="CartMaterialContainer" parent="HBoxContainer/Customiser2" index="0"]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 278.0
-margin_bottom = 100.0
+[editable path="VBoxContainer/GridContainer/View1/Customiser1"]
 
-[connection signal="pressed" from="HBoxContainer/Customiser1/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser1/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser1/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser1/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser1/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="HBoxContainer/Begin" to="." method="_on_Begin_pressed"]
-[connection signal="pressed" from="HBoxContainer/Customiser2/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 2 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser2/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 2 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser2/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 2 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser2/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 2 ]]
-[connection signal="pressed" from="HBoxContainer/Customiser2/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 2 ]]
+[editable path="VBoxContainer/GridContainer/View2/Customiser2"]
 
-[editable path="HBoxContainer/Customiser1"]
+[editable path="VBoxContainer/GridContainer/View3/Customiser3"]
 
-[editable path="HBoxContainer/Customiser2"]
+[editable path="VBoxContainer/GridContainer/View4/Customiser4"]

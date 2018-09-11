@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Racing Sandbox"
-run/main_scene="res://scenes/ChararcterCustomisation/SplitCustomization.tscn"
+run/main_scene="res://scenes/PlayerSelection/PlayerPicker.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 ApplyCustomization="*res://scenes/ChararcterCustomisation/ApplyCustomization.gd"
+BGMplayer="*res://scenes/MusicPlayer/BGMplayer.tscn"
 
 [importer_defaults]
 
@@ -124,6 +125,46 @@ brake_2={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777350,"unicode":0,"echo":false,"script":null)
  ]
+}
+up_3={
+"deadzone": 0.5,
+"events": [  ]
+}
+up_4={
+"deadzone": 0.5,
+"events": [  ]
+}
+left_3={
+"deadzone": 0.5,
+"events": [  ]
+}
+left_4={
+"deadzone": 0.5,
+"events": [  ]
+}
+back_3={
+"deadzone": 0.5,
+"events": [  ]
+}
+back_4={
+"deadzone": 0.5,
+"events": [  ]
+}
+right_3={
+"deadzone": 0.5,
+"events": [  ]
+}
+right_4={
+"deadzone": 0.5,
+"events": [  ]
+}
+brake_3={
+"deadzone": 0.5,
+"events": [  ]
+}
+brake_4={
+"deadzone": 0.5,
+"events": [  ]
 }
 
 [layer_names]

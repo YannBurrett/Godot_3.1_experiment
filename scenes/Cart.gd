@@ -25,6 +25,8 @@ export var joy_brake = JOY_ANALOG_L2
 export var brake_mult = 1.0
 
 func _ready():
+	if player_id > ApplyCustomization.player_count:
+		queue_free()
 	apply_custom_colour()
 
 
@@ -38,10 +40,18 @@ func apply_custom_colour():
 		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[1]))
 		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[1]))
 		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[1]))
-	else:
+	elif player_id == 2:
 		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[2]))
 		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[2]))
 		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[2]))
+	elif player_id == 3:
+		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[3]))
+		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[3]))
+		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[3]))
+	else:
+		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[4]))
+		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[4]))
+		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[4]))
 
 
 func _physics_process(delta):
