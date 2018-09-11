@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/SplitScreen.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Tracks/Track1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Camera.gd" type="Script" id=3]
-[ext_resource path="res://scenes/WorldEnvironment.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=2]
+[ext_resource path="res://scenes/Tracks/Track1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Camera.gd" type="Script" id=4]
+[ext_resource path="res://scenes/WorldEnvironment.tscn" type="PackedScene" id=5]
 
 [node name="SplitScreen" type="Control"]
 anchor_left = 0.0
@@ -42,10 +43,9 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/vseparation = 4
-custom_constants/hseparation = 4
+theme = ExtResource( 2 )
 columns = 2
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Theme", "custom_constants" ]
 
 [node name="ViewportContainer1" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -62,9 +62,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
 stretch_shrink = 1
-_sections_unfolded = [ "Rect", "Size Flags" ]
+_sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="Splitter/ViewportContainer1"]
+editor/display_folded = true
 arvr = false
 size = Vector2( 510, 298 )
 own_world = false
@@ -91,17 +92,20 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener" ]
 
-[node name="Track1" parent="Splitter/ViewportContainer1/Viewport" instance=ExtResource( 2 )]
+[node name="Track1" parent="Splitter/ViewportContainer1/Viewport" instance=ExtResource( 3 )]
 
 [node name="Track" parent="Splitter/ViewportContainer1/Viewport/Track1" index="0"]
 data = {
-"cells": PoolIntArray( 1, 0, 1073741829, 3, 0, 655366, 5, 0, 655366, 6, 0, 655366, 12, 0, 655364, 65533, 0, 5, 65535, 0, 5, 65528, 1, 655368, 1, 2, 1441794, 3, 2, 1441794, 4, 2, 1441794, 18, 2, 1048581, 20, 2, 655362, 22, 2, 1075183621, 65531, 2, 1048578, 65533, 2, 1048578, 65535, 2, 655360, 7, 3, 655370, 1, 4, 655365, 3, 4, 655366, 4, 4, 655366, 18, 4, 1048581, 20, 4, 1441793, 22, 4, 1441797, 65533, 4, 655365, 65535, 4, 655365, 11, 5, 8, 18, 6, 1048585, 20, 6, 1441801, 13, 9, 655368, 17, 9, 1075183624, 1, 65520, 1048578, 65527, 65520, 1074790409, 65529, 65520, 1048578, 65531, 65520, 1048578, 65533, 65520, 1048578, 65535, 65520, 1048578, 4, 65521, 8, 1, 65522, 1073741833, 65535, 65522, 1441794, 65528, 65523, 1048579, 65532, 65523, 1048584, 1, 65524, 2, 5, 65524, 2, 1, 65526, 2, 5, 65526, 1073741826, 65529, 65526, 655362, 65529, 65527, 1048583, 65532, 65527, 1441795, 1, 65528, 2, 5, 65528, 2, 65529, 65528, 655362, 1, 65530, 2, 65533, 65530, 1048583, 4, 65531, 1441800, 65528, 65531, 1441802, 1, 65532, 655369, 65534, 65533, 655368, 1, 65534, 1048578, 3, 65534, 1048578, 4, 65534, 1048578, 6, 65534, 1048578, 12, 65534, 655361, 65527, 65534, 1048577, 9, 65535, 655371, 15, 65535, 655373, 19, 65535, 8 )
+"cells": PoolIntArray( 1, 0, 5, 3, 0, 655366, 5, 0, 655366, 6, 0, 655366, 12, 0, 655364, 65533, 0, 5, 65535, 0, 5, 65528, 1, 655368, 1, 2, 1441794, 3, 2, 1441794, 4, 2, 1441794, 18, 2, 1048581, 20, 2, 655362, 22, 2, 1441797, 65531, 2, 1048578, 65533, 2, 1048578, 65535, 2, 655360, 7, 3, 655370, 1, 4, 655365, 3, 4, 655366, 4, 4, 655366, 18, 4, 1048581, 20, 4, 1441793, 22, 4, 1441797, 65533, 4, 655365, 65535, 4, 655365, 11, 5, 8, 18, 6, 1048585, 20, 6, 1441801, 13, 9, 655368, 17, 9, 1441800, 1, 65520, 1048578, 65527, 65520, 1048585, 65529, 65520, 1048578, 65531, 65520, 1048578, 65533, 65520, 1048578, 65535, 65520, 1048578, 4, 65521, 8, 1, 65522, 9, 65535, 65522, 1441794, 65528, 65523, 1048579, 65532, 65523, 1048584, 1, 65524, 2, 5, 65524, 2, 1, 65526, 2, 5, 65526, 2, 65529, 65526, 655362, 65529, 65527, 1048583, 65532, 65527, 1441795, 1, 65528, 2, 5, 65528, 2, 65529, 65528, 655362, 1, 65530, 2, 65533, 65530, 1048583, 4, 65531, 1441800, 65528, 65531, 1441802, 1, 65532, 655369, 65534, 65533, 655368, 1, 65534, 1048578, 3, 65534, 1048578, 4, 65534, 1074790402, 6, 65534, 1048578, 12, 65534, 655361, 65527, 65534, 1048577, 9, 65535, 655371, 15, 65535, 655373, 19, 65535, 8 )
 }
 
 [node name="Terrain" parent="Splitter/ViewportContainer1/Viewport/Track1" index="1"]
 data = {
-"cells": PoolIntArray( 65531, 0, 655383, 7, 65518, 1048582, 9, 65518, 15, 11, 65518, 15, 12, 65518, 1073741839, 13, 65518, 15, 14, 65518, 15, 16, 65518, 15, 17, 65518, 15, 18, 65518, 15, 19, 65518, 15, 20, 65518, 15, 9, 65519, 15, 14, 65519, 15, 15, 65519, 15, 16, 65519, 15, 17, 65519, 15, 18, 65519, 15, 19, 65519, 15, 20, 65519, 15, 7, 65520, 1048583, 10, 65520, 15, 11, 65520, 15, 12, 65520, 15, 13, 65520, 15, 14, 65520, 15, 15, 65520, 15, 18, 65520, 15, 19, 65520, 15, 20, 65520, 15, 7, 65521, 1048583, 9, 65521, 15, 11, 65521, 15, 12, 65521, 15, 15, 65521, 15, 16, 65521, 15, 18, 65521, 15, 19, 65521, 15, 20, 65521, 15, 9, 65522, 15, 11, 65522, 15, 12, 65522, 15, 13, 65522, 15, 14, 65522, 15, 16, 65522, 15, 17, 65522, 15, 19, 65522, 15, 20, 65522, 15, 7, 65523, 1074790407, 9, 65523, 15, 10, 65523, 15, 11, 65523, 15, 12, 65523, 15, 13, 65523, 15, 14, 65523, 15, 15, 65523, 15, 17, 65523, 1073741839, 18, 65523, 1073741839, 19, 65523, 15, 3, 65524, 13, 9, 65524, 15, 10, 65524, 15, 11, 65524, 15, 12, 65524, 15, 13, 65524, 15, 14, 65524, 15, 15, 65524, 15, 16, 65524, 15, 18, 65524, 15, 19, 65524, 15, 20, 65524, 15, 65535, 65524, 15, 7, 65525, 1048583, 9, 65525, 1073741839, 11, 65525, 1073741839, 12, 65525, 15, 14, 65525, 15, 15, 65525, 15, 16, 65525, 15, 19, 65525, 15, 3, 65526, 13, 9, 65526, 15, 11, 65526, 15, 12, 65526, 15, 13, 65526, 15, 16, 65526, 15, 17, 65526, 15, 19, 65526, 15, 20, 65526, 15, 65527, 65526, 1048604, 65535, 65526, 1073741839, 7, 65527, 1048583, 9, 65527, 15, 11, 65527, 15, 13, 65527, 15, 14, 65527, 15, 15, 65527, 15, 16, 65527, 15, 17, 65527, 15, 20, 65527, 15, 3, 65528, 13, 7, 65528, 1048583, 9, 65528, 15, 16, 65528, 15, 17, 65528, 15, 18, 65528, 15, 19, 65528, 15, 20, 65528, 15, 65527, 65528, 28, 65535, 65528, 15, 9, 65529, 15, 10, 65529, 15, 11, 65529, 15, 12, 65529, 15, 13, 65529, 15, 14, 65529, 15, 7, 65530, 1048583, 9, 65530, 15, 10, 65530, 15, 11, 65530, 15, 12, 65530, 15, 13, 65530, 1073741839, 14, 65530, 15, 15, 65530, 15, 16, 65530, 15, 17, 65530, 15, 18, 65530, 15, 19, 65530, 15, 20, 65530, 15, 65531, 65530, 655433, 65535, 65530, 15, 7, 65532, 1048581, 9, 65532, 655367, 11, 65532, 655367, 13, 65532, 655367, 15, 65532, 655367, 17, 65532, 655367, 19, 65532, 655367, 20, 65532, 655367, 65531, 65532, 655383, 65529, 65534, 1441865, 65531, 65534, 655383 )
+"cells": PoolIntArray( 65531, 0, 655383, 7, 65518, 1048582, 9, 65518, 15, 11, 65518, 15, 12, 65518, 15, 13, 65518, 15, 14, 65518, 15, 16, 65518, 15, 17, 65518, 15, 18, 65518, 15, 19, 65518, 15, 20, 65518, 15, 9, 65519, 15, 14, 65519, 15, 15, 65519, 15, 16, 65519, -1073741809, 17, 65519, 15, 18, 65519, 15, 19, 65519, 15, 20, 65519, 15, 7, 65520, 1048583, 10, 65520, 15, 11, 65520, 1610612751, 12, 65520, 15, 13, 65520, 15, 14, 65520, 15, 15, 65520, 15, 18, 65520, 15, 19, 65520, 15, 20, 65520, 15, 7, 65521, 1048583, 9, 65521, 15, 11, 65521, 15, 12, 65521, 15, 15, 65521, 15, 16, 65521, 15, 18, 65521, 15, 19, 65521, 15, 20, 65521, 15, 9, 65522, 15, 11, 65522, 15, 12, 65522, 15, 13, 65522, 15, 14, 65522, 15, 16, 65522, 15, 17, 65522, 15, 19, 65522, 15, 20, 65522, 15, 7, 65523, 1048583, 9, 65523, 15, 10, 65523, 15, 11, 65523, 15, 12, 65523, 15, 13, 65523, 15, 14, 65523, 15, 15, 65523, 15, 17, 65523, 15, 18, 65523, 15, 19, 65523, 15, 3, 65524, 13, 9, 65524, 15, 10, 65524, 15, 11, 65524, 15, 12, 65524, 15, 13, 65524, 15, 14, 65524, 15, 15, 65524, 15, 16, 65524, 15, 18, 65524, 15, 19, 65524, 15, 20, 65524, 15, 65535, 65524, 15, 7, 65525, 1048583, 9, 65525, 15, 11, 65525, 15, 12, 65525, 15, 14, 65525, 15, 15, 65525, -536870897, 16, 65525, 15, 19, 65525, 15, 3, 65526, 13, 9, 65526, 15, 11, 65526, 15, 12, 65526, 15, 13, 65526, 15, 16, 65526, 15, 17, 65526, 15, 19, 65526, 15, 20, 65526, 15, 65527, 65526, 1048604, 65535, 65526, 15, 7, 65527, 1048583, 9, 65527, 15, 11, 65527, 15, 13, 65527, 15, 14, 65527, 15, 15, 65527, 15, 16, 65527, 15, 17, 65527, 15, 20, 65527, 15, 3, 65528, 13, 7, 65528, 1048583, 9, 65528, 15, 16, 65528, 15, 17, 65528, 15, 18, 65528, 15, 19, 65528, 15, 20, 65528, 15, 65527, 65528, 28, 65535, 65528, 15, 9, 65529, 15, 10, 65529, 15, 11, 65529, 15, 12, 65529, 15, 13, 65529, 15, 14, 65529, 15, 7, 65530, 1048583, 9, 65530, 15, 10, 65530, 15, 11, 65530, 15, 12, 65530, 15, 13, 65530, 15, 14, 65530, 15, 15, 65530, 15, 16, 65530, 15, 17, 65530, 15, 18, 65530, 15, 19, 65530, 15, 20, 65530, 15, 65531, 65530, 655433, 65535, 65530, 15, 7, 65532, 1048581, 9, 65532, 655367, 11, 65532, 655367, 13, 65532, 655367, 15, 65532, 655367, 17, 65532, 655367, 19, 65532, 655367, 20, 65532, 655367, 65531, 65532, 655383, 65529, 65534, 1441865, 65531, 65534, 655383 )
 }
+
+[node name="DirectionalLight" parent="Splitter/ViewportContainer1/Viewport/Track1" index="2"]
+light_cull_mask = -1
 
 [node name="Camera1" type="Camera" parent="Splitter/ViewportContainer1/Viewport"]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1.30137, 2.5, 11.5 )
@@ -117,13 +121,35 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 follow_this_path = NodePath("../../../../Splitter/ViewportContainer1/Viewport/Track1/Cart")
 target_distance = 2.0
 target_height = 1.0
 
-[node name="WorldEnvironment" parent="Splitter/ViewportContainer1/Viewport/Camera1" instance=ExtResource( 4 )]
+[node name="WorldEnvironment" parent="Splitter/ViewportContainer1/Viewport/Camera1" instance=ExtResource( 5 )]
+
+[node name="Name1" type="Label" parent="Splitter/ViewportContainer1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 112.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Player 1
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin" ]
 
 [node name="ViewportContainer2" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -184,11 +210,34 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 follow_this_path = NodePath("../../../../Splitter/ViewportContainer1/Viewport/Track1/Cart2")
 target_distance = 2.0
 target_height = 1.0
+
+[node name="Name2" type="Label" parent="Splitter/ViewportContainer2"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 394.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -247.0
+grow_horizontal = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Player 2"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Margin" ]
 
 [node name="ViewportContainer3" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -249,11 +298,33 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 follow_this_path = NodePath("../../../ViewportContainer1/Viewport/Track1/Cart3")
 target_distance = 2.0
 target_height = 1.0
+
+[node name="Name3" type="Label" parent="Splitter/ViewportContainer3"]
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = -51.0
+margin_right = 116.0
+margin_bottom = -40.0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 12
+text = "Player 3"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Margin", "Size Flags" ]
 
 [node name="ViewportContainer4" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -315,11 +386,34 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 follow_this_path = NodePath("../../../ViewportContainer1/Viewport/Track1/Cart4")
 target_distance = 2.0
 target_height = 1.0
+
+[node name="Name4" type="Label" parent="Splitter/ViewportContainer4"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -51.0
+margin_right = -40.0
+margin_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Player 4"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Margin" ]
 
 [connection signal="tree_exiting" from="Splitter/ViewportContainer1/Viewport/Track1/Cart2" to="Splitter/ViewportContainer2/Viewport/Camera2" method="cart_despawn"]
 [connection signal="tree_exiting" from="Splitter/ViewportContainer1/Viewport/Track1/Cart3" to="Splitter/ViewportContainer3/Viewport/Camera3" method="cart_despawn"]
