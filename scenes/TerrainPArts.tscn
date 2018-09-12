@@ -1,84 +1,84 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=75 format=2]
 
-[ext_resource path="res://terrain assets/canal-corner-high.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://terrain assets/TerraintMateria;.tres" type="Material" id=2]
-[ext_resource path="res://terrain assets/canal-high-water-low.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://terrain assets/canal-corner-low.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://terrain assets/water-beach-concave.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://terrain assets/water-beach-convex.obj" type="ArrayMesh" id=6]
-[ext_resource path="res://terrain assets/water-beach-corner-inner.obj" type="ArrayMesh" id=7]
-[ext_resource path="res://terrain assets/water-beach-corner-outer.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://terrain assets/water-beach-straight.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://terrain assets/water-bedding-convex.obj" type="ArrayMesh" id=10]
-[ext_resource path="res://terrain assets/water-bedding-straight.obj" type="ArrayMesh" id=11]
-[ext_resource path="res://terrain assets/water-beddng-concave.obj" type="ArrayMesh" id=12]
-[ext_resource path="res://terrain assets/water-land-inner.obj" type="ArrayMesh" id=13]
-[ext_resource path="res://terrain assets/water-land-outer.obj" type="ArrayMesh" id=14]
-[ext_resource path="res://terrain assets/water-land-straight.obj" type="ArrayMesh" id=15]
-[ext_resource path="res://terrain assets/water-river-junction.obj" type="ArrayMesh" id=16]
-[ext_resource path="res://terrain assets/water.obj" type="ArrayMesh" id=17]
-[ext_resource path="res://terrain assets/canal-hill-water-low.obj" type="ArrayMesh" id=18]
-[ext_resource path="res://terrain assets/canal-hill.obj" type="ArrayMesh" id=19]
-[ext_resource path="res://terrain assets/canal-river-high.obj" type="ArrayMesh" id=20]
-[ext_resource path="res://terrain assets/canal-river-low.obj" type="ArrayMesh" id=21]
-[ext_resource path="res://terrain assets/canal-straight-high.obj" type="ArrayMesh" id=22]
-[ext_resource path="res://terrain assets/canal-straight-low.obj" type="ArrayMesh" id=23]
-[ext_resource path="res://terrain assets/dirt-low.obj" type="ArrayMesh" id=24]
-[ext_resource path="res://terrain assets/grass-low.obj" type="ArrayMesh" id=25]
-[ext_resource path="res://terrain assets/grass.obj" type="ArrayMesh" id=26]
-[ext_resource path="res://terrain assets/hill-corner2.obj" type="ArrayMesh" id=27]
-[ext_resource path="res://terrain assets/hill-corner-high.obj" type="ArrayMesh" id=28]
-[ext_resource path="res://terrain assets/hill-corner-low.obj" type="ArrayMesh" id=29]
-[ext_resource path="res://terrain assets/hill-corner.obj" type="ArrayMesh" id=30]
-[ext_resource path="res://terrain assets/hill-grass.obj" type="ArrayMesh" id=31]
-[ext_resource path="res://terrain assets/hill-ramp.obj" type="ArrayMesh" id=32]
-[ext_resource path="res://terrain assets/lot-border-low.obj" type="ArrayMesh" id=33]
-[ext_resource path="res://terrain assets/lot-border.obj" type="ArrayMesh" id=34]
-[ext_resource path="res://terrain assets/lot-corner-low.obj" type="ArrayMesh" id=35]
-[ext_resource path="res://terrain assets/lot-corner.obj" type="ArrayMesh" id=36]
-[ext_resource path="res://terrain assets/lot-exit-low.obj" type="ArrayMesh" id=37]
-[ext_resource path="res://terrain assets/lot-exit.obj" type="ArrayMesh" id=38]
-[ext_resource path="res://terrain assets/lot-low.obj" type="ArrayMesh" id=39]
-[ext_resource path="res://terrain assets/lot-parking-low.obj" type="ArrayMesh" id=40]
-[ext_resource path="res://terrain assets/lot-parking.obj" type="ArrayMesh" id=41]
-[ext_resource path="res://terrain assets/lot.obj" type="ArrayMesh" id=42]
-[ext_resource path="res://terrain assets/river-corner-high.obj" type="ArrayMesh" id=43]
-[ext_resource path="res://terrain assets/river-corner-low.obj" type="ArrayMesh" id=44]
-[ext_resource path="res://terrain assets/river-end-high.obj" type="ArrayMesh" id=45]
-[ext_resource path="res://terrain assets/river-end-low.obj" type="ArrayMesh" id=46]
-[ext_resource path="res://terrain assets/river-hill.obj" type="ArrayMesh" id=47]
-[ext_resource path="res://terrain assets/river-straight-high.obj" type="ArrayMesh" id=48]
-[ext_resource path="res://terrain assets/river-straight-low.obj" type="ArrayMesh" id=49]
-[ext_resource path="res://terrain assets/road-bridge-canal.obj" type="ArrayMesh" id=50]
-[ext_resource path="res://terrain assets/road-bridge-coast.obj" type="ArrayMesh" id=51]
-[ext_resource path="res://terrain assets/road-bridge-crossroad.obj" type="ArrayMesh" id=52]
-[ext_resource path="res://terrain assets/road-bridge-grass.obj" type="ArrayMesh" id=53]
-[ext_resource path="res://terrain assets/road-bridge-hill.obj" type="ArrayMesh" id=54]
-[ext_resource path="res://terrain assets/road-bridge-ramp.obj" type="ArrayMesh" id=55]
-[ext_resource path="res://terrain assets/road-bridge-river.obj" type="ArrayMesh" id=56]
-[ext_resource path="res://terrain assets/road-bridge-road.obj" type="ArrayMesh" id=57]
-[ext_resource path="res://terrain assets/road-bridge-water.obj" type="ArrayMesh" id=58]
-[ext_resource path="res://terrain assets/road-corner-high.obj" type="ArrayMesh" id=59]
-[ext_resource path="res://terrain assets/road-corner-low.obj" type="ArrayMesh" id=60]
-[ext_resource path="res://terrain assets/road-corner.obj" type="ArrayMesh" id=61]
-[ext_resource path="res://terrain assets/road-crossing-high.obj" type="ArrayMesh" id=62]
-[ext_resource path="res://terrain assets/road-crossing-low.obj" type="ArrayMesh" id=63]
-[ext_resource path="res://terrain assets/road-crossroad-low.obj" type="ArrayMesh" id=64]
-[ext_resource path="res://terrain assets/road-end-high.obj" type="ArrayMesh" id=65]
-[ext_resource path="res://terrain assets/road-end-low.obj" type="ArrayMesh" id=66]
-[ext_resource path="res://terrain assets/road-hill.obj" type="ArrayMesh" id=67]
-[ext_resource path="res://terrain assets/road-straight-high.obj" type="ArrayMesh" id=68]
-[ext_resource path="res://terrain assets/road-straight-low.obj" type="ArrayMesh" id=69]
-[ext_resource path="res://terrain assets/road-tjunction-high.obj" type="ArrayMesh" id=70]
-[ext_resource path="res://terrain assets/road-tjunction-low.obj" type="ArrayMesh" id=71]
-[ext_resource path="res://terrain assets/road-tunnel-entry.obj" type="ArrayMesh" id=72]
-[ext_resource path="res://terrain assets/road-tunnel-segment.obj" type="ArrayMesh" id=73]
-[ext_resource path="res://terrain assets/sand.obj" type="ArrayMesh" id=74]
-[ext_resource path="res://terrain assets/building-office-small.obj" type="ArrayMesh" id=75]
+[ext_resource path="res://terrain assets/building-office-small.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://terrain assets/canal-corner-high.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://terrain assets/canal-corner-low.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://terrain assets/canal-high-water-low.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://terrain assets/canal-hill-water-low.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://terrain assets/canal-hill.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://terrain assets/canal-river-high.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://terrain assets/canal-river-low.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://terrain assets/canal-straight-high.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://terrain assets/canal-straight-low.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://terrain assets/dirt-low.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://terrain assets/grass-low.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://terrain assets/grass.obj" type="ArrayMesh" id=13]
+[ext_resource path="res://terrain assets/hill-corner-high.obj" type="ArrayMesh" id=14]
+[ext_resource path="res://terrain assets/hill-corner-low.obj" type="ArrayMesh" id=15]
+[ext_resource path="res://terrain assets/hill-corner.obj" type="ArrayMesh" id=16]
+[ext_resource path="res://terrain assets/hill-corner2.obj" type="ArrayMesh" id=17]
+[ext_resource path="res://terrain assets/hill-grass.obj" type="ArrayMesh" id=18]
+[ext_resource path="res://terrain assets/hill-ramp.obj" type="ArrayMesh" id=19]
+[ext_resource path="res://terrain assets/lot-border-low.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://terrain assets/lot-border.obj" type="ArrayMesh" id=21]
+[ext_resource path="res://terrain assets/lot-corner-low.obj" type="ArrayMesh" id=22]
+[ext_resource path="res://terrain assets/lot-corner.obj" type="ArrayMesh" id=23]
+[ext_resource path="res://terrain assets/lot-exit-low.obj" type="ArrayMesh" id=24]
+[ext_resource path="res://terrain assets/lot-exit.obj" type="ArrayMesh" id=25]
+[ext_resource path="res://terrain assets/lot-low.obj" type="ArrayMesh" id=26]
+[ext_resource path="res://terrain assets/lot-parking-low.obj" type="ArrayMesh" id=27]
+[ext_resource path="res://terrain assets/lot-parking.obj" type="ArrayMesh" id=28]
+[ext_resource path="res://terrain assets/lot.obj" type="ArrayMesh" id=29]
+[ext_resource path="res://terrain assets/river-corner-high.obj" type="ArrayMesh" id=30]
+[ext_resource path="res://terrain assets/river-corner-low.obj" type="ArrayMesh" id=31]
+[ext_resource path="res://terrain assets/river-end-high.obj" type="ArrayMesh" id=32]
+[ext_resource path="res://terrain assets/river-end-low.obj" type="ArrayMesh" id=33]
+[ext_resource path="res://terrain assets/river-hill.obj" type="ArrayMesh" id=34]
+[ext_resource path="res://terrain assets/river-straight-high.obj" type="ArrayMesh" id=35]
+[ext_resource path="res://terrain assets/river-straight-low.obj" type="ArrayMesh" id=36]
+[ext_resource path="res://terrain assets/road-bridge-canal.obj" type="ArrayMesh" id=37]
+[ext_resource path="res://terrain assets/road-bridge-coast.obj" type="ArrayMesh" id=38]
+[ext_resource path="res://terrain assets/road-bridge-crossroad.obj" type="ArrayMesh" id=39]
+[ext_resource path="res://terrain assets/road-bridge-grass.obj" type="ArrayMesh" id=40]
+[ext_resource path="res://terrain assets/road-bridge-hill.obj" type="ArrayMesh" id=41]
+[ext_resource path="res://terrain assets/road-bridge-ramp.obj" type="ArrayMesh" id=42]
+[ext_resource path="res://terrain assets/road-bridge-river.obj" type="ArrayMesh" id=43]
+[ext_resource path="res://terrain assets/road-bridge-road.obj" type="ArrayMesh" id=44]
+[ext_resource path="res://terrain assets/road-bridge-water.obj" type="ArrayMesh" id=45]
+[ext_resource path="res://terrain assets/road-corner-high.obj" type="ArrayMesh" id=46]
+[ext_resource path="res://terrain assets/road-corner-low.obj" type="ArrayMesh" id=47]
+[ext_resource path="res://terrain assets/road-corner.obj" type="ArrayMesh" id=48]
+[ext_resource path="res://terrain assets/road-crossing-high.obj" type="ArrayMesh" id=49]
+[ext_resource path="res://terrain assets/road-crossing-low.obj" type="ArrayMesh" id=50]
+[ext_resource path="res://terrain assets/road-crossroad-low.obj" type="ArrayMesh" id=51]
+[ext_resource path="res://terrain assets/road-end-high.obj" type="ArrayMesh" id=52]
+[ext_resource path="res://terrain assets/road-end-low.obj" type="ArrayMesh" id=53]
+[ext_resource path="res://terrain assets/road-hill.obj" type="ArrayMesh" id=54]
+[ext_resource path="res://terrain assets/road-straight-high.obj" type="ArrayMesh" id=55]
+[ext_resource path="res://terrain assets/road-straight-low.obj" type="ArrayMesh" id=56]
+[ext_resource path="res://terrain assets/road-tjunction-high.obj" type="ArrayMesh" id=57]
+[ext_resource path="res://terrain assets/road-tjunction-low.obj" type="ArrayMesh" id=58]
+[ext_resource path="res://terrain assets/road-tunnel-entry.obj" type="ArrayMesh" id=59]
+[ext_resource path="res://terrain assets/road-tunnel-segment.obj" type="ArrayMesh" id=60]
+[ext_resource path="res://terrain assets/sand.obj" type="ArrayMesh" id=61]
+[ext_resource path="res://terrain assets/water-beach-concave.obj" type="ArrayMesh" id=62]
+[ext_resource path="res://terrain assets/water-beach-convex.obj" type="ArrayMesh" id=63]
+[ext_resource path="res://terrain assets/water-beach-corner-inner.obj" type="ArrayMesh" id=64]
+[ext_resource path="res://terrain assets/water-beach-corner-outer.obj" type="ArrayMesh" id=65]
+[ext_resource path="res://terrain assets/water-beach-straight.obj" type="ArrayMesh" id=66]
+[ext_resource path="res://terrain assets/water-bedding-convex.obj" type="ArrayMesh" id=67]
+[ext_resource path="res://terrain assets/water-bedding-straight.obj" type="ArrayMesh" id=68]
+[ext_resource path="res://terrain assets/water-beddng-concave.obj" type="ArrayMesh" id=69]
+[ext_resource path="res://terrain assets/water-land-inner.obj" type="ArrayMesh" id=70]
+[ext_resource path="res://terrain assets/water-land-outer.obj" type="ArrayMesh" id=71]
+[ext_resource path="res://terrain assets/water-land-straight.obj" type="ArrayMesh" id=72]
+[ext_resource path="res://terrain assets/water-river-junction.obj" type="ArrayMesh" id=73]
+[ext_resource path="res://terrain assets/water.obj" type="ArrayMesh" id=74]
 
 [node name="TerrainParts" type="Spatial"]
 
-[node name="CanalCornerhigh" type="MeshInstance" parent="."]
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -90,11 +90,25 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "material", "mesh" ]
+material/0 = null
 
-[node name="Canal_high_water_low" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1 )
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -106,11 +120,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 3 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "material" ]
+material/0 = null
 
-[node name="CanalCornerlow" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0 )
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -122,11 +135,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 4 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "material" ]
+material/0 = null
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 11 )
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -138,10 +150,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 5 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 11 )
+[node name="MeshInstance6" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -153,10 +165,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 11 )
+[node name="MeshInstance7" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -168,10 +180,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 7 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3, 4 )
+[node name="MeshInstance8" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -183,10 +195,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 8 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance5" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 13 )
+[node name="MeshInstance9" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -198,10 +210,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 9 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance6" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, 11 )
+[node name="MeshInstance10" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -213,10 +225,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 10 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance7" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2, 1 )
+[node name="MeshInstance11" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -228,10 +240,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 11 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance8" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 11 )
+[node name="MeshInstance12" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -243,10 +255,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 12 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance9" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 2 )
+[node name="MeshInstance13" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -258,10 +270,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 13 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance10" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 24 )
+[node name="MeshInstance14" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -273,10 +285,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 14 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance11" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 21 )
+[node name="MeshInstance15" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -288,10 +300,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 15 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance12" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, 32 )
+[node name="MeshInstance16" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -303,10 +315,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 16 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance13" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 5, -9 )
+[node name="MeshInstance17" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -318,11 +330,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 17 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance14" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, -11 )
+[node name="MeshInstance18" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -334,10 +345,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 18 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance15" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, -21 )
+[node name="MeshInstance19" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -349,11 +360,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 19 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance16" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, -31 )
+[node name="MeshInstance20" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -365,10 +375,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 20 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance17" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -1, 25 )
+[node name="MeshInstance21" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -380,10 +390,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 21 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance18" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, 21 )
+[node name="MeshInstance22" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -395,10 +405,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 22 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance19" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -1, -24 )
+[node name="MeshInstance23" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -410,10 +420,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 23 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance20" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, -32 )
+[node name="MeshInstance24" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -425,11 +435,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 24 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance21" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -24 )
+[node name="MeshInstance25" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -441,10 +450,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 25 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance22" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -37 )
+[node name="MeshInstance26" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -456,10 +465,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 26 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance23" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -1, -7 )
+[node name="MeshInstance27" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -471,11 +480,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 27 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance24" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 35 )
+[node name="MeshInstance28" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -487,11 +495,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 28 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance25" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 35 )
+[node name="MeshInstance29" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -503,10 +510,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 29 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance26" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -35 )
+[node name="MeshInstance30" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -518,10 +525,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 30 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance27" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, -13 )
+[node name="MeshInstance31" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -533,10 +540,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 31 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance28" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, -45 )
+[node name="MeshInstance32" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -548,10 +555,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 32 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance29" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -46 )
+[node name="MeshInstance33" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -563,10 +570,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 33 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance30" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 35 )
+[node name="MeshInstance34" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -578,10 +585,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 34 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance31" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -1, 6 )
+[node name="MeshInstance35" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -593,10 +600,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 35 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance32" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, -44 )
+[node name="MeshInstance36" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -608,10 +615,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 36 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance33" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, -1, -28 )
+[node name="MeshInstance37" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -623,10 +630,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 37 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance34" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 2, 42 )
+[node name="MeshInstance38" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -638,10 +645,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 38 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance35" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 13, 24 )
+[node name="MeshInstance39" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -653,11 +660,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 39 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance36" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49, -1, 10 )
+[node name="MeshInstance40" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -669,10 +675,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 40 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance37" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -53 )
+[node name="MeshInstance41" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -684,10 +690,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 41 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance38" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 44 )
+[node name="MeshInstance42" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -699,10 +705,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 42 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance39" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -43 )
+[node name="MeshInstance43" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -714,10 +720,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 43 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance40" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -1, -43 )
+[node name="MeshInstance44" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -729,10 +735,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 44 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance41" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 24 )
+[node name="MeshInstance45" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -744,10 +750,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 45 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance42" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -1, -24 )
+[node name="MeshInstance46" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -759,10 +765,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 46 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance43" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1, 40 )
+[node name="MeshInstance47" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -774,10 +780,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 47 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance44" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -1, -35 )
+[node name="MeshInstance48" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -789,10 +795,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 48 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance45" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -1, 29 )
+[node name="MeshInstance49" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -804,10 +810,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 49 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance46" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, -45 )
+[node name="MeshInstance50" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -819,10 +825,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 50 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance47" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, -1, -15 )
+[node name="MeshInstance51" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -834,10 +840,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 51 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance48" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -1, -32 )
+[node name="MeshInstance52" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -849,10 +855,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 52 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance49" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 43 )
+[node name="MeshInstance53" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -864,10 +870,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 53 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance50" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, -1, -3 )
+[node name="MeshInstance54" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -879,10 +885,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 54 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance51" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, -1, -7 )
+[node name="MeshInstance55" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -894,10 +900,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 55 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance52" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -1, -46 )
+[node name="MeshInstance56" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -909,10 +915,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 56 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance53" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43, -1, -44 )
+[node name="MeshInstance57" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -924,10 +930,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 57 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance54" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -1, -34 )
+[node name="MeshInstance58" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -939,10 +945,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 58 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance55" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1, 20 )
+[node name="MeshInstance59" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -954,10 +960,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 59 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance56" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 2, -13 )
+[node name="MeshInstance60" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -969,10 +975,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 60 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance57" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 15 )
+[node name="MeshInstance61" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -984,10 +990,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 61 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance58" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -1, 23 )
+[node name="MeshInstance62" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -999,10 +1005,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 62 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance59" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -1, -13 )
+[node name="MeshInstance63" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1014,10 +1020,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 63 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance60" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -1, -28 )
+[node name="MeshInstance64" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1029,10 +1035,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 64 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance61" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, -1, -25 )
+[node name="MeshInstance65" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1044,10 +1050,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 65 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance62" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -1, -25 )
+[node name="MeshInstance66" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1059,10 +1065,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 66 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance63" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -5, -16 )
+[node name="MeshInstance67" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1074,10 +1080,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 67 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance64" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -44 )
+[node name="MeshInstance68" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1089,10 +1095,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 68 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance65" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -1, -25 )
+[node name="MeshInstance69" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1104,11 +1110,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 69 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "material" ]
+material/0 = null
 
-[node name="MeshInstance66" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, 44 )
+[node name="MeshInstance70" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1120,10 +1125,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 70 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance67" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -15 )
+[node name="MeshInstance71" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1135,10 +1140,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 71 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance68" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 1, 33 )
+[node name="MeshInstance72" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1150,10 +1155,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 72 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance69" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -1, -4 )
+[node name="MeshInstance73" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1165,10 +1170,10 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 73 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 
-[node name="MeshInstance70" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -5, -3 )
+[node name="MeshInstance74" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1180,21 +1185,5 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 74 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
-_sections_unfolded = [ "mesh" ]
-
-[node name="MeshInstance71" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 4, 51 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 75 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 2 )
+material/0 = null
 

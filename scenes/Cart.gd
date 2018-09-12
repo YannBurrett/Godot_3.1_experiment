@@ -35,6 +35,7 @@ func apply_custom_colour():
 	var helmet = 3
 	var suit = 1
 	
+
 	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))

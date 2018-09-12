@@ -1,16 +1,18 @@
 extends Control
 
-onready var view1 = $Splitter/ViewportContainer1/Viewport
-onready var view2 = $Splitter/ViewportContainer2/Viewport
-onready var view3 = $Splitter/ViewportContainer3/Viewport
-onready var view4 = $Splitter/ViewportContainer4/Viewport
-onready var camera1 = $Splitter/ViewportContainer3/Viewport
-onready var track = $Splitter/ViewportContainer4/Viewport
 
 func _ready():
+	var view1 = $Splitter/ViewportContainer1/Viewport
+	var view2 = $Splitter/ViewportContainer2/Viewport
+	var view3 = $Splitter/ViewportContainer3/Viewport
+	var view4 = $Splitter/ViewportContainer4/Viewport
+	var camera1 = $Splitter/ViewportContainer3/Viewport
+	var track = $Splitter/ViewportContainer4/Viewport
+	
 	view2.world = view1
 	view3.world = view1
 	view4.world = view1
+	
 	BGMplayer.stop()
 	BGMplayer.stream = load("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav")
 	BGMplayer.play()

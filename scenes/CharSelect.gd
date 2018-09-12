@@ -114,38 +114,27 @@ func _on_Randomise_pressed(player):
 
 
 func _on_Begin_pressed():
-	upload_colours()
-	upload_decals()
+	for player in range(ApplyCustomization.player_count+1):
+		if player == 0:
+			pass
+		else:
+			upload_customisation(player)
+
 	upload_names()
 	get_tree().change_scene("res://scenes/Tracks/SplitScreen.tscn")
 
 
-func upload_colours():
-	ApplyCustomization.Player_material[1] = materials[current_player_material_number[1]]
-	ApplyCustomization.Player_material[2] = materials[current_player_material_number[2]]
-	ApplyCustomization.Player_material[3] = materials[current_player_material_number[3]]
-	ApplyCustomization.Player_material[4] = materials[current_player_material_number[4]]
-	ApplyCustomization.Cart_material[1] = materials[current_cart_material_number[1]]
-	ApplyCustomization.Cart_material[2] = materials[current_cart_material_number[2]]
-	ApplyCustomization.Cart_material[3] = materials[current_cart_material_number[3]]
-	ApplyCustomization.Cart_material[4] = materials[current_cart_material_number[4]]
+func _on_Back_pressed():
+	get_tree().change_scene("res://scenes/PlayerSelection/PlayerPicker.tscn")
 
 
-func upload_decals():
-	ApplyCustomization.Decal_material[1] = decals[current_decal_number[1]]
-	ApplyCustomization.Decal_material[2] = decals[current_decal_number[2]]
-	ApplyCustomization.Decal_material[3] = decals[current_decal_number[3]]
-	ApplyCustomization.Decal_material[4] = decals[current_decal_number[4]]
-
+func upload_customisation(player):
+	ApplyCustomization.Player_material[player] = materials[current_player_material_number[player]]
+	ApplyCustomization.Cart_material[player] = materials[current_cart_material_number[player]]
+	ApplyCustomization.Decal_material[player] = decals[current_decal_number[player]]
 
 func upload_names():
 	ApplyCustomization.Player_names[1] = $VBoxContainer/GridContainer/View1/CenterContainer/Name1.text
 	ApplyCustomization.Player_names[2] = $VBoxContainer/GridContainer/View2/CenterContainer2/Name2.text
 	ApplyCustomization.Player_names[3] = $VBoxContainer/GridContainer/View3/CenterContainer3/Name3.text
 	ApplyCustomization.Player_names[4] = $VBoxContainer/GridContainer/View4/CenterContainer4/Name4.text
-
-func _on_Back_pressed():
-	get_tree().change_scene("res://scenes/PlayerSelection/PlayerPicker.tscn")
-
-
-

@@ -50,8 +50,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 39.0
-margin_bottom = 35.0
+margin_right = 24.0
+margin_bottom = 24.0
 rect_min_size = Vector2( 24, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -67,7 +67,8 @@ group = null
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
-_sections_unfolded = [ "Textures", "shortcut" ]
+expand = true
+_sections_unfolded = [ "Rect", "Textures", "Theme", "shortcut" ]
 
 [node name="DecalLabel" type="Label" parent="CartMaterialContainer"]
 anchor_left = 0.0
