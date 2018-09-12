@@ -231,10 +231,6 @@ margin_top = 0.0
 margin_right = 385.0
 margin_bottom = 91.0
 
-[node name="DecalButtonLeft" parent="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer" index="0"]
-margin_right = 39.0
-margin_bottom = 35.0
-
 [node name="View2" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
@@ -371,10 +367,6 @@ margin_left = 125.0
 margin_top = 0.0
 margin_right = 385.0
 margin_bottom = 91.0
-
-[node name="DecalButtonLeft" parent="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer" index="0"]
-margin_right = 39.0
-margin_bottom = 35.0
 
 [node name="View3" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
@@ -514,10 +506,6 @@ margin_top = 0.0
 margin_right = 385.0
 margin_bottom = 91.0
 
-[node name="DecalButtonLeft" parent="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer" index="0"]
-margin_right = 39.0
-margin_bottom = 35.0
-
 [node name="View4" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
@@ -654,10 +642,6 @@ margin_left = 125.0
 margin_top = 0.0
 margin_right = 385.0
 margin_bottom = 91.0
-
-[node name="DecalButtonLeft" parent="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer" index="0"]
-margin_right = 39.0
-margin_bottom = 35.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 anchor_left = 0.0

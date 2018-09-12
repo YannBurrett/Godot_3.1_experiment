@@ -26,9 +26,9 @@ func update_player_count():
 	var name4 = $Splitter/ViewportContainer4/Name4
 	
 	name1.text = ApplyCustomization.Player_names[1]
-	if name2: name2.text = ApplyCustomization.Player_names[2]
-	if name3: name3.text = ApplyCustomization.Player_names[3]
-	if name4: name4.text = ApplyCustomization.Player_names[4]
+	name2.text = ApplyCustomization.Player_names[2]
+	name3.text = ApplyCustomization.Player_names[3]
+	name4.text = ApplyCustomization.Player_names[4]
 	if ApplyCustomization.player_count == 1:
 		$Splitter/ViewportContainer2.hide()
 		$Splitter/ViewportContainer3.hide()

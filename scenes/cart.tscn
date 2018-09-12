@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Cart.gd" type="Script" id=1]
 [ext_resource path="res://racing assets/Cart.obj" type="ArrayMesh" id=2]
@@ -24,6 +24,15 @@ flip_faces = false
 size = Vector2( 24, 14 )
 subdivide_width = 5
 subdivide_depth = 5
+
+[sub_resource type="PlaneMesh" id=4]
+
+material = ExtResource( 3 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+flip_faces = false
+size = Vector2( 0.1, 0.075 )
+subdivide_width = 0
+subdivide_depth = 0
 
 [sub_resource type="BoxShape" id=3]
 
@@ -76,7 +85,7 @@ brake_mult = 1.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.0115564, 0 )
 layers = 1
 material_override = null
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
@@ -91,7 +100,7 @@ material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
-_sections_unfolded = [ "Transform", "mesh" ]
+_sections_unfolded = [ "Geometry", "Transform", "mesh" ]
 
 [node name="FlagPole" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 0.01, 0, 0, 0, 0.125, 0, 0, 0, 0.01, 0.555238, 0.267974, -0.288659 )
@@ -158,6 +167,38 @@ attachments/6/point_index = 48
 attachments/6/spatial_attachment_path = NodePath("..")
 attachments/6/offset = Vector3( 5.24256e-007, -0.208824, -0.271708 )
 _sections_unfolded = [ "Collision", "Geometry", "attachments/0", "attachments/1", "attachments/2", "attachments/3", "attachments/4", "attachments/5", "attachments/6", "material", "mesh", "pinned_points" ]
+
+[node name="Decal" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( -4.37114e-008, -1, -4.37114e-008, 0, -4.37114e-008, 1, -1, 4.37114e-008, 1.91069e-015, 0.247259, 0.0527425, -0.0420296 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform", "material", "mesh" ]
+
+[node name="Decal2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( -4.37114e-008, -1, -4.37114e-008, 0, -4.37114e-008, 1, -1, 4.37114e-008, 1.91069e-015, 0.687317, 0.0527425, -0.0420296 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform", "material", "mesh" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.194924, -0.0349127 )

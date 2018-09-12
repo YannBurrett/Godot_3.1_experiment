@@ -55,6 +55,8 @@ func recolour(player):
 	get_node(Cart + "MeshInstance").set_surface_material(cart, load(materials[current_cart_material_number[player]]))
 	get_node(Cart + "MeshInstance").set_surface_material(suit, load(materials[current_player_material_number[player]]))
 	get_node(Cart + "MeshInstance/FlagPole/Flag").material_override = (load(decals[current_decal_number[player]]))
+	get_node(Cart + "MeshInstance/Decal").material_override = (load(decals[current_decal_number[player]]))
+	get_node(Cart + "MeshInstance/Decal2").material_override = (load(decals[current_decal_number[player]]))
 
 
 func _on_CartButtonLeft_pressed(player):

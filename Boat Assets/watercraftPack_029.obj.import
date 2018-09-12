@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/watercraftPack_029.obj-da334bb4aed280ca4500fc3416827fdb.mesh"
+
+[deps]
+
+files=[ "res://.import/watercraftPack_029.obj-da334bb4aed280ca4500fc3416827fdb.mesh" ]
+
+source_file="res://Boat Assets/watercraftPack_029.obj"
+dest_files=[ "res://.import/watercraftPack_029.obj-da334bb4aed280ca4500fc3416827fdb.mesh", "res://.import/watercraftPack_029.obj-da334bb4aed280ca4500fc3416827fdb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

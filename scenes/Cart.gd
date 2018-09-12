@@ -40,6 +40,8 @@ func apply_custom_colour():
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
 	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])
+	$MeshInstance/Decal.material_override = load(ApplyCustomization.Decal_material[player_id])
+	$MeshInstance/Decal2.material_override = load(ApplyCustomization.Decal_material[player_id])
 
 
 func _physics_process(delta):
