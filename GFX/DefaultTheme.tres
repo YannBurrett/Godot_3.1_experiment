@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=27 format=2]
+[gd_resource type="Theme" load_steps=28 format=2]
 
 [ext_resource path="res://GFX/fonts/Kenney Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GFX/UI/PNG/yellow_button07.png" type="Texture" id=2]
@@ -182,6 +182,16 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
+[sub_resource type="DynamicFont" id=12]
+
+size = 10
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="StyleBoxEmpty" id=10]
 
 content_margin_left = -1.0
@@ -197,7 +207,7 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Extra Spacing", "Settings", "font_data" ]
+_sections_unfolded = [ "font_data" ]
 
 [resource]
 
@@ -261,6 +271,15 @@ HSlider/styles/grabber_area = null
 HSlider/styles/grabber_disabled = null
 HSlider/styles/grabber_highlight = null
 HSlider/styles/slider = SubResource( 9 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 12 )
+Label/styles/normal = null
 LineEdit/colors/clear_button_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 LineEdit/colors/clear_button_color_pressed = Color( 1, 1, 1, 1 )
 LineEdit/colors/cursor_color = Color( 0.941176, 0.941176, 0.941176, 1 )
@@ -273,5 +292,5 @@ LineEdit/icons/clear = null
 LineEdit/styles/focus = null
 LineEdit/styles/normal = SubResource( 10 )
 LineEdit/styles/read_only = null
-_sections_unfolded = [ "Button/fonts/font", "Button/styles", "Button/styles/disabled", "ButtonGroup/styles", "CheckBox/colors", "CheckBox/fonts", "CheckBox/icons", "CheckBox/icons/unchecked", "CheckButton/constants", "HScrollBar/styles", "HScrollBar/styles/grabber_highlight", "HSlider/icons", "HSlider/icons/tick", "HSlider/styles/slider", "LineEdit", "LineEdit/colors", "LineEdit/styles", "default_font" ]
+_sections_unfolded = [ "Button/fonts/font", "Button/styles", "Button/styles/disabled", "ButtonGroup/styles", "CheckBox/colors", "CheckBox/fonts", "CheckBox/icons", "CheckBox/icons/unchecked", "CheckButton/constants", "HScrollBar/styles", "HScrollBar/styles/grabber_highlight", "HSlider/icons", "HSlider/icons/tick", "HSlider/styles/slider", "Label", "Label/fonts", "Label/styles", "LineEdit/colors", "LineEdit/styles", "default_font" ]
 

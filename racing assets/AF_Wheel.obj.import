@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/AF_Wheel.obj-1853d8f61646f746ff0b9a9356a3f3c9.mesh"
+
+[deps]
+
+files=[ "res://.import/AF_Wheel.obj-1853d8f61646f746ff0b9a9356a3f3c9.mesh" ]
+
+source_file="res://racing assets/AF_Wheel.obj"
+dest_files=[ "res://.import/AF_Wheel.obj-1853d8f61646f746ff0b9a9356a3f3c9.mesh", "res://.import/AF_Wheel.obj-1853d8f61646f746ff0b9a9356a3f3c9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.275, 0.275, 0.275 )
+optimize_mesh=true

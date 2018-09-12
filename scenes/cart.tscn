@@ -2,8 +2,8 @@
 
 [ext_resource path="res://scenes/Cart.gd" type="Script" id=1]
 [ext_resource path="res://racing assets/Cart.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://scenes/ChararcterCustomisation/DiscoveringGodot.material" type="Material" id=3]
-[ext_resource path="res://AF_Wheel.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=3]
+[ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=5]
 
 [sub_resource type="CylinderMesh" id=1]
@@ -33,7 +33,7 @@ extents = Vector3( 0.221525, 0.174357, 0.377656 )
 [node name="Cart" type="VehicleBody"]
 input_ray_pickable = true
 input_capture_on_drag = false
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 mode = 0
 mass = 51.0204
@@ -59,7 +59,7 @@ engine_force = 0.0
 brake = 0.0
 steering = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Motion" ]
+_sections_unfolded = [ "Collision", "Motion" ]
 player_id = 1
 MAX_ENGINE_FORCE = 50
 MAX_BRAKE_FORCE = 5.0
@@ -91,7 +91,7 @@ material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
-_sections_unfolded = [ "Transform", "material", "mesh" ]
+_sections_unfolded = [ "Transform", "mesh" ]
 
 [node name="FlagPole" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 0.01, 0, 0, 0, 0.125, 0, 0, 0, 0.01, 0.555238, 0.267974, -0.288659 )
@@ -109,7 +109,7 @@ skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
 
-[node name="SoftBody" type="SoftBody" parent="MeshInstance/FlagPole"]
+[node name="Flag" type="SoftBody" parent="MeshInstance/FlagPole"]
 transform = Transform( -4.3688e-008, -12.5, 0, -4.3688e-008, 2.38835e-014, 0.086418, -0.999466, 5.46391e-007, -3.77745e-009, 0, 0.396102, -12.2653 )
 layers = 1
 material_override = null
@@ -125,7 +125,7 @@ skeleton = NodePath("..")
 material/0 = null
 collision_layer = 0
 collision_mask = 0
-parent_collision_ignore = NodePath("../..")
+parent_collision_ignore = NodePath("")
 simulation_precision = 5
 total_mass = 1.0
 linear_stiffness = 0.13
@@ -157,7 +157,7 @@ attachments/5/offset = Vector3( 5.24256e-007, -0.00718156, -0.271708 )
 attachments/6/point_index = 48
 attachments/6/spatial_attachment_path = NodePath("..")
 attachments/6/offset = Vector3( 5.24256e-007, -0.208824, -0.271708 )
-_sections_unfolded = [ "Collision", "attachments/0", "attachments/1", "attachments/2", "attachments/3", "attachments/4", "attachments/5", "attachments/6", "mesh", "pinned_points" ]
+_sections_unfolded = [ "Collision", "Geometry", "attachments/0", "attachments/1", "attachments/2", "attachments/3", "attachments/4", "attachments/5", "attachments/6", "material", "mesh", "pinned_points" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.194924, -0.0349127 )

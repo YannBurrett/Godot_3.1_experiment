@@ -35,23 +35,10 @@ func apply_custom_colour():
 	var helmet = 3
 	var suit = 1
 	
-	
-	if player_id == 1:
-		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[1]))
-		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[1]))
-		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[1]))
-	elif player_id == 2:
-		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[2]))
-		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[2]))
-		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[2]))
-	elif player_id == 3:
-		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[3]))
-		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[3]))
-		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[3]))
-	else:
-		$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[4]))
-		$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[4]))
-		$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[4]))
+	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
+	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
+	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
+	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])
 
 
 func _physics_process(delta):
@@ -92,7 +79,4 @@ func _physics_process(delta):
 	else:
 		$EngineSound.stop()
 
-#func _input(event):
-#	if Input.is_action_just_pressed("ui_reset_position"):
-#		translation = get_parent().get_node("Position3D").translation
-#		rotation_degrees = Vector3(0,-90,0)
+

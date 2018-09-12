@@ -1,111 +1,35 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/CharSelect.gd" type="Script" id=1]
-[ext_resource path="res://scenes/ChararcterCustomisation/Materials.gd" type="Script" id=2]
-[ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=3]
-[ext_resource path="res://scenes/ChararcterCustomisation/Customiser.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/PlayerSelection/player_select_cart.gd" type="Script" id=6]
-
-[sub_resource type="Environment" id=1]
-
-background_mode = 0
-background_sky_custom_fov = 0.0
-background_color = Color( 0, 0, 0, 1 )
-background_energy = 1.0
-background_canvas_max_layer = 0
-ambient_light_color = Color( 1, 1, 1, 1 )
-ambient_light_energy = 0.25
-ambient_light_sky_contribution = 0.5
-fog_enabled = false
-fog_color = Color( 0.5, 0.6, 0.7, 1 )
-fog_sun_color = Color( 1, 0.9, 0.7, 1 )
-fog_sun_amount = 0.0
-fog_depth_enabled = true
-fog_depth_begin = 10.0
-fog_depth_curve = 1.0
-fog_transmit_enabled = false
-fog_transmit_curve = 1.0
-fog_height_enabled = false
-fog_height_min = 0.0
-fog_height_max = 100.0
-fog_height_curve = 1.0
-tonemap_mode = 2
-tonemap_exposure = 2.0
-tonemap_white = 0.75
-auto_exposure_enabled = false
-auto_exposure_scale = 0.4
-auto_exposure_min_luma = 0.05
-auto_exposure_max_luma = 8.0
-auto_exposure_speed = 0.5
-ss_reflections_enabled = true
-ss_reflections_max_steps = 64
-ss_reflections_fade_in = 0.15
-ss_reflections_fade_out = 2.0
-ss_reflections_depth_tolerance = 0.2
-ss_reflections_roughness = false
-ssao_enabled = true
-ssao_radius = 2.0
-ssao_intensity = 12.0
-ssao_radius2 = 0.0
-ssao_intensity2 = 0.0
-ssao_bias = 0.01
-ssao_light_affect = 1.0
-ssao_ao_channel_affect = 0.0
-ssao_color = Color( 0.433594, 0.41835, 0.41835, 1 )
-ssao_quality = 2
-ssao_blur = 3
-ssao_edge_sharpness = 4.0
-dof_blur_far_enabled = false
-dof_blur_far_distance = 10.0
-dof_blur_far_transition = 5.0
-dof_blur_far_amount = 0.1
-dof_blur_far_quality = 1
-dof_blur_near_enabled = false
-dof_blur_near_distance = 2.0
-dof_blur_near_transition = 1.0
-dof_blur_near_amount = 0.1
-dof_blur_near_quality = 1
-glow_enabled = false
-glow_levels/1 = false
-glow_levels/2 = false
-glow_levels/3 = true
-glow_levels/4 = false
-glow_levels/5 = true
-glow_levels/6 = false
-glow_levels/7 = false
-glow_intensity = 0.8
-glow_strength = 1.0
-glow_bloom = 0.25
-glow_blend_mode = 2
-glow_hdr_threshold = 1.0
-glow_hdr_scale = 2.0
-glow_bicubic_upscale = false
-adjustment_enabled = true
-adjustment_brightness = 1.0
-adjustment_contrast = 1.0
-adjustment_saturation = 1.5
-_sections_unfolded = [ "Ambient Light", "Background", "Glow", "Tonemap" ]
+[ext_resource path="res://textures/background.png" type="Texture" id=2]
+[ext_resource path="res://scenes/ChararcterCustomisation/Materials.gd" type="Script" id=3]
+[ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=4]
+[ext_resource path="res://default_env.tres" type="Environment" id=5]
+[ext_resource path="res://scenes/ChararcterCustomisation/Customiser.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/cart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/PlayerSelection/player_select_cart.gd" type="Script" id=8]
 
 [node name="CharSelect" type="Spatial"]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 0
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.392157, 0.662745, 0.792157, 1 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
 
 [node name="Materials" type="Node" parent="."]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Script" ]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -146,9 +70,9 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 4 )
 alignment = 0
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Theme", "theme" ]
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 anchor_left = 0.0
@@ -163,9 +87,9 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 3 )
+theme = ExtResource( 4 )
 columns = 2
-_sections_unfolded = [ "Margin", "Size Flags", "Theme", "custom_constants" ]
+_sections_unfolded = [ "Margin", "Theme", "custom_constants" ]
 
 [node name="View1" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
@@ -181,7 +105,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 0
-_sections_unfolded = [ "Margin" ]
+_sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View1"]
 anchor_left = 0.0
@@ -189,7 +113,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 510.0
-margin_bottom = 153.0
+margin_bottom = 162.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -202,7 +126,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View1/ViewportContainer"]
 arvr = false
-size = Vector2( 510, 153 )
+size = Vector2( 510, 162 )
 own_world = false
 world = null
 transparent_bg = true
@@ -227,7 +151,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View1/ViewportContainer/Viewport"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -1.25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.25 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -243,7 +167,7 @@ far = 100.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="VBoxContainer/GridContainer/View1/ViewportContainer/Viewport/Camera"]
-environment = SubResource( 1 )
+environment = ExtResource( 5 )
 _sections_unfolded = [ "environment" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/GridContainer/View1"]
@@ -251,9 +175,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 157.0
+margin_top = 166.0
 margin_right = 510.0
-margin_bottom = 181.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -290,29 +214,22 @@ caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Customiser1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 4 )]
-editor/display_folded = true
+[node name="Customiser1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 6 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 185.0
+margin_top = 194.0
 margin_right = 510.0
 margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View1/Customiser1" index="0"]
-margin_left = 116.0
+editor/display_folded = true
+margin_left = 125.0
 margin_top = 0.0
-margin_right = 394.0
-margin_bottom = 100.0
-
-[node name="Cart1" parent="VBoxContainer/GridContainer/View1" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
-gravity_scale = 0.0
-script = ExtResource( 6 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-rotation_speed = 1
+margin_right = 385.0
+margin_bottom = 91.0
 
 [node name="View2" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
@@ -332,13 +249,12 @@ alignment = 0
 _sections_unfolded = [ "Margin", "Size Flags" ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View2"]
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 510.0
-margin_bottom = 153.0
+margin_bottom = 162.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -350,9 +266,8 @@ stretch_shrink = 1
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View2/ViewportContainer"]
-editor/display_folded = true
 arvr = false
-size = Vector2( 510, 153 )
+size = Vector2( 510, 162 )
 own_world = false
 world = null
 transparent_bg = true
@@ -377,10 +292,10 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View2/ViewportContainer/Viewport"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.75, 0.1, 2 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.75, 0.25, 2 )
 keep_aspect = 1
 cull_mask = 1048575
-environment = null
+environment = ExtResource( 5 )
 h_offset = 0.0
 v_offset = 0.0
 doppler_tracking = 0
@@ -397,9 +312,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 157.0
+margin_top = 166.0
 margin_right = 510.0
-margin_bottom = 181.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -436,29 +351,22 @@ caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Customiser2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 4 )]
+[node name="Customiser2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 6 )]
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 185.0
+margin_top = 194.0
 margin_right = 510.0
 margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View2/Customiser2" index="0"]
-margin_left = 116.0
+margin_left = 125.0
 margin_top = 0.0
-margin_right = 394.0
-margin_bottom = 100.0
-
-[node name="Cart2" parent="VBoxContainer/GridContainer/View2" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2 )
-gravity_scale = 0.0
-script = ExtResource( 6 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-rotation_speed = 1
+margin_right = 385.0
+margin_bottom = 91.0
 
 [node name="View3" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
@@ -478,13 +386,12 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View3"]
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 510.0
-margin_bottom = 153.0
+margin_bottom = 162.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -496,9 +403,8 @@ stretch_shrink = 1
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View3/ViewportContainer"]
-editor/display_folded = true
 arvr = false
-size = Vector2( 510, 153 )
+size = Vector2( 510, 162 )
 own_world = false
 world = null
 transparent_bg = true
@@ -523,7 +429,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View3/ViewportContainer/Viewport"]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0.1, 4.72 )
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0.25, 4.72 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -544,9 +450,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 157.0
+margin_top = 166.0
 margin_right = 510.0
-margin_bottom = 181.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -583,29 +489,22 @@ caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Customiser3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 4 )]
+[node name="Customiser3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 6 )]
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 185.0
+margin_top = 194.0
 margin_right = 510.0
 margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View3/Customiser3" index="0"]
-margin_left = 116.0
+margin_left = 125.0
 margin_top = 0.0
-margin_right = 394.0
-margin_bottom = 100.0
-
-[node name="Cart3" parent="VBoxContainer/GridContainer/View3" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5 )
-gravity_scale = 0.0
-script = ExtResource( 6 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-rotation_speed = 1
+margin_right = 385.0
+margin_bottom = 91.0
 
 [node name="View4" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
 anchor_left = 0.0
@@ -626,13 +525,12 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/GridContainer/View4"]
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 510.0
-margin_bottom = 153.0
+margin_bottom = 162.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -645,7 +543,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="VBoxContainer/GridContainer/View4/ViewportContainer"]
 arvr = false
-size = Vector2( 510, 153 )
+size = Vector2( 510, 162 )
 own_world = false
 world = null
 transparent_bg = true
@@ -670,7 +568,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View4/ViewportContainer/Viewport"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.75, 0.1, 2 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.75, 0.25, 2 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -690,9 +588,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 157.0
+margin_top = 166.0
 margin_right = 510.0
-margin_bottom = 181.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -729,29 +627,21 @@ caret_blink_speed = 0.65
 caret_position = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Customiser4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 4 )]
-editor/display_folded = true
+[node name="Customiser4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 6 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 185.0
+margin_top = 194.0
 margin_right = 510.0
 margin_bottom = 285.0
 
 [node name="CartMaterialContainer" parent="VBoxContainer/GridContainer/View4/Customiser4" index="0"]
-margin_left = 116.0
+margin_left = 125.0
 margin_top = 0.0
-margin_right = 394.0
-margin_bottom = 100.0
-
-[node name="Cart4" parent="VBoxContainer/GridContainer/View4" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2 )
-gravity_scale = 0.0
-script = ExtResource( 6 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
-rotation_speed = 1
+margin_right = 385.0
+margin_bottom = 91.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 anchor_left = 0.0
@@ -832,21 +722,59 @@ text = "Begin!"
 flat = false
 align = 1
 
+[node name="Carts" type="Node" parent="."]
+
+[node name="Cart1" parent="Carts" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+gravity_scale = 0.0
+script = ExtResource( 8 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="Cart2" parent="Carts" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2 )
+gravity_scale = 0.0
+script = ExtResource( 8 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="Cart3" parent="Carts" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5 )
+gravity_scale = 0.0
+script = ExtResource( 8 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[node name="Cart4" parent="Carts" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2 )
+gravity_scale = 0.0
+script = ExtResource( 8 )
+_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+rotation_speed = 1
+
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/DecalButtonLeft" to="." method="_on_DecalButtonLeft_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/DecalButtonRight" to="." method="_on_DecalButtonRight_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/DecalButtonLeft" to="." method="_on_DecalButtonLeft_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/DecalButtonRight" to="." method="_on_DecalButtonRight_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View2/Customiser2/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/DecalButtonLeft" to="." method="_on_DecalButtonLeft_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/DecalButtonRight" to="." method="_on_DecalButtonRight_pressed" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/SuitButtonRight" to="." method="_on_SuitButtonRight_pressed" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View3/Customiser3/CartMaterialContainer/Randomise" to="." method="_on_Randomise_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/DecalButtonLeft" to="." method="_on_DecalButtonLeft_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/DecalButtonRight" to="." method="_on_DecalButtonRight_pressed" binds= [ 4 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/CartButtonLeft" to="." method="_on_CartButtonLeft_pressed" binds= [ 4 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/CartButtonRight" to="." method="_on_CartButtonRight_pressed" binds= [ 4 ]]
 [connection signal="pressed" from="VBoxContainer/GridContainer/View4/Customiser4/CartMaterialContainer/SuitButtonLeft" to="." method="_on_SuitButtonLeft_pressed" binds= [ 4 ]]
