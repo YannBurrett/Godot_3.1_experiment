@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gas-station.obj-0f7711424a29dddfe46a58b7c93846a1.mesh"
+
+[deps]
+
+files=[ "res://.import/gas-station.obj-0f7711424a29dddfe46a58b7c93846a1.mesh" ]
+
+source_file="res://suburb assets/gas-station.obj"
+dest_files=[ "res://.import/gas-station.obj-0f7711424a29dddfe46a58b7c93846a1.mesh", "res://.import/gas-station.obj-0f7711424a29dddfe46a58b7c93846a1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

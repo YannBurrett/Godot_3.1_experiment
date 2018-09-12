@@ -55,8 +55,6 @@ func recolour(player):
 	get_node(Cart + "MeshInstance").set_surface_material(cart, load(materials[current_cart_material_number[player]]))
 	get_node(Cart + "MeshInstance").set_surface_material(suit, load(materials[current_player_material_number[player]]))
 	get_node(Cart + "MeshInstance/FlagPole/Flag").material_override = (load(decals[current_decal_number[player]]))
-	get_node(Cart + "MeshInstance/Decal").material_override = (load(decals[current_decal_number[player]]))
-	get_node(Cart + "MeshInstance/Decal2").material_override = (load(decals[current_decal_number[player]]))
 
 
 func _on_CartButtonLeft_pressed(player):
@@ -123,10 +121,12 @@ func _on_Begin_pressed():
 			upload_customisation(player)
 
 	upload_names()
+#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/Tracks/SplitScreen.tscn")
 
 
 func _on_Back_pressed():
+#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/PlayerSelection/PlayerPicker.tscn")
 
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-hill-small.obj-37fa46c895877fa2cc11439269bc30cf.mesh"
+
+[deps]
+
+files=[ "res://.import/house-hill-small.obj-37fa46c895877fa2cc11439269bc30cf.mesh" ]
+
+source_file="res://suburb assets/house-hill-small.obj"
+dest_files=[ "res://.import/house-hill-small.obj-37fa46c895877fa2cc11439269bc30cf.mesh", "res://.import/house-hill-small.obj-37fa46c895877fa2cc11439269bc30cf.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

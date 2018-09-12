@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-country.obj-74b536236592dd90726d112e08069aea.mesh"
+
+[deps]
+
+files=[ "res://.import/house-country.obj-74b536236592dd90726d112e08069aea.mesh" ]
+
+source_file="res://suburb assets/house-country.obj"
+dest_files=[ "res://.import/house-country.obj-74b536236592dd90726d112e08069aea.mesh", "res://.import/house-country.obj-74b536236592dd90726d112e08069aea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

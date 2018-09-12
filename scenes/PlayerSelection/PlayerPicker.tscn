@@ -148,7 +148,7 @@ collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 5 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart2" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 4 )]
@@ -157,7 +157,7 @@ collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 5 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart3" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 4 )]
@@ -166,7 +166,7 @@ collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 5 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart4" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 4 )]
@@ -175,7 +175,7 @@ collision_layer = 0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 5 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Camera1" type="Camera" parent="CenterContainer/VBoxContainer/HBoxContainer/ViewportContainer1/Viewport1"]

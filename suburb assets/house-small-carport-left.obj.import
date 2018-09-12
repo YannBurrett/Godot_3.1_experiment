@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-small-carport-left.obj-941d6c883e4f15a4d621a7db8d1d9c17.mesh"
+
+[deps]
+
+files=[ "res://.import/house-small-carport-left.obj-941d6c883e4f15a4d621a7db8d1d9c17.mesh" ]
+
+source_file="res://suburb assets/house-small-carport-left.obj"
+dest_files=[ "res://.import/house-small-carport-left.obj-941d6c883e4f15a4d621a7db8d1d9c17.mesh", "res://.import/house-small-carport-left.obj-941d6c883e4f15a4d621a7db8d1d9c17.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

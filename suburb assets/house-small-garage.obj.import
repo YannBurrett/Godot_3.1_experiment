@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-small-garage.obj-677f8a086c2993a1e6e91cd47ce1a788.mesh"
+
+[deps]
+
+files=[ "res://.import/house-small-garage.obj-677f8a086c2993a1e6e91cd47ce1a788.mesh" ]
+
+source_file="res://suburb assets/house-small-garage.obj"
+dest_files=[ "res://.import/house-small-garage.obj-677f8a086c2993a1e6e91cd47ce1a788.mesh", "res://.import/house-small-garage.obj-677f8a086c2993a1e6e91cd47ce1a788.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

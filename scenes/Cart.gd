@@ -2,6 +2,9 @@ extends VehicleBody
 
 export var player_id = 1
 
+var respawn_point
+var last_checkpoint = 1
+
 ############################################################
 # behaviour values
 
@@ -25,6 +28,7 @@ export var joy_brake = JOY_ANALOG_L2
 export var brake_mult = 1.0
 
 func _ready():
+	respawn_point = translation
 	if player_id > ApplyCustomization.player_count:
 		queue_free()
 	apply_custom_colour()
@@ -40,8 +44,6 @@ func apply_custom_colour():
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
 	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])
-	$MeshInstance/Decal.material_override = load(ApplyCustomization.Decal_material[player_id])
-	$MeshInstance/Decal2.material_override = load(ApplyCustomization.Decal_material[player_id])
 
 
 func _physics_process(delta):
@@ -82,4 +84,18 @@ func _physics_process(delta):
 	else:
 		$EngineSound.stop()
 
+	if translation.y <0:
+		respawn()
+		
 
+func respawn():
+	translation = respawn_point
+
+
+func checkpoint(spawn_point, checkpoint_id):
+	if checkpoint_id < last_checkpoint:
+		print("wrong way!")
+	else:
+		respawn_point = spawn_point
+		last_checkpoint = checkpoint_id
+		print("checkpoint " + str(checkpoint_id))

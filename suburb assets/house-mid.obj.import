@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-mid.obj-bd326c983d19bcc1a72cc4b67e154d29.mesh"
+
+[deps]
+
+files=[ "res://.import/house-mid.obj-bd326c983d19bcc1a72cc4b67e154d29.mesh" ]
+
+source_file="res://suburb assets/house-mid.obj"
+dest_files=[ "res://.import/house-mid.obj-bd326c983d19bcc1a72cc4b67e154d29.mesh", "res://.import/house-mid.obj-bd326c983d19bcc1a72cc4b67e154d29.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

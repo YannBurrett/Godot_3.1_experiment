@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-luxurious.obj-ea31d61acf79bc76f9f2ac0e1f201cad.mesh"
+
+[deps]
+
+files=[ "res://.import/house-luxurious.obj-ea31d61acf79bc76f9f2ac0e1f201cad.mesh" ]
+
+source_file="res://suburb assets/house-luxurious.obj"
+dest_files=[ "res://.import/house-luxurious.obj-ea31d61acf79bc76f9f2ac0e1f201cad.mesh", "res://.import/house-luxurious.obj-ea31d61acf79bc76f9f2ac0e1f201cad.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
