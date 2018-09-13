@@ -99,3 +99,5 @@ func checkpoint(spawn_point, checkpoint_id):
 		respawn_point = spawn_point
 		last_checkpoint = checkpoint_id
 		print("checkpoint " + str(checkpoint_id))
+		$CheckpointParticles.emitting = true
+		$CheckpointParticles/AudioStreamPlayer3D.play()
