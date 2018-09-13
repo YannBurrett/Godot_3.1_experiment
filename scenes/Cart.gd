@@ -3,7 +3,9 @@ extends VehicleBody
 export var player_id = 1
 
 var respawn_point
-var last_checkpoint = 1
+var last_checkpoint = 0
+var total_checkpoints
+var lap = 0
 
 ############################################################
 # behaviour values
@@ -30,7 +32,7 @@ export var brake_mult = 1.0
 func _ready():
 	respawn_point = translation
 	if player_id > ApplyCustomization.player_count:
-		queue_free()
+		call_deferred("queue_free")
 	apply_custom_colour()
 
 
@@ -86,18 +88,41 @@ func _physics_process(delta):
 
 	if translation.y <0:
 		respawn()
-		
+	
 
 func respawn():
 	translation = respawn_point
 
 
+func update_checkpoints(checkpoints):
+	total_checkpoints = checkpoints
+
+
 func checkpoint(spawn_point, checkpoint_id):
-	if checkpoint_id < last_checkpoint:
-		print("wrong way!")
-	else:
+	if checkpoint_id == last_checkpoint:
+		pass
+	elif checkpoint_id == (last_checkpoint +1):
 		respawn_point = spawn_point
 		last_checkpoint = checkpoint_id
 		print("checkpoint " + str(checkpoint_id))
+		$AnimationPlayer.play("checkpoint")
+	else:
+		print("wrong way!")
+		respawn()
+
+
+func add_lap():
+	if last_checkpoint == total_checkpoints:
+		lap += 1
+		last_checkpoint = 0
+		get_tree().call_group("gamestate", "track_lap", player_id, lap)
 		$CheckpointParticles.emitting = true
-		$CheckpointParticles/AudioStreamPlayer3D.play()
+		print(player_id)
+		print(lap)
+	elif last_checkpoint == 0:
+		pass
+	else: respawn()
+
+#warning-ignore:unused_argument
+func victory(player):
+	print("I win!")

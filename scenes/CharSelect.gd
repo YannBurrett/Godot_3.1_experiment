@@ -9,6 +9,8 @@ var current_decal_number = {1: 1, 2: 1, 3: 1, 4: 1}
 var materials
 var decals
 
+onready var splitscreen = "res://scenes/Tracks/SplitScreen.tscn"
+
 func _ready():
 	update_materials_list()
 	update_decal_list()
@@ -122,7 +124,7 @@ func _on_Begin_pressed():
 
 	upload_names()
 #warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/Tracks/SplitScreen.tscn")
+	get_tree().change_scene(splitscreen)
 
 
 func _on_Back_pressed():

@@ -32,5 +32,6 @@ func update_windows(value):
 
 func _on_BeginButton_pressed():
 	ApplyCustomization.player_count = player_count
+#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/ChararcterCustomisation/SplitCustomization.tscn")
 	
