@@ -123,14 +123,11 @@ func _on_Begin_pressed():
 			upload_customisation(player)
 
 	upload_names()
-#warning-ignore:return_value_discarded
-	get_tree().change_scene(splitscreen)
+	SceneSwitcher.pick_track()
 
 
 func _on_Back_pressed():
-#warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/PlayerSelection/PlayerPicker.tscn")
-
+	SceneSwitcher.pick_players()
 
 func upload_customisation(player):
 	ApplyCustomization.Player_material[player] = materials[current_player_material_number[player]]

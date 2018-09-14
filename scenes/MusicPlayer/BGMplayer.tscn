@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Ending.wav" type="AudioStream" id=1]
+[ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" type="AudioStream" id=1]
 
 [node name="BGMplayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
@@ -10,4 +10,5 @@ autoplay = true
 stream_paused = false
 mix_target = 0
 bus = "Master"
+_sections_unfolded = [ "stream" ]
 

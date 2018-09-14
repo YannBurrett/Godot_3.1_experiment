@@ -6,14 +6,12 @@ func _ready():
 	var view2 = $Splitter/ViewportContainer2/Viewport
 	var view3 = $Splitter/ViewportContainer3/Viewport
 	var view4 = $Splitter/ViewportContainer4/Viewport
-#warning-ignore:unused_variable
-	var camera1 = $Splitter/ViewportContainer3/Viewport
-#warning-ignore:unused_variable
-	var track = $Splitter/ViewportContainer4/Viewport
+
 	
 	view2.world = view1
 	view3.world = view1
 	view4.world = view1
+	
 	
 	BGMplayer.stop()
 	BGMplayer.stream = load("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav")

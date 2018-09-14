@@ -16,13 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Racing Sandbox"
-run/main_scene="res://scenes/PlayerSelection/PlayerPicker.tscn"
+run/main_scene="res://scenes/SceneSwitcher/SceneSwitcher.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 ApplyCustomization="*res://scenes/ChararcterCustomisation/ApplyCustomization.gd"
 BGMplayer="*res://scenes/MusicPlayer/BGMplayer.tscn"
+SceneSwitcher="*res://scenes/SceneSwitcher/SceneSwitcher.tscn"
 
 [importer_defaults]
 
