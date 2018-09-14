@@ -35,8 +35,14 @@ func update_player_count():
 		$Splitter/ViewportContainer2.hide()
 		$Splitter/ViewportContainer3.hide()
 		$Splitter/ViewportContainer4.hide()
+		$Splitter/ViewportContainer2/Viewport/Camera2.cart_despawn()
+		$Splitter/ViewportContainer3/Viewport/Camera3.cart_despawn()
+		$Splitter/ViewportContainer4/Viewport/Camera4.cart_despawn()
 	if ApplyCustomization.player_count == 2:
 		$Splitter/ViewportContainer3.hide()
 		$Splitter/ViewportContainer4.hide()
+		$Splitter/ViewportContainer3/Viewport/Camera3.cart_despawn()
+		$Splitter/ViewportContainer4/Viewport/Camera4.cart_despawn()
 	if ApplyCustomization.player_count == 3:
 		$Splitter/ViewportContainer4.hide()
+		$Splitter/ViewportContainer4/Viewport/Camera4.cart_despawn()

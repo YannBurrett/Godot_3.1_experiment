@@ -123,6 +123,6 @@ func add_lap():
 		pass
 	else: respawn()
 
-#warning-ignore:unused_argument
-func victory(player):
-	print("I win!")
+func win(player):
+	if player == player_id:
+		get_tree().call_group("victory", "win", player_id)

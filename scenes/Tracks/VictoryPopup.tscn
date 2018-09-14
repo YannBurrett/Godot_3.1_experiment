@@ -1,0 +1,194 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Tracks/VictoryPopup.gd" type="Script" id=1]
+[ext_resource path="res://textures/sonicExplosion00.png" type="Texture" id=2]
+[ext_resource path="res://textures/noun_champion_1932388_E6DA00.svg" type="Texture" id=3]
+[ext_resource path="res://GFX/fonts/Kenney Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Circle"
+length = 8.0
+loop = true
+step = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0, 270.0, 360.0 ]
+}
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="VictoryPopup" type="Popup" groups=[
+"victory",
+]]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+script = ExtResource( 1 )
+_sections_unfolded = [ "Theme" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+modulate = Color( 1, 1, 1, 0.603922 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 312.0
+margin_top = 100.0
+margin_right = 712.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 400, 400 )
+rect_rotation = 326.889
+rect_pivot_offset = Vector2( 200, 200 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+_sections_unfolded = [ "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer/TextureRect"]
+root_node = NodePath("..")
+autoplay = "Circle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Circle = SubResource( 2 )
+blend_times = [  ]
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 412.0
+margin_top = 195.0
+margin_right = 612.0
+margin_bottom = 405.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/CenterContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 200.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 200, 210 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+_sections_unfolded = [ "Mouse", "Rect", "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 332.0
+margin_top = 208.0
+margin_right = 692.0
+margin_bottom = 392.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Player" type="Label" parent="CenterContainer/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 360.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Player"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_fonts/font" ]
+
+[node name="Wins!" type="Label" parent="CenterContainer/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 94.0
+margin_right = 360.0
+margin_bottom = 184.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Wins!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_fonts/font" ]
+

@@ -1050,6 +1050,7 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 64 )
 skeleton = NodePath("..")
 material/0 = null
+_sections_unfolded = [ "material", "mesh" ]
 
 [node name="MeshInstance65" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
@@ -1065,6 +1066,7 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 65 )
 skeleton = NodePath("..")
 material/0 = null
+_sections_unfolded = [ "material", "mesh" ]
 
 [node name="MeshInstance66" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )

@@ -728,28 +728,28 @@ align = 1
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
 gravity_scale = 0.0
 script = ExtResource( 8 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart2" parent="Carts" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2 )
 gravity_scale = 0.0
 script = ExtResource( 8 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart3" parent="Carts" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5 )
 gravity_scale = 0.0
 script = ExtResource( 8 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [node name="Cart4" parent="Carts" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2 )
 gravity_scale = 0.0
 script = ExtResource( 8 )
-_sections_unfolded = [ "Collision", "Motion", "Script", "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Motion", "Script", "Transform" ]
 rotation_speed = 1
 
 [connection signal="pressed" from="VBoxContainer/GridContainer/View1/Customiser1/CartMaterialContainer/DecalButtonLeft" to="." method="_on_DecalButtonLeft_pressed" binds= [ 1 ]]

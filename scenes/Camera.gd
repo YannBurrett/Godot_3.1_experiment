@@ -34,4 +34,4 @@ func _physics_process(delta):
 
 
 func cart_despawn():
-	queue_free()
+	call_deferred("queue_free")

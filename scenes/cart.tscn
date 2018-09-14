@@ -9,7 +9,7 @@
 [ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=7]
 [ext_resource path="res://textures/emote_star.png" type="Texture" id=8]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 
 resource_name = "checkpoint"
 length = 2.5
@@ -52,7 +52,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="CylinderMesh" id=3]
+[sub_resource type="CylinderMesh" id=2]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
@@ -62,7 +62,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="PlaneMesh" id=4]
+[sub_resource type="PlaneMesh" id=3]
 
 material = ExtResource( 3 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
@@ -71,12 +71,12 @@ size = Vector2( 24, 14 )
 subdivide_width = 5
 subdivide_depth = 5
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=4]
 
 margin = 0.04
 extents = Vector3( 0.221525, 0.174357, 0.377656 )
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=5]
 
 render_priority = 0
 trail_divisor = 1
@@ -113,7 +113,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Flags", "Gravity", "Initial Velocity", "Resource" ]
 
-[sub_resource type="SphereMesh" id=7]
+[sub_resource type="SphereMesh" id=6]
 
 lightmap_size_hint = Vector2( 1, 1 )
 material = ExtResource( 6 )
@@ -125,7 +125,7 @@ radial_segments = 64
 rings = 32
 is_hemisphere = false
 
-[sub_resource type="PlaneMesh" id=8]
+[sub_resource type="PlaneMesh" id=7]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
@@ -133,7 +133,7 @@ size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=8]
 
 render_priority = 0
 flags_transparent = true
@@ -240,7 +240,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 2.0
-anims/checkpoint = SubResource( 2 )
+anims/checkpoint = SubResource( 1 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -276,7 +276,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
@@ -292,7 +292,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 4 )
+mesh = SubResource( 3 )
 skeleton = NodePath("..")
 material/0 = null
 collision_layer = 0
@@ -333,7 +333,7 @@ _sections_unfolded = [ "Collision", "Geometry", "attachments/0", "attachments/1"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.194924, -0.0349127 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
@@ -514,9 +514,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = false
 draw_order = 1
-process_material = SubResource( 6 )
+process_material = SubResource( 5 )
 draw_passes = 1
-draw_pass_1 = SubResource( 7 )
+draw_pass_1 = SubResource( 6 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform", "draw_pass_1", "process_material" ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CheckpointParticles"]
@@ -551,8 +551,8 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 8 )
+mesh = SubResource( 7 )
 skeleton = NodePath("..")
-material/0 = SubResource( 9 )
+material/0 = SubResource( 8 )
 _sections_unfolded = [ "Matrix", "Transform", "Visibility", "material" ]
 
