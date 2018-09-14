@@ -18,6 +18,7 @@ export var steer_speed = 5.0
 
 var steer_target = 0.0
 var steer_angle = 0.0
+var steer_direction = 1
 
 ############################################################
 # Input
@@ -72,13 +73,13 @@ func _physics_process(delta):
 	if (steer_target < steer_angle):
 		steer_angle -= steer_speed * delta
 		if (steer_target > steer_angle):
-			steer_angle = steer_target
+			steer_angle = steer_target 
 	elif (steer_target > steer_angle):
 		steer_angle += steer_speed * delta
 		if (steer_target < steer_angle):
 			steer_angle = steer_target
 	
-	steering = steer_angle
+	steering = steer_angle * steer_direction
 
 	if throttle_val >0.1:
 		if not $EngineSound.is_playing():
@@ -126,3 +127,15 @@ func add_lap():
 func win(player):
 	if player == player_id:
 		get_tree().call_group("victory", "win", player_id)
+
+func pickup():
+	var reverser = load("res://scenes/Pickups/Reverser.tscn")
+	var reverserobject = reverser.instance()
+	add_child(reverserobject)
+	$Popup.popup()
+	$Popup/Timer.start()
+	
+
+func _on_Timer_timeout():
+	steer_direction = 1
+	$Popup.hide()

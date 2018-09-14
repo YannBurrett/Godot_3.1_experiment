@@ -2,13 +2,13 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/newlight.png-9c7e9e4ccefca0ead36ccf067f5dae0d.s3tc.stex"
-path.etc2="res://.import/newlight.png-9c7e9e4ccefca0ead36ccf067f5dae0d.etc2.stex"
+path.s3tc="res://.import/Yann128.png-3aacfb4411c93a67e89abfefc997f3fb.s3tc.stex"
+path.etc2="res://.import/Yann128.png-3aacfb4411c93a67e89abfefc997f3fb.etc2.stex"
 
 [deps]
 
-source_file="res://textures/particles/newlight.png"
-dest_files=[ "res://.import/newlight.png-9c7e9e4ccefca0ead36ccf067f5dae0d.s3tc.stex", "res://.import/newlight.png-9c7e9e4ccefca0ead36ccf067f5dae0d.etc2.stex" ]
+source_file="res://scenes/ChararcterCustomisation/DecalTextures/Yann128.png"
+dest_files=[ "res://.import/Yann128.png-3aacfb4411c93a67e89abfefc997f3fb.s3tc.stex", "res://.import/Yann128.png-3aacfb4411c93a67e89abfefc997f3fb.etc2.stex" ]
 
 [params]
 

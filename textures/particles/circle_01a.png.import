@@ -2,13 +2,13 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/magic_04.png-191bd20aa96990e04a66cd03a040e36d.s3tc.stex"
-path.etc2="res://.import/magic_04.png-191bd20aa96990e04a66cd03a040e36d.etc2.stex"
+path.s3tc="res://.import/circle_01a.png-c7ebc96b7d2bb8904be7327d9811495d.s3tc.stex"
+path.etc2="res://.import/circle_01a.png-c7ebc96b7d2bb8904be7327d9811495d.etc2.stex"
 
 [deps]
 
-source_file="res://textures/particles/magic_04.png"
-dest_files=[ "res://.import/magic_04.png-191bd20aa96990e04a66cd03a040e36d.s3tc.stex", "res://.import/magic_04.png-191bd20aa96990e04a66cd03a040e36d.etc2.stex" ]
+source_file="res://textures/particles/circle_01a.png"
+dest_files=[ "res://.import/circle_01a.png-c7ebc96b7d2bb8904be7327d9811495d.s3tc.stex", "res://.import/circle_01a.png-c7ebc96b7d2bb8904be7327d9811495d.etc2.stex" ]
 
 [params]
 

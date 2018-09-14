@@ -9,7 +9,7 @@ var last_lookat
 
 func _ready():
 	follow_this = get_node(follow_this_path)
-	last_lookat = follow_this.global_transform.origin
+	last_lookat = follow_this.global_transform.origin + Vector3(0,3,0)
 
 func _physics_process(delta):
 	var delta_v = global_transform.origin - follow_this.global_transform.origin
