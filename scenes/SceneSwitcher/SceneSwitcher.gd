@@ -5,7 +5,7 @@ onready var customisation = "res://scenes/ChararcterCustomisation/SplitCustomiza
 onready var track_selection = "res://scenes/Tracks/TrackSelector.tscn"
 
 
-onready var tracks_list ={0: "res://scenes/Tracks/TrackLoop.tscn", 1: "res://scenes/Tracks/TrackWinding.tscn"}
+onready var tracks_list ={0: "res://scenes/Tracks/TrackLoop.tscn", 1: "res://scenes/Tracks/TrackWinding.tscn", 2:"res://scenes/Tracks/TrackDoubleCross.tscn"}
 var selected_track
 var track
 

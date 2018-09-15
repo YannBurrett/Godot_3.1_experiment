@@ -473,7 +473,6 @@ material/0 = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "material", "mesh" ]
 
 [node name="StaticBody" type="StaticBody" parent="Track_Start"]
-editor/display_folded = true
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
