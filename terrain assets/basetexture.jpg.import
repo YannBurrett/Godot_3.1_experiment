@@ -1,21 +1,32 @@
 [remap]
 
-importer="texture_3d"
-type="Texture3D"
-path="res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.tex3d"
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.s3tc.stex"
+path.etc2="res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.etc2.stex"
 
 [deps]
 
 source_file="res://terrain assets/basetexture.jpg"
-dest_files=[ "res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.tex3d" ]
+dest_files=[ "res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.s3tc.stex", "res://.import/basetexture.jpg-a62f2053a4f1d8cadc541608872dc549.etc2.stex" ]
 
 [params]
 
 compress/mode=2
-compress/no_bptc_if_rgb=false
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
+flags/anisotropic=false
 flags/srgb=1
-slices/horizontal=8
-slices/vertical=8
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
