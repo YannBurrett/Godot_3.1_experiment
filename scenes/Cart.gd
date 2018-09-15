@@ -6,6 +6,7 @@ var respawn_point
 var last_checkpoint = 0
 var total_checkpoints
 var lap = 0
+var lose = false
 
 ############################################################
 # behaviour values
@@ -128,14 +129,17 @@ func add_lap():
 	else: respawn()
 
 func win(player):
-	if player == player_id:
+	if player == player_id and not lose:
 		get_tree().call_group("victory", "win", player_id)
+	else:
+		lose = true
+		
 
 func pickup():
 	var reverser = load("res://scenes/Pickups/Reverser.tscn")
 	var reverserobject = reverser.instance()
 	add_child(reverserobject)
-	$Popup.popup()
+	$Popup.popup_centered()
 	$Popup/Timer.start()
 	
 
