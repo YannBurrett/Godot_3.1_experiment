@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://terrain assets/building-office-small.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://terrain assets/TerraintMateria;.tres" type="Material" id=2]
@@ -90,6 +90,11 @@
 [ext_resource path="res://suburb assets/road-straight-house-1-low.obj" type="ArrayMesh" id=88]
 [ext_resource path="res://suburb assets/road-straight-house-2-low.obj" type="ArrayMesh" id=89]
 
+[sub_resource type="ConcavePolygonShape" id=432]
+
+margin = 0.04
+data = PoolVector3Array( 4, 3, -3, 4, 0.8, -2, 4, 3.1, -3, 4, 3, -3, 3, 3, -3, 4, 3, -4, -4, 0, -2, -4, -1, -4, -4, 0, -3, 4, 3.1, -2, 4, 0.8, -2, 3, 3.1, -2, 3, 3.1, 2, 2, 3.1, 4, 3, 3.1, -2, 2, 3.1, -4, 2, 3.1, 4, 2, 3, -4, 3, 3.1, -4, 3, 3, -4, 3, 3.1, -3, 4, -1, 4, -4, -1, 4, 4, 0, 4, -4, 0, 4, -2, 2, 4, 4, 0, 4, 3, 3.1, -4, 2, 3.1, -4, 3, 3, -4, 3, 2, -4, 3, 3, -4, 2, 2, -4, 4, 3.1, -3, 3, 3.1, -3, 4, 3, -3, 3, 3.1, -3, 4, 3.1, -3, 3, 3.1, -2, -4, 3, -3, -4, 3.1, -3, -4, 0.8, -2, -4, 3, -3, -4, 3, -4, -3, 3, -3, 4, 0, -3, 4, -1, -4, 4, 0, -2, -3, 2.5, -2, -4, 0.8, -2, -3, 3.1, -2, -3, 3.1, -3, -2, 3.1, -4, -3, 3.1, -2, -3, 3, -3, -3, 3, -4, -3, 3.1, -3, -3, 3.1, -4, -2, 3.1, -4, -3, 3.1, -3, -2, 2, 4, -4, 0, 4, -3, 2, 4, -2, 3, -4, -2, 3.1, -4, -3, 3, -4, -3, 2, -4, -2, 2, -4, -3, 3, -4, -4, 3.1, -3, -4, 3, -3, -3, 3.1, -3, -4, 3.1, -2, -4, 3.1, -3, -3, 3.1, -2, 3, 2, 4, 4, 0, 4, 2, 2, 4, 2, 2, -4, 2, 3, -4, -2, 2, -4, 4, 3, 3, 4, 3.1, 3, 4, 0.8, 2, 4, 3, 3, 4, 3, 4, 3, 3, 3, -4, 0, 4, -4, -1, 4, -4, 0, 3, 3, 2.5, 2, 4, 0.8, 2, 3, 3.1, 2, 3, 3.1, 3, 2, 3.1, 4, 3, 3.1, 2, 4, 0, -4, -4, 0, -4, 4, -1, -4, 3, 3, 3, 3, 3, 4, 3, 3.1, 3, -4, 0, -4, 4, 0, -4, -2, 2, -4, 3, 3.1, 4, 2, 3.1, 4, 3, 3.1, 3, 2, 3, 4, 2, 3.1, 4, 3, 3, 4, 3, 2, 4, 2, 2, 4, 3, 3, 4, 4, 3.1, 3, 4, 3, 3, 3, 3.1, 3, 4, 3.1, 2, 4, 3.1, 3, 3, 3.1, 2, -4, 3, 3, -4, 0.8, 2, -4, 3.1, 3, -4, 3, 3, -3, 3, 3, -4, 3, 4, 4, 0, 3, 4, -1, 4, 4, 0, 4, -4, 3.1, 2, -4, 0.8, 2, -3, 3.1, 2, -3, 2, -4, -4, 0, -4, -2, 2, -4, -3, 3.1, 4, -3, 3, 4, -3, 3.1, 3, -3, 3.1, 2, -2, 3.1, 4, -3, 3.1, 3, -3, 3.1, 4, -2, 3.1, 4, -3, 3, 4, -3, 2, 4, -3, 3, 4, -2, 2, 4, -4, 3.1, 3, -3, 3.1, 3, -4, 3, 3, -3, 3.1, 3, -4, 3.1, 3, -3, 3.1, 2, -3, 3.1, 3, -2, 3.1, 4, -3, 3.1, 4, 2, 2, -4, 4, 0, -4, 3, 2, -4, 2, 2, 4, -2, 2, 4, 2, 3, 4, -4, 0, 3, -4, 3, 3, -4, 0, 4, -4, 0, -3, -4, -1, -4, -4, 0, -4, -4, 0.8, 2, -4, 3, 3, -4, 0, 2, 3, 2, 4, 3, 3, 4, 4, 3, 4, -4, 3, 4, -3, 3, 4, -3, 2, 4, 4, 3, -4, 3, 2, -4, 4, 0, -4, 3, 2.5, -2, 3, 2.5, 2, 3, 3.1, -2, 4, 0.8, 2, 4, 0.8, -2, 4, 0, 2, 4, 0, -4, 4, -1, -4, 4, 0, -3, -4, 0, -4, -3, 2, -4, -4, 3, -4, 4, 0, 4, 3, 2, 4, 4, 3, 4, 4, 0, 3, 4, 0, 4, 4, 3, 3, 4, 0, 3, 4, 3, 3, 4, 0, 2, -3, 2.5, -2, -3, 3.1, -2, -3, 2.5, 2, -4, 0, 2, -4, 0, -2, -4, 0.8, 2, -4, 0, -3, -4, 0, -4, -4, 3, -3, -3, 2.5, 2, -4, 0.8, 2, 3, 2.5, 2, -3, 2.5, -2, 3, 2.5, -2, -4, 0.8, -2, -4, 0, -3, -4, 3, -3, -4, 0, -2, -3, 2, -4, -3, 3, -4, -4, 3, -4, -4, 3, 4, -3, 2, 4, -4, 0, 4, 4, 0, -3, 4, 3, -3, 4, 0, -4, 4, 0.8, -2, 4, 3, -3, 4, 0, -2, 4, 3, -4, 3, 3, -4, 3, 2, -4, -4, 0.8, -2, 4, 0.8, -2, -4, 0.8, 2, -3, 2.5, -2, -3, 2.5, 2, 3, 2.5, -2, 3, 3.1, -3, 2, 3.1, -4, 3, 3.1, -4, -2, 3, -4, -2, 3, 4, -2, 3.1, -4, -3, 3.1, -2, -2, 3.1, -4, -3, 3.1, 2, 3, 3.1, -2, 2, 3.1, -4, 3, 3.1, -3, -2, 3, 4, -2, 3, -4, 2, 3, 4, 4, 0, 2, 4, -1, 4, 4, 0, 3, -4, 0, 3, -4, -1, 4, -4, 0, 2, 4, -1, -4, 4, -1, 4, 4, 0, -2, -4, 0, -2, -4, 0, 2, -4, -1, -4, 4, 0.8, -2, 4, 3.1, -2, 4, 3.1, -3, 3, 3, -3, 3, 3, -4, 4, 3, -4, 4, 0.8, -2, 3, 2.5, -2, 3, 3.1, -2, 2, 3.1, 4, 2, 3.1, -4, 3, 3.1, -2, 2, 3.1, 4, 2, 3, 4, 2, 3, -4, 3, 3, -4, 3, 3, -3, 3, 3.1, -3, -4, -1, 4, -4, 0, 4, 4, 0, 4, -2, 2, 4, 2, 2, 4, 4, 0, 4, 2, 3.1, -4, 2, 3, -4, 3, 3, -4, 3, 3, -4, 2, 3, -4, 2, 2, -4, 3, 3.1, -3, 3, 3, -3, 4, 3, -3, 4, 3.1, -3, 4, 3.1, -2, 3, 3.1, -2, -4, 3.1, -3, -4, 3.1, -2, -4, 0.8, -2, -4, 3, -4, -3, 3, -4, -3, 3, -3, -4, 0.8, -2, -4, 3.1, -2, -3, 3.1, -2, -3, 3, -4, -3, 3.1, -4, -3, 3.1, -3, -2, 3.1, -4, -3, 3.1, -4, -3, 3, -4, -2, 2, -4, -2, 3, -4, -3, 3, -4, -4, 3, -3, -3, 3, -3, -3, 3.1, -3, -4, 3.1, -3, -3, 3.1, -3, -3, 3.1, -2, 2, 3, -4, -2, 3, -4, -2, 2, -4, 4, 3.1, 3, 4, 3.1, 2, 4, 0.8, 2, 4, 3, 4, 3, 3, 4, 3, 3, 3, 4, 0.8, 2, 4, 3.1, 2, 3, 3.1, 2, -4, 0, -4, -4, -1, -4, 4, -1, -4, 3, 3, 4, 3, 3.1, 4, 3, 3.1, 3, 4, 0, -4, 2, 2, -4, -2, 2, -4, 2, 3.1, 4, 3, 3.1, 4, 3, 3, 4, 2, 2, 4, 2, 3, 4, 3, 3, 4, 4, 3, 3, 3, 3, 3, 3, 3.1, 3, 4, 3.1, 3, 3, 3.1, 3, 3, 3.1, 2, -4, 0.8, 2, -4, 3.1, 2, -4, 3.1, 3, -3, 3, 3, -3, 3, 4, -4, 3, 4, -4, 0.8, 2, -3, 2.5, 2, -3, 3.1, 2, -3, 3, 4, -3, 3, 3, -3, 3.1, 3, -2, 3.1, 4, -2, 3, 4, -3, 3, 4, -3, 3, 4, -2, 3, 4, -2, 2, 4, -3, 3.1, 3, -3, 3, 3, -4, 3, 3, -4, 3.1, 3, -4, 3.1, 2, -3, 3.1, 2, -2, 2, 4, -2, 3, 4, 2, 3, 4, -4, 3, 3, -4, 3, 4, -4, 0, 4, -4, 3, 3, -4, 0, 3, -4, 0, 2, 3, 2.5, 2, 3, 3.1, 2, 3, 3.1, -2, 4, 0.8, -2, 4, 0, -2, 4, 0, 2, 4, 0, 4, 4, 3, 4, 4, 3, 3, 4, 3, 3, 4, 0.8, 2, 4, 0, 2, -3, 3.1, -2, -3, 3.1, 2, -3, 2.5, 2, -4, 0, -2, -4, 0.8, -2, -4, 0.8, 2, -4, 0, -4, -4, 3, -4, -4, 3, -3, -4, 0.8, 2, 4, 0.8, 2, 3, 2.5, 2, 3, 2.5, -2, 4, 0.8, -2, -4, 0.8, -2, -4, 3, -3, -4, 0.8, -2, -4, 0, -2, 4, 3, -3, 4, 3, -4, 4, 0, -4, 4, 3, -3, 4, 0, -3, 4, 0, -2, 4, 0.8, -2, 4, 0.8, 2, -4, 0.8, 2, -3, 2.5, 2, 3, 2.5, 2, 3, 2.5, -2, -2, 3, 4, -2, 3.1, 4, -2, 3.1, -4, -2, 3.1, -4, -2, 3.1, 4, -3, 3.1, 2, -2, 3, -4, 2, 3, -4, 2, 3, 4, 4, -1, 4, 4, 0, 2, 4, 0, -2, -4, 0, 2, -4, -1, 4, -4, -1, -4 )
+
 [sub_resource type="ConcavePolygonShape" id=418]
 
 margin = 0.04
@@ -110,10 +115,25 @@ data = PoolVector3Array( -2, 3, 4, -2, 3, -4, 2, 3, 4, 2, 3, 4, 2, 3, -4, 2, 3.1
 margin = 0.04
 extents = Vector3( 3.99562, 1, 4.39662 )
 
+[sub_resource type="ConcavePolygonShape" id=430]
+
+margin = 0.04
+data = PoolVector3Array( 4, 0, -4, 4, 1, -4, 3, 0, -4, -4, -1, 4, -4, -1, 3, -4, 0, 4, -3, -1, -4, -3, 0, -4, -4, -1, -4, 4, 0, 3, 4, -1, 3, 4, 0, 4, -4, 0, 4, -3, 0, 4, -4, -1, 4, -4, 1, 4, -3, 1, 4, -4, 0, 4, 4, 0, 4, 4, 1, 4, 4, 0, 3, -4, 0, 4, -4, 0, 3, -4, 1, 4, 4, 1, 4, 3, 1, 4, 4, 1, 3, -4, 0, -3, -4, -1, -3, -4, 0, -4, -4, 0, -2, -4, -1, -2, -4, 0, -3, 4, 0, -4, 4, -1, -4, 4, 0, -3, 4, 0, -3, 4, -1, -3, 4, 0, -2, 2, 1, -2, -2, 1, -2, 2, 1, -4, 4, 0, -3, 4, 1, -3, 4, 0, -4, 4, 0, -2, 4, 1, -2, 4, 0, -3, -4, 0, -4, -4, 1, -4, -4, 0, -3, -4, 0, -3, -4, 1, -3, -4, 0, -2, -3, 1, 4, -2, 1, 4, -3, 0, 4, -2, 1, 4, 2, 1, 4, -2, 0, 4, 4, 1, -3, 3, 1, -3, 4, 1, -4, -3, 0, 4, -2, 0, 4, -3, -1, 4, -2, 0, 4, 2, 0, 4, -2, -1, 4, -3, 0, -4, -3, 1, -4, -4, 0, -4, -2, 0, -4, -2, 1, -4, -3, 0, -4, 4, -1, -4, 4, 0, -4, 3, -1, -4, -2, -1, -4, -2, 0, -4, -3, -1, -4, 3, 0, 4, 4, 0, 4, 3, -1, 4, 2, 0, 4, 3, 0, 4, 2, -1, 4, 3, 0, 4, 3, 1, 4, 4, 0, 4, 2, 0, 4, 2, 1, 4, 3, 0, 4, -3, 1, 4, -4, 1, 4, -3, 1, 3, -2, 1.1, -4, -2, 1, -4, -2, 1.1, -2, -4, 1, -3, -4, 1, -4, -3, 1, -3, -3, 1.1, -4, -3, 1, -4, -2, 1.1, -4, 4, 1.1, 3, 4, 1, 3, 3, 1.1, 3, 2, -1, -4, 2, 0, -4, -2, -1, -4, 3, -1, -4, 3, 0, -4, 2, -1, -4, 3, 0, -4, 3, 1, -4, 2, 0, -4, 2, 0, -4, 2, 1, -4, -2, 0, -4, 4, 1.1, 2, 4, 1, 2, 4, 1.1, 3, -4, 0, 3, -4, 0, 2, -4, 1, 3, 4, 0, 3, 4, 1, 3, 4, 0, 2, 4, 0, 2, 4, -1, 2, 4, 0, 3, -4, -1, 3, -4, -1, 2, -4, 0, 3, 4, 1.1, -3, 4, 1, -3, 4, 1.1, -2, -3, 1.1, -3, -3, 1.1, -4, -2, 1.1, -2, 3, 1.1, -3, 2, 1.1, -2, 3, 1.1, -4, -3, 1.1, 3, -4, 1.1, 3, -2, 1.1, 2, 3, 1.1, 3, 3, 1, 3, 3, 1.1, 4, -4, 1.1, -2, -4, 1, -2, -4, 1.1, -3, 3, 1.1, -3, 3, 1, -3, 4, 1.1, -3, 3, 1.1, -4, 3, 1, -4, 3, 1.1, -3, -2, 1, 2, -2, 1, -2, 2, 1, 2, -2, 1, 2, -4, 1, 2, -2, 1, -2, -3, 1.1, 4, -3, 1, 4, -3, 1.1, 3, 2, 1, 2, 2, 1, -2, 4, 1, 2, 2, 1.1, 4, 2, 1, 4, 2, 1.1, 2, -4, 1.1, -3, -4, 1, -3, -3, 1.1, -3, -3, 1.1, 3, -3, 1, 3, -4, 1.1, 3, 3, 1.1, 4, 3, 1, 4, 2, 1.1, 4, -3, 1.1, -3, -3, 1, -3, -3, 1.1, -4, 2, 1.1, 2, 2, 1, 2, 4, 1.1, 2, -2, 1.1, -2, -2, 1, -2, -4, 1.1, -2, 4, 1.1, -2, 4, 1, -2, 2, 1.1, -2, -4, 1.1, -2, -4, 1.1, -3, -2, 1.1, -2, 2, 1.1, 4, 2, 1.1, 2, 3, 1.1, 4, -2, 1.1, 4, -3, 1.1, 4, -2, 1.1, 2, 3, 1.1, 3, 2, 1.1, 2, 4, 1.1, 3, 4, 1.1, -2, 2, 1.1, -2, 4, 1.1, -3, 2, 1, 4, -2, 1, 4, 2, 1, 2, -2, 1, 2, -2, 1, 4, -2, 1.1, 2, 2, 1.1, -2, 2, 1, -2, 2, 1.1, -4, -2, 1.1, 4, -2, 1, 4, -3, 1.1, 4, 2, 1.1, -4, 2, 1, -4, 3, 1.1, -4, -4, 1, 2, -2, 1, 2, -4, 1.1, 2, -4, 1.1, 3, -4, 1, 3, -4, 1.1, 2, -4, 0, 2, -4, -1, 2, -4, 0, -2, 4, 0, -2, 4, -1, -2, 4, 0, 2, 4, 0, 2, 4, 1, 2, 4, 0, -2, -4, 0, 2, -4, 0, -2, -4, 1, 2, 4, 1, -4, 3, 1, -4, 3, 0, -4, -4, -1, 3, -4, 0, 3, -4, 0, 4, -3, 0, -4, -4, 0, -4, -4, -1, -4, 4, -1, 3, 4, -1, 4, 4, 0, 4, -3, 0, 4, -3, -1, 4, -4, -1, 4, -3, 1, 4, -3, 0, 4, -4, 0, 4, 4, 1, 4, 4, 1, 3, 4, 0, 3, -4, 0, 3, -4, 1, 3, -4, 1, 4, 3, 1, 4, 3, 1, 3, 4, 1, 3, -4, -1, -3, -4, -1, -4, -4, 0, -4, -4, -1, -2, -4, -1, -3, -4, 0, -3, 4, -1, -4, 4, -1, -3, 4, 0, -3, 4, -1, -3, 4, -1, -2, 4, 0, -2, -2, 1, -2, -2, 1, -4, 2, 1, -4, 4, 1, -3, 4, 1, -4, 4, 0, -4, 4, 1, -2, 4, 1, -3, 4, 0, -3, -4, 1, -4, -4, 1, -3, -4, 0, -3, -4, 1, -3, -4, 1, -2, -4, 0, -2, -2, 1, 4, -2, 0, 4, -3, 0, 4, 2, 1, 4, 2, 0, 4, -2, 0, 4, 3, 1, -3, 3, 1, -4, 4, 1, -4, -2, 0, 4, -2, -1, 4, -3, -1, 4, 2, 0, 4, 2, -1, 4, -2, -1, 4, -3, 1, -4, -4, 1, -4, -4, 0, -4, -2, 1, -4, -3, 1, -4, -3, 0, -4, 4, 0, -4, 3, 0, -4, 3, -1, -4, -2, 0, -4, -3, 0, -4, -3, -1, -4, 4, 0, 4, 4, -1, 4, 3, -1, 4, 3, 0, 4, 3, -1, 4, 2, -1, 4, 3, 1, 4, 4, 1, 4, 4, 0, 4, 2, 1, 4, 3, 1, 4, 3, 0, 4, -4, 1, 4, -4, 1, 3, -3, 1, 3, -2, 1, -4, -2, 1, -2, -2, 1.1, -2, -4, 1, -4, -3, 1, -4, -3, 1, -3, -3, 1, -4, -2, 1, -4, -2, 1.1, -4, 4, 1, 3, 3, 1, 3, 3, 1.1, 3, 2, 0, -4, -2, 0, -4, -2, -1, -4, 3, 0, -4, 2, 0, -4, 2, -1, -4, 3, 1, -4, 2, 1, -4, 2, 0, -4, 2, 1, -4, -2, 1, -4, -2, 0, -4, 4, 1, 2, 4, 1, 3, 4, 1.1, 3, -4, 0, 2, -4, 1, 2, -4, 1, 3, 4, 1, 3, 4, 1, 2, 4, 0, 2, 4, -1, 2, 4, -1, 3, 4, 0, 3, -4, -1, 2, -4, 0, 2, -4, 0, 3, 4, 1, -3, 4, 1, -2, 4, 1.1, -2, -3, 1.1, -4, -2, 1.1, -4, -2, 1.1, -2, 2, 1.1, -2, 2, 1.1, -4, 3, 1.1, -4, -4, 1.1, 3, -4, 1.1, 2, -2, 1.1, 2, 3, 1, 3, 3, 1, 4, 3, 1.1, 4, -4, 1, -2, -4, 1, -3, -4, 1.1, -3, 3, 1, -3, 4, 1, -3, 4, 1.1, -3, 3, 1, -4, 3, 1, -3, 3, 1.1, -3, -2, 1, -2, 2, 1, -2, 2, 1, 2, -4, 1, 2, -4, 1, -2, -2, 1, -2, -3, 1, 4, -3, 1, 3, -3, 1.1, 3, 2, 1, -2, 4, 1, -2, 4, 1, 2, 2, 1, 4, 2, 1, 2, 2, 1.1, 2, -4, 1, -3, -3, 1, -3, -3, 1.1, -3, -3, 1, 3, -4, 1, 3, -4, 1.1, 3, 3, 1, 4, 2, 1, 4, 2, 1.1, 4, -3, 1, -3, -3, 1, -4, -3, 1.1, -4, 2, 1, 2, 4, 1, 2, 4, 1.1, 2, -2, 1, -2, -4, 1, -2, -4, 1.1, -2, 4, 1, -2, 2, 1, -2, 2, 1.1, -2, -4, 1.1, -3, -3, 1.1, -3, -2, 1.1, -2, 2, 1.1, 2, 3, 1.1, 3, 3, 1.1, 4, -3, 1.1, 4, -3, 1.1, 3, -2, 1.1, 2, 2, 1.1, 2, 4, 1.1, 2, 4, 1.1, 3, 2, 1.1, -2, 3, 1.1, -3, 4, 1.1, -3, -2, 1, 4, -2, 1, 2, 2, 1, 2, -2, 1, 4, -2, 1.1, 4, -2, 1.1, 2, 2, 1, -2, 2, 1, -4, 2, 1.1, -4, -2, 1, 4, -3, 1, 4, -3, 1.1, 4, 2, 1, -4, 3, 1, -4, 3, 1.1, -4, -2, 1, 2, -2, 1.1, 2, -4, 1.1, 2, -4, 1, 3, -4, 1, 2, -4, 1.1, 2, -4, -1, 2, -4, -1, -2, -4, 0, -2, 4, -1, -2, 4, -1, 2, 4, 0, 2, 4, 1, 2, 4, 1, -2, 4, 0, -2, -4, 0, -2, -4, 1, -2, -4, 1, 2 )
+
+[sub_resource type="ConcavePolygonShape" id=431]
+
+margin = 0.04
+data = PoolVector3Array( -4, -1, 4, -4, -1, 3, -4, 0, 4, -4, 1, 2, -4, 1.1, 2, -4, 1, 3, -4, 1.1, -2, -4, 1, -2, -4, 1.1, -3, -4, 0, -3, -4, -1, -3, -4, 0, -4, -4, 0, -2, -4, -1, -2, -4, 0, -3, -4, 0, 2, -4, -1, 2, -4, 0, -2, -4, -1, 3, -4, -1, 2, -4, 0, 3, 4, 3, -4, 4, 3, 4, 3, 2.75, -3, -4, 0, 4, 4, 0, 4, -4, -1, 4, 4, -1, -4, 4, 0, -4, -4, -1, -4, 3, 2.85, -3, 3, 2.75, -3, 3, 2.85, 3, -4, 0, 4, -4, 0, 3, -4, 1, 4, -4, 0, -4, -4, 1, -4, -4, 0, -3, -4, 0, -3, -4, 1, -3, -4, 0, -2, -4, 0, 2, -4, 0, -2, -4, 1, 2, -4, 0, 3, -4, 0, 2, -4, 1, 3, 3, 2.85, -3, 3, 2.85, 3, -1.8463, 2.85, -3, -1.8463, 2.85, -3, -1.8462, 2.85, 3, -2.1538, 2.6, -2, -2.1537, 2.6, 2, 4, 2.6, 2, -2.1538, 2.6, -2, 4, 1, 2, -4, 1, 2, 4, 1, -2, 3, 2.75, -3, -4, 1, -3, 4, 3, -4, 3, 2.75, 3, 4, 3, 4, -4, 1, 3, -4, 1.1, -3, -4, 1, -3, 3, 2.85, -3, 4, 2.6, 2, -2.1537, 2.6, 2, -4, 1.1, 2, -4, 1.1, -2, -2.1538, 2.6, -2, 4, 2.6, -2, -1.8462, 2.85, 3, 3, 2.85, 3, -4, 1.1, 3, 3, 2.85, -3, -1.8463, 2.85, -3, -4, 1.1, -3, -4, 1.1, 3, -4, 1.1, 2, -1.8462, 2.85, 3, -4, 1.1, -3, -1.8463, 2.85, -3, -4, 1.1, -2, -4, 1.1, 3, 3, 2.85, 3, -4, 1, 3, 4, 1, -3, 4, 0, -4, 4, 0, -3, 4, 1, 2, -4, 1.1, 2, -4, 1, 2, 4, 1, -2, -4, 1.1, -2, 4, 2.6, -2, 4, 1, 2, 4, 2.6, 2, -4, 1.1, 2, -4, 1, -2, -4, 1.1, -2, 4, 1, -2, 4, 1, 2, 4, 0, 2, 4, 1, 3, 4, 1, -2, 4, 1, -3, 4, 0, -2, 4, 0, -2, 4, 0, 2, 4, 1, -2, 4, 1, 3, 4, 2.75, 3, 4, 1, 2, 4, 2.6, -2, 4, 2.6, 2, 4, 2.75, -3, 4, 1, -3, 4, 1, -2, 4, 2.75, -3, 4, 2.75, 3, 4, 3, 4, 4, 2.75, -3, 4, 1, -3, 4, 2.75, -3, 4, 0, -4, 4, 0, -4, 4, 3, -4, -4, 0, -4, 4, 0, -4, 4, -1, -4, 4, 0, -3, 4, 0, -2, 4, 0, -3, 4, -1, -4, 4, 0, 3, 4, -1, 4, 4, 0, 4, 4, -1, 4, 4, 0, 3, 4, 0, 2, 4, -1, 4, 4, 0, 2, 4, -1, -4, -4, 1, 4, 4, 3, 4, -4, 0, 4, 4, 1, 3, 4, 0, 4, 4, 2.75, 3, 4, 0, 3, 4, 0, 4, 4, 1, 3, -4, -1, 3, -4, 0, 3, -4, 0, 4, -4, 1.1, 2, -4, 1.1, 3, -4, 1, 3, -4, 1, -2, -4, 1, -3, -4, 1.1, -3, -4, -1, -3, -4, -1, -4, -4, 0, -4, -4, -1, -2, -4, -1, -3, -4, 0, -3, -4, -1, 2, -4, -1, -2, -4, 0, -2, -4, -1, 2, -4, 0, 2, -4, 0, 3, 4, 3, 4, 3, 2.75, 3, 3, 2.75, -3, 4, 0, 4, 4, -1, 4, -4, -1, 4, 4, 0, -4, -4, 0, -4, -4, -1, -4, 3, 2.75, -3, 3, 2.75, 3, 3, 2.85, 3, -4, 0, 3, -4, 1, 3, -4, 1, 4, -4, 1, -4, -4, 1, -3, -4, 0, -3, -4, 1, -3, -4, 1, -2, -4, 0, -2, -4, 0, -2, -4, 1, -2, -4, 1, 2, -4, 0, 2, -4, 1, 2, -4, 1, 3, 3, 2.85, 3, -1.8462, 2.85, 3, -1.8463, 2.85, -3, -1.8462, 2.85, 3, -2.1537, 2.6, 2, -2.1538, 2.6, -2, 4, 2.6, 2, 4, 2.6, -2, -2.1538, 2.6, -2, -4, 1, 2, -4, 1, -2, 4, 1, -2, -4, 1, -3, -4, 1, -4, 4, 3, -4, 4, 3, 4, -4, 1, 4, -4, 1, 3, -4, 1, -3, 3, 2.75, -3, 3, 2.85, -3, -4, 1.1, 2, -2.1537, 2.6, 2, -1.8462, 2.85, 3, -1.8463, 2.85, -3, -2.1538, 2.6, -2, -4, 1.1, -2, 3, 2.85, 3, 3, 2.75, 3, -4, 1, 3, 4, 0, 2, 4, 0, 3, 4, 1, 3, 4, 1, -3, 4, 0, -3, 4, 0, -2, 4, 0, 2, 4, 1, 2, 4, 1, -2, 4, 2.75, 3, 4, 2.6, 2, 4, 1, 2, 4, 2.6, 2, 4, 2.75, 3, 4, 2.75, -3, 4, 1, -2, 4, 2.6, -2, 4, 2.75, -3, 4, 3, 4, 4, 3, -4, 4, 2.75, -3, 4, 2.75, -3, 4, 3, -4, 4, 0, -4, 4, 3, -4, -4, 1, -4, -4, 0, -4, 4, 0, 2, 4, 0, -2, 4, -1, -4, 4, 3, 4, 4, 0, 4, -4, 0, 4, 4, 0, 4, 4, 3, 4, 4, 2.75, 3 )
+
+[sub_resource type="ConcavePolygonShape" id=433]
+
+margin = 0.04
+data = PoolVector3Array( -4, 0, -4, -4, -1, -4, 4, 0, -4, -4, -1, 4, -4, 0, 4, 4, -1, 4, -4, 1, 2, -4, 1, -2, 4, 1, 2, -4, 1, 2, 4, 1, 2, -4, 2.6, 2, -4, 2.6, -2, 4, 2.6, -2, -4, 1, -2, -4, 3, 4, -4, 3, -4, 4, 3, 4, -4, 2.6, 2, 4, 2.6, 2, -4, 2.6, -2, -4, 3, -4, -4, 0, -4, 4, 3, -4, -4, 0, 4, -4, 3, 4, 4, 0, 4, -4, 1, 3, -4, 0, 4, -4, 0, 3, -4, 1, 3, -4, 2.75, 3, -4, 0, 4, -4, 0, -2, -4, 0, 2, -4, -1, -4, -4, 0, 2, -4, 0, 3, -4, -1, 4, -4, 0, 4, -4, -1, 4, -4, 0, 3, -4, -1, -4, -4, 0, -3, -4, 0, -2, -4, 0, -3, -4, -1, -4, -4, 0, -4, -4, 1, -3, -4, 0, -4, -4, 2.75, -3, -4, 3, -4, -4, 3, 4, -4, 2.75, -3, -4, 1, -3, -4, 2.75, -3, -4, 1, -2, 4, 1, -3, 4, 0, -4, 4, 0, -3, -4, 2.75, 3, -4, 2.6, 2, -4, 2.75, -3, -4, 1, 3, -4, 1, 2, -4, 2.75, 3, -4, 1, -2, -4, 1, 2, -4, 0, -2, -4, 1, -2, -4, 0, -2, -4, 1, -3, 4, 1, 2, 4, 0, 2, 4, 1, 3, 4, 1, -2, 4, 1, -3, 4, 0, -2, 4, 0, -2, 4, 0, 2, 4, 1, -2, 4, 1, 3, 4, 2.75, 3, 4, 1, 2, 4, 2.6, -2, 4, 2.6, 2, 4, 2.75, -3, 4, 1, -3, 4, 1, -2, 4, 2.75, -3, 4, 2.75, -3, 4, 2.75, 3, 4, 3, -4, 4, 1, -3, 4, 2.75, -3, 4, 0, -4, -4, 0, 3, -4, 0, 2, -4, 1, 3, 4, 0, -4, 4, -1, -4, 4, 0, -3, 4, 0, -2, 4, 0, -3, 4, -1, -4, 4, 0, 3, 4, -1, 4, 4, 0, 4, 4, -1, 4, 4, 0, 3, 4, 0, 2, 4, -1, 4, 4, 0, 2, 4, -1, -4, -4, 0, -3, -4, 0, -4, -4, 1, -3, 4, 1, 3, 4, 0, 4, 4, 2.75, 3, 4, 0, 3, 4, 0, 4, 4, 1, 3, -4, -1, -4, 4, -1, -4, 4, 0, -4, -4, 0, 4, 4, 0, 4, 4, -1, 4, -4, 1, -2, 4, 1, -2, 4, 1, 2, 4, 1, 2, 4, 2.6, 2, -4, 2.6, 2, 4, 2.6, -2, 4, 1, -2, -4, 1, -2, -4, 3, -4, 4, 3, -4, 4, 3, 4, 4, 2.6, 2, 4, 2.6, -2, -4, 2.6, -2, -4, 0, -4, 4, 0, -4, 4, 3, -4, -4, 3, 4, 4, 3, 4, 4, 0, 4, -4, 2.75, 3, -4, 3, 4, -4, 0, 4, -4, 0, 2, -4, -1, 4, -4, -1, -4, -4, 0, -4, -4, 3, -4, -4, 2.75, -3, -4, 3, 4, -4, 2.75, 3, -4, 2.75, -3, -4, 2.75, -3, -4, 2.6, -2, -4, 1, -2, -4, 2.6, 2, -4, 2.6, -2, -4, 2.75, -3, -4, 1, 2, -4, 2.6, 2, -4, 2.75, 3, -4, 1, 2, -4, 0, 2, -4, 0, -2, -4, 0, -2, -4, 0, -3, -4, 1, -3, 4, 0, 2, 4, 0, 3, 4, 1, 3, 4, 1, -3, 4, 0, -3, 4, 0, -2, 4, 0, 2, 4, 1, 2, 4, 1, -2, 4, 2.75, 3, 4, 2.6, 2, 4, 1, 2, 4, 2.6, 2, 4, 2.75, 3, 4, 2.75, -3, 4, 1, -2, 4, 2.6, -2, 4, 2.75, -3, 4, 2.75, 3, 4, 3, 4, 4, 3, -4, 4, 2.75, -3, 4, 3, -4, 4, 0, -4, -4, 0, 2, -4, 1, 2, -4, 1, 3, 4, 0, 2, 4, 0, -2, 4, -1, -4, 4, 0, 4, 4, 3, 4, 4, 2.75, 3 )
+
 [node name="TerrainParts" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.362, 6.83471, -6.68921 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -128,7 +148,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.825, 6.83471, 4.20681 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -143,7 +163,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.6388, 6.83471, -12.4756 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -158,7 +178,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, -1688.35, 3424.64 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -173,7 +193,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance5" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6425, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -188,7 +208,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance6" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.0705, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -203,7 +223,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance7" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3309, 6.83471, -8.90867 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -218,7 +238,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance8" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3365, 6.83471, -71.1478 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -233,7 +253,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance9" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99191, 6.83471, -12.0496 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -248,7 +268,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance10" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.8219, 6.83471, -65.2022 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -263,7 +283,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance11" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5713, 6.83471, 6.8875 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -278,7 +298,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance12" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.2132, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -293,7 +313,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance13" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 46.5123 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -308,7 +328,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance14" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38324, 6.83471, 32.9869 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -323,7 +343,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance15" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6981, 6.83471, 31.427 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -338,7 +358,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance16" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.906, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -353,7 +373,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance17" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0887, 6.83471, -10.2242 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -368,7 +388,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance18" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6034, 16.6857, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -383,7 +403,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance19" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2903, 6.83471, -11.9148 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -398,7 +418,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance20" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, -59.5088 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -413,7 +433,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance21" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.9609, 6.83471, -48.5145 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -428,7 +448,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance22" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, -45.5966 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -443,7 +463,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance23" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.596, 6.83471, -27.0501 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -458,7 +478,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance24" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.1581, 17.3565, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -473,7 +493,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance25" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.003, 6.83471, 36.8577 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -488,7 +508,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance26" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0166, 6.83471, -55.2013 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -503,7 +523,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance27" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0784, 6.83471, 34.9152 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -518,7 +538,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance28" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5924, 6.83471, 30.2714 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -533,7 +553,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance29" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2879, 6.83471, -54.0114 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -548,7 +568,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance30" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38007, 6.83471, -17.4044 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -563,7 +583,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance31" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.94, 6.83471, -15.7486 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -578,7 +598,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance32" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.34667, 6.83471, -27.7869 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -593,7 +613,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance33" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, -71.4872 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -608,7 +628,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance34" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5881, 6.83471, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -623,7 +643,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance35" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2933, 6.83471, 34.7838 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -638,7 +658,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance36" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -54.6625, 6.83471, -59.5429 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -653,7 +673,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance37" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3172, 6.83471, 6.71765 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -667,8 +687,22 @@ mesh = ExtResource( 38 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
+[node name="StaticBody" type="StaticBody" parent="MeshInstance37"]
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 2
+physics_material_override = null
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance37/StaticBody"]
+shape = SubResource( 432 )
+disabled = false
+
 [node name="MeshInstance38" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.8996, 6.83471, -5.48899 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -683,7 +717,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance39" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.2338, 6.83471, 15.8959 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -728,7 +762,7 @@ disabled = false
 _sections_unfolded = [ "shape" ]
 
 [node name="MeshInstance41" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5415, 6.83471, -17.0717 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -772,7 +806,7 @@ shape = SubResource( 423 )
 disabled = false
 
 [node name="MeshInstance43" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2668, 6.83471, -29.8671 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -787,7 +821,8 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance44" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 19.8783 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 5.57475, 19.8783 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -831,7 +866,7 @@ shape = SubResource( 429 )
 disabled = false
 
 [node name="MeshInstance45" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7201, 6.83471, 7.46294 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -846,7 +881,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance46" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01722, 6.83471, 9.18401 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -861,7 +896,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance47" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4131, 11.6464, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -876,7 +911,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance48" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.3656, 6.83471, 21.3716 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -891,7 +926,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance49" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3842, -0.549834, 30.5217 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -906,7 +941,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance50" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55966, 6.83471, -41.1233 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -921,7 +956,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance51" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2294, 6.8793, -42.493 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -935,8 +970,21 @@ mesh = ExtResource( 52 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
+[node name="StaticBody" type="StaticBody" parent="MeshInstance51"]
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+physics_material_override = null
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance51/StaticBody"]
+shape = SubResource( 430 )
+disabled = false
+
 [node name="MeshInstance52" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00276566, 6.83471, 14.7851 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -951,7 +999,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance53" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77.5963, -13.2582, 4.45643 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -966,7 +1014,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance54" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15886, 6.83471, 24.1388 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -981,7 +1029,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance55" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7136, 6.83471, -29.4908 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -996,7 +1044,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance56" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.775, 6.83471, 34.009 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1011,7 +1059,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance57" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5663, 0.952502, -22.0768 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1026,7 +1074,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance58" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8877, 6.83471, 47.4419 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1041,7 +1089,8 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance59" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54384, 6.83471, 34.7375 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1055,8 +1104,21 @@ mesh = ExtResource( 60 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
+[node name="StaticBody" type="StaticBody" parent="MeshInstance59"]
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+physics_material_override = null
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance59/StaticBody"]
+shape = SubResource( 431 )
+disabled = false
+
 [node name="MeshInstance60" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.4699, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1069,9 +1131,23 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 61 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance60"]
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+physics_material_override = null
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance60/StaticBody"]
+shape = SubResource( 433 )
+disabled = false
 
 [node name="MeshInstance61" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3697, 6.83471, -55.4715 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1086,7 +1162,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance62" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.7233, 6.83471, -42.6178 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1101,7 +1177,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance63" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.5637, 6.83471, -40.2062 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1116,7 +1192,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance64" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4166, 6.83471, -65.3859 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1132,7 +1208,7 @@ material/0 = ExtResource( 2 )
 _sections_unfolded = [ "material", "mesh" ]
 
 [node name="MeshInstance65" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.8088, 6.83471, -69.5145 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1148,7 +1224,7 @@ material/0 = ExtResource( 2 )
 _sections_unfolded = [ "material", "mesh" ]
 
 [node name="MeshInstance66" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1021.87, -590.641, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1163,7 +1239,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance67" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0814, 6.83471, -21.4973 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1178,7 +1254,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance68" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.3689, 6.83471, -37.5628 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1193,7 +1269,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance69" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0229, 6.83471, -40.1008 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1208,7 +1284,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance70" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.0911, -18.676, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1223,7 +1299,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance71" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.049, 6.83471, -14.5532 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1254,7 +1330,7 @@ material/0 = ExtResource( 2 )
 _sections_unfolded = [ "mesh" ]
 
 [node name="MeshInstance73" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8943, 6.83471, 52.4674 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1269,7 +1345,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance74" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6096, 6.83471, 4.45654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -110.376, -12.693, 4.45654 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1330,7 +1406,7 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 
 [node name="MeshInstance78" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89702, 2.33785, -1.21912 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.30184, 2.33785, -1.21912 )
 layers = 1
 material_override = null
 cast_shadow = 1

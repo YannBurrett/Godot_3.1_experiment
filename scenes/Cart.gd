@@ -54,7 +54,7 @@ func _physics_process(delta):
 	var throttle_val = throttle_mult * Input.get_joy_axis(0, joy_throttle)
 	var brake_val = brake_mult * Input.get_joy_axis(0, joy_brake)
 	
-	# ovverides for keyboard
+	# overides for keyboard
 	if Input.is_action_pressed("up_%s" % player_id):
 		throttle_val = 1.0
 	if Input.is_action_pressed("back_%s" % player_id):
@@ -65,6 +65,9 @@ func _physics_process(delta):
 		steer_val = 1.0
 	elif Input.is_action_pressed("right_%s" % player_id):
 		steer_val = -1.0
+	
+	if Input.is_action_just_released("reset_position_%s" % player_id):
+		respawn()
 	
 	engine_force = throttle_val * MAX_ENGINE_FORCE
 	brake = brake_val * MAX_BRAKE_FORCE
