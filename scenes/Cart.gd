@@ -92,7 +92,15 @@ func _physics_process(delta):
 
 	if translation.y <0:
 		respawn()
-	
+
+
+func lock():
+	pass
+
+
+func unlock():
+	pass
+
 
 func respawn():
 	translation = respawn_point
