@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/go.ogg-4161b22f1ae83f59b5112272cb0ad66a.oggstr"
+
+[deps]
+
+source_file="res://SFX/go.ogg"
+dest_files=[ "res://.import/go.ogg-4161b22f1ae83f59b5112272cb0ad66a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -5,6 +5,8 @@ var lap_target
 var lap_tracker = {}
 var total_checkpoints
 
+var race_won = false
+
 
 func _ready():
 	count_checkpoints()
@@ -23,10 +25,10 @@ func track_lap(player, lap):
 
 
 func win(player):
-	print(player)
-	get_tree().call_group("players", "win", player)
-	$Timer.start()
-	
+	if race_won == false:
+		get_tree().call_group("players", "win", player)
+		$Timer.start()
+	race_won = true
 
 
 func _on_Timer_timeout():
