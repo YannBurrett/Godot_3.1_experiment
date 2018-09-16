@@ -95,11 +95,13 @@ func _physics_process(delta):
 
 
 func lock():
-	pass
+	axis_lock_angular_y = true
+	axis_lock_linear_y = true
 
 
 func unlock():
-	pass
+	axis_lock_angular_y = false
+	axis_lock_linear_y = false
 
 
 func respawn():

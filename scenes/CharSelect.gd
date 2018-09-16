@@ -6,10 +6,9 @@ var current_cart_material_number = {1: 1, 2: 1, 3: 1, 4: 1}
 var current_player_material_number = {1: 1, 2: 1, 3: 1, 4: 1}
 var current_decal_number = {1: 1, 2: 1, 3: 1, 4: 1}
 
-var materials
-var decals
-
+onready var materials = $Materials.materials
 onready var splitscreen = "res://scenes/Tracks/SplitScreen.tscn"
+onready var decals = $Materials.decals
 
 func _ready():
 	update_materials_list()
@@ -22,12 +21,10 @@ func _ready():
 
 
 func update_materials_list():
-	materials = $Materials.materials
 	max_material_number = materials.size()
 
 
 func update_decal_list():
-	decals = $Materials.decals
 	max_decal_number = decals.size()
 
 
