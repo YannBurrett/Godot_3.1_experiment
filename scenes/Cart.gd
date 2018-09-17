@@ -23,11 +23,8 @@ var steer_direction = 1
 ############################################################
 # Input
 
-export var joy_steering = JOY_ANALOG_LX
 export var steering_mult = -1.0
-export var joy_throttle = JOY_ANALOG_R2
 export var throttle_mult = 1.0
-export var joy_brake = JOY_ANALOG_L2
 export var brake_mult = 1.0
 
 func _ready():
@@ -41,7 +38,6 @@ func apply_custom_colour():
 	var cart = 4
 	var helmet = 3
 	var suit = 1
-	
 
 	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
@@ -55,15 +51,15 @@ func _physics_process(delta):
 	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
 	
 	# overides for keyboard
-	if Input.is_action_pressed("up_%s" % player_id):
+	if Input.get_action_strength("up_%s" % player_id):
 		throttle_val = 1.0
-	if Input.is_action_pressed("back_%s" % player_id):
+	if Input.get_action_strength("back_%s" % player_id):
 		throttle_val = -1.0
-	if Input.is_action_pressed("brake_%s" % player_id):
+	if Input.get_action_strength("brake_%s" % player_id):
 		brake_val = 1.0
-	if Input.is_action_pressed("left_%s" % player_id):
+	if Input.get_action_strength("left_%s" % player_id):
 		steer_val = 1.0
-	elif Input.is_action_pressed("right_%s" % player_id):
+	elif Input.get_action_strength("right_%s" % player_id):
 		steer_val = -1.0
 	
 	if Input.is_action_just_released("reset_position_%s" % player_id):
@@ -121,7 +117,6 @@ func checkpoint(spawn_point, checkpoint_id):
 		print("checkpoint " + str(checkpoint_id))
 		$AnimationPlayer.play("checkpoint")
 	else:
-		print("wrong way!")
 		respawn()
 
 
@@ -136,6 +131,7 @@ func add_lap():
 	elif last_checkpoint == 0:
 		pass
 	else: respawn()
+
 
 func win(player):
 	if player == player_id:

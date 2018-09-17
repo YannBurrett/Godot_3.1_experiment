@@ -142,7 +142,7 @@ shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener", "Script", "world" ]
 
 [node name="Camera1" type="Camera" parent="Splitter/ViewportContainer1/Viewport"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 2.5, 11.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.5, 11.5 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = ExtResource( 3 )
@@ -232,7 +232,7 @@ shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener" ]
 
 [node name="Camera2" type="Camera" parent="Splitter/ViewportContainer2/Viewport"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 2.5, 10.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.5, 10.5 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -320,7 +320,7 @@ shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener" ]
 
 [node name="Camera3" type="Camera" parent="Splitter/ViewportContainer3/Viewport"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 2.5, 9.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.5, 9.5 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -408,7 +408,7 @@ shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener" ]
 
 [node name="Camera4" type="Camera" parent="Splitter/ViewportContainer4/Viewport"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 2.5, 8.5 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.5, 8.5 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

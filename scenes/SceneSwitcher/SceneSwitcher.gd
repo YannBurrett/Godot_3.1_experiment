@@ -1,11 +1,15 @@
 extends Node
 
-onready var start = "res://scenes/PlayerSelection/PlayerPicker.tscn"
-onready var customisation = "res://scenes/ChararcterCustomisation/SplitCustomization.tscn"
-onready var track_selection = "res://scenes/Tracks/TrackSelector.tscn"
+var start = preload("res://scenes/PlayerSelection/PlayerPicker.tscn")
+var customisation = preload("res://scenes/ChararcterCustomisation/SplitCustomization.tscn")
+onready var track_selection = preload("res://scenes/Tracks/TrackSelector.tscn")
 
 
-onready var tracks_list ={0: "res://scenes/Tracks/TrackLoop.tscn", 1: "res://scenes/Tracks/TrackWinding.tscn", 2:"res://scenes/Tracks/TrackDoubleCross.tscn"}
+var tracks_list ={
+		0: preload("res://scenes/Tracks/TrackLoop.tscn"), 
+		1: preload("res://scenes/Tracks/TrackWinding.tscn"), 
+		2: preload("res://scenes/Tracks/TrackDoubleCross.tscn")
+		}
 var selected_track
 var track
 
@@ -14,16 +18,20 @@ func _ready():
 
 
 func pick_players():
-	get_tree().change_scene(start)
+#warning-ignore:return_value_discarded
+	get_tree().change_scene_to(start)
 
 
 func customise_player():
-	get_tree().change_scene(customisation)
+#warning-ignore:return_value_discarded
+	get_tree().change_scene_to(customisation)
 
 
 func pick_track():
-	get_tree().change_scene(track_selection)
+#warning-ignore:return_value_discarded
+	get_tree().change_scene_to(track_selection)
 	
 func begin_race():
 	track = tracks_list[selected_track]
-	get_tree().change_scene(track)
+#warning-ignore:return_value_discarded
+	get_tree().change_scene_to(track)
