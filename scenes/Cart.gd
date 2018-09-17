@@ -23,9 +23,6 @@ var steer_direction = 1
 ############################################################
 # Input
 
-#export var steering_mult = -1.0
-#export var throttle_mult = 1.0
-#export var brake_mult = 1.0
 
 func _ready():
 	respawn_point = translation
@@ -139,14 +136,11 @@ func win(player):
 		get_tree().call_group("victory", "win", player_id)
 
 
-func pickup():
+func pickup_reverser():
 	var reverser = load("res://scenes/Pickups/Reverser.tscn")
 	var reverserobject = reverser.instance()
 	add_child(reverserobject)
-	$Popup.popup_centered()
-	$Popup/Timer.start()
-	
 
-func _on_Timer_timeout():
-	steer_direction = 1
-	$Popup.hide()
+
+
+

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Reverser.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Pickups/textures/noun_Reverse_662407_1A1A1A.svg" type="Texture" id=2]
+[ext_resource path="res://scenes/Pickups/textures/noun_Reverse_662407_FFFFFF.svg" type="Texture" id=3]
+
 
 [node name="Reverser" type="Node"]
 script = ExtResource( 1 )
@@ -10,5 +13,39 @@ process_mode = 1
 wait_time = 5.0
 one_shot = false
 autostart = false
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -30.0
+margin_right = 30.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 5.0
+step = 0.1
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+allow_greater = false
+allow_lesser = false
+texture_under = ExtResource( 2 )
+texture_over = null
+texture_progress = ExtResource( 3 )
+tint_under = Color( 1, 1, 1, 1 )
+tint_over = Color( 1, 1, 1, 1 )
+tint_progress = Color( 1, 1, 1, 1 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Textures" ]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
