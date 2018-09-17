@@ -50,9 +50,9 @@ func apply_custom_colour():
 
 
 func _physics_process(delta):
-	var steer_val = steering_mult * Input.get_joy_axis(0, joy_steering)
-	var throttle_val = throttle_mult * Input.get_joy_axis(0, joy_throttle)
-	var brake_val = brake_mult * Input.get_joy_axis(0, joy_brake)
+	var steer_val = steering_mult * Input.get_action_strength("right_%s" % player_id)
+	var throttle_val = throttle_mult * Input.get_action_strength("up_%s" % player_id)
+	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
 	
 	# overides for keyboard
 	if Input.is_action_pressed("up_%s" % player_id):
