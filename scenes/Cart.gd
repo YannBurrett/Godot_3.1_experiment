@@ -46,9 +46,12 @@ func apply_custom_colour():
 
 
 func _physics_process(delta):
-	var steer_val = steering_mult * Input.get_action_strength("right_%s" % player_id)
-	var throttle_val = throttle_mult * Input.get_action_strength("up_%s" % player_id)
-	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
+#	var steer_val = steering_mult * Input.get_action_strength("right_%s" % player_id)
+#	var throttle_val = throttle_mult * Input.get_action_strength("up_%s" % player_id)
+#	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
+	var steer_val 
+	var throttle_val 
+	var brake_val 
 	
 	# overides for keyboard
 	if Input.get_action_strength("up_%s" % player_id):
