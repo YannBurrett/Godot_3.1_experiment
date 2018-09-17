@@ -29,6 +29,7 @@ func _ready():
 	if player_id > ApplyCustomization.player_count:
 		call_deferred("queue_free")
 	apply_custom_colour()
+	$CheckpointParticles/ThoughtBubble.hide()
 
 
 func apply_custom_colour():
