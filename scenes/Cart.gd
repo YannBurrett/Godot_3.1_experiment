@@ -23,9 +23,9 @@ var steer_direction = 1
 ############################################################
 # Input
 
-export var steering_mult = -1.0
-export var throttle_mult = 1.0
-export var brake_mult = 1.0
+#export var steering_mult = -1.0
+#export var throttle_mult = 1.0
+#export var brake_mult = 1.0
 
 func _ready():
 	respawn_point = translation
@@ -49,9 +49,9 @@ func _physics_process(delta):
 #	var steer_val = steering_mult * Input.get_action_strength("right_%s" % player_id)
 #	var throttle_val = throttle_mult * Input.get_action_strength("up_%s" % player_id)
 #	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
-	var steer_val 
-	var throttle_val 
-	var brake_val 
+	var steer_val = 0
+	var throttle_val = 0 
+	var brake_val = 0
 	
 	# overides for keyboard
 	if Input.get_action_strength("up_%s" % player_id):
@@ -129,8 +129,6 @@ func add_lap():
 		last_checkpoint = 0
 		get_tree().call_group("gamestate", "track_lap", player_id, lap)
 		$CheckpointParticles.emitting = true
-		print(player_id)
-		print(lap)
 	elif last_checkpoint == 0:
 		pass
 	else: respawn()

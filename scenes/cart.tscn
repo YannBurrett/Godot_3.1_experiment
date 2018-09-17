@@ -201,7 +201,7 @@ input_capture_on_drag = false
 collision_layer = 2
 collision_mask = 3
 mode = 0
-mass = 51.0204
+mass = 50.0
 physics_material_override = null
 gravity_scale = 1.0
 custom_integrator = false
@@ -230,12 +230,6 @@ MAX_ENGINE_FORCE = 50
 MAX_BRAKE_FORCE = 5.0
 MAX_STEER_ANGLE = 0.5
 steer_speed = 5.0
-joy_steering = 0
-steering_mult = -1.0
-joy_throttle = 7
-throttle_mult = 1.0
-joy_brake = 6
-brake_mult = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("..")

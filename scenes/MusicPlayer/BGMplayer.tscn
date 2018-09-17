@@ -10,5 +10,4 @@ autoplay = true
 stream_paused = false
 mix_target = 0
 bus = "Master"
-_sections_unfolded = [ "stream" ]
 
