@@ -19,6 +19,7 @@ export var steer_speed = 5.0
 var steer_target = 0.0
 var steer_angle = 0.0
 var steer_direction = 1
+var stored_engine_force
 
 ############################################################
 # Input
@@ -34,10 +35,12 @@ func _ready():
 
 func apply_custom_colour():
 	var cart = 4
+	var underside = 6
 	var helmet = 3
 	var suit = 1
 
 	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
+	$MeshInstance.set_surface_material(underside, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
 	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])
@@ -92,13 +95,12 @@ func _physics_process(delta):
 
 
 func lock():
-	axis_lock_angular_y = true
-	axis_lock_linear_y = true
+	stored_engine_force = MAX_ENGINE_FORCE
+	MAX_ENGINE_FORCE = 0
 
 
 func unlock():
-	axis_lock_angular_y = false
-	axis_lock_linear_y = false
+	MAX_ENGINE_FORCE = stored_engine_force
 
 
 func respawn():
@@ -133,6 +135,7 @@ func add_lap():
 
 
 func win(player):
+	lock()
 	if player == player_id:
 		get_tree().call_group("victory", "win", player_id)
 
