@@ -1,13 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://SFX/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" type="AudioStream" id=1]
+[ext_resource path="res://scenes/MusicPlayer/BGMplayer.gd" type="Script" id=2]
 
 [node name="BGMplayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
 volume_db = -15.0
 pitch_scale = 1.0
-autoplay = true
+autoplay = false
 stream_paused = false
 mix_target = 0
 bus = "Master"
+script = ExtResource( 2 )
 

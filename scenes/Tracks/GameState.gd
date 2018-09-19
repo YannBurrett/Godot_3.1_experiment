@@ -11,7 +11,6 @@ var race_won = false
 func _ready():
 	count_checkpoints()
 	lap_target = ApplyCustomization.laps
-	$CSGWalls/InnerWall/CSGPolygon.set_collision_layer(2)
 
 
 func count_checkpoints():
@@ -33,6 +32,5 @@ func win(player):
 
 
 func _on_Timer_timeout():
-	BGMplayer.stream = load("res://SFX/Juhani Junkala [Retro Game Music Pack] Title Screen.wav")
-	BGMplayer.play()
+	BGMplayer.menu_music()
 	SceneSwitcher.pick_track()

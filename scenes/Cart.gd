@@ -31,6 +31,8 @@ func _ready():
 		call_deferred("queue_free")
 	apply_custom_colour()
 	$CheckpointParticles/ThoughtBubble.hide()
+	add_lap()
+	respawn_point = translation
 
 
 func apply_custom_colour():
@@ -47,9 +49,6 @@ func apply_custom_colour():
 
 
 func _physics_process(delta):
-#	var steer_val = steering_mult * Input.get_action_strength("right_%s" % player_id)
-#	var throttle_val = throttle_mult * Input.get_action_strength("up_%s" % player_id)
-#	var brake_val = brake_mult * Input.get_action_strength("brake_%s" % player_id)
 	var steer_val = 0
 	var throttle_val = 0 
 	var brake_val = 0
@@ -117,7 +116,6 @@ func checkpoint(spawn_point, checkpoint_id):
 	elif checkpoint_id == (last_checkpoint +1):
 		respawn_point = spawn_point
 		last_checkpoint = checkpoint_id
-		print("checkpoint " + str(checkpoint_id))
 		$AnimationPlayer.play("checkpoint")
 	else:
 		respawn()
@@ -127,11 +125,11 @@ func add_lap():
 	if last_checkpoint == total_checkpoints:
 		lap += 1
 		last_checkpoint = 0
-		get_tree().call_group("gamestate", "track_lap", player_id, lap)
 		$CheckpointParticles.emitting = true
 	elif last_checkpoint == 0:
 		pass
 	else: respawn()
+	get_tree().call_group("gamestate", "track_lap", player_id, lap)
 
 
 func win(player):

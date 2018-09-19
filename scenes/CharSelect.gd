@@ -7,7 +7,6 @@ var current_player_material_number = {1: 1, 2: 1, 3: 1, 4: 1}
 var current_decal_number = {1: 1, 2: 1, 3: 1, 4: 1}
 
 onready var materials = $Materials.materials
-onready var splitscreen = "res://scenes/Tracks/SplitScreen.tscn"
 onready var decals = $Materials.decals
 
 func _ready():
