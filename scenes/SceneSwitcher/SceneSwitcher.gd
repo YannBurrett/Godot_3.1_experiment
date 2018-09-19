@@ -1,7 +1,7 @@
 extends Node
 
-var start = preload("res://scenes/PlayerSelection/PlayerPicker.tscn")
-var customisation = preload("res://scenes/ChararcterCustomisation/SplitCustomization.tscn")
+onready var start = preload("res://scenes/PlayerSelection/PlayerPicker.tscn")
+onready var customisation = preload("res://scenes/ChararcterCustomisation/SplitCustomization.tscn")
 onready var track_selection = preload("res://scenes/Tracks/TrackSelector.tscn")
 
 

@@ -1,13 +1,16 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/Cart.gd" type="Script" id=1]
 [ext_resource path="res://racing assets/Cart.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=3]
-[ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=5]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/rainbow.tres" type="Material" id=6]
-[ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=7]
-[ext_resource path="res://textures/emote_star.png" type="Texture" id=8]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarBlack.material" type="Material" id=3]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarBlue.material" type="Material" id=4]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarWhite.material" type="Material" id=5]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=6]
+[ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=8]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/rainbow.tres" type="Material" id=9]
+[ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=10]
+[ext_resource path="res://textures/emote_star.png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -64,7 +67,7 @@ rings = 4
 
 [sub_resource type="PlaneMesh" id=3]
 
-material = ExtResource( 3 )
+material = ExtResource( 6 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
 size = Vector2( 24, 14 )
@@ -116,7 +119,7 @@ _sections_unfolded = [ "Flags", "Gravity", "Initial Velocity", "Resource" ]
 [sub_resource type="SphereMesh" id=6]
 
 lightmap_size_hint = Vector2( 1, 1 )
-material = ExtResource( 6 )
+material = ExtResource( 9 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
 radius = 0.12
@@ -161,7 +164,7 @@ params_billboard_keep_scale = false
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 8 )
+albedo_texture = ExtResource( 11 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -251,13 +254,13 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 2 )
 skeleton = NodePath("..")
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
-_sections_unfolded = [ "Geometry", "Transform", "mesh" ]
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 4 )
+material/2 = ExtResource( 4 )
+material/3 = ExtResource( 5 )
+material/4 = ExtResource( 5 )
+material/5 = ExtResource( 3 )
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="FlagPole" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 0.01, 0, 0, 0, 0.125, 0, 0, 0, 0.01, 0.555238, 0.267974, -0.288659 )
@@ -357,7 +360,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 4 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -390,7 +393,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 4 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -423,7 +426,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 4 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -456,7 +459,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 4 )
+mesh = ExtResource( 7 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -464,7 +467,7 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="EngineSound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 8 )
 attenuation_model = 0
 unit_db = 20.0
 unit_size = 1.0
@@ -514,7 +517,7 @@ draw_pass_1 = SubResource( 6 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform", "draw_pass_1", "process_material" ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CheckpointParticles"]
-stream = ExtResource( 7 )
+stream = ExtResource( 10 )
 attenuation_model = 0
 unit_db = 5.0
 unit_size = 1.0

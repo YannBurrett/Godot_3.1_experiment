@@ -26,7 +26,7 @@ var stored_engine_force
 
 
 func _ready():
-	respawn_point = translation
+	call_deferred("respawn_point = translation")
 	if player_id > ApplyCustomization.player_count:
 		call_deferred("queue_free")
 	apply_custom_colour()

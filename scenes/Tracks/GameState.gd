@@ -11,6 +11,7 @@ var race_won = false
 func _ready():
 	count_checkpoints()
 	lap_target = ApplyCustomization.laps
+	$CSGWalls/InnerWall/CSGPolygon.set_collision_layer(2)
 
 
 func count_checkpoints():
