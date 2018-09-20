@@ -7,6 +7,8 @@ var last_checkpoint = 0
 var total_checkpoints
 var lap = 0
 
+var star = preload("res://textures/star_emoji.material")
+
 ############################################################
 # behaviour values
 
@@ -65,8 +67,8 @@ func _physics_process(delta):
 	elif Input.get_action_strength("right_%s" % player_id):
 		steer_val = -1.0
 	
-	if Input.is_action_just_released("reset_position_%s" % player_id):
-		respawn()
+	if Input.is_action_just_released("horn_%s" % player_id) and not $Horn.is_playing():
+		$Horn.play()
 	
 	engine_force = throttle_val * MAX_ENGINE_FORCE
 	brake = brake_val * MAX_BRAKE_FORCE

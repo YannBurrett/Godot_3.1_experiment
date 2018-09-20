@@ -16,7 +16,7 @@ func menu_music():
 
 func race_music():
 	randomize()
-	var song = randi() % (jukebox.size() -1)
+	var song = randi() % (jukebox.size())
 	stop()
 	stream = jukebox[song]
 	play()
