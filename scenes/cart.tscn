@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=6]
 [ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=8]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/rainbow.tres" type="Material" id=9]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/rainbow.material" type="Material" id=9]
 [ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=10]
 [ext_resource path="res://textures/star_emoji.material" type="Material" id=11]
 [ext_resource path="res://SFX/horn.wav" type="AudioStream" id=12]

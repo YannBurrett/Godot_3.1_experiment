@@ -19,7 +19,7 @@ flags_disable_ambient_light = false
 flags_ensure_correct_normals = false
 vertex_color_use_as_albedo = false
 vertex_color_is_srgb = false
-params_diffuse_mode = 0
+params_diffuse_mode = 4
 params_specular_mode = 0
 params_blend_mode = 0
 params_cull_mode = 0
@@ -58,4 +58,5 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_mode = 0
+_sections_unfolded = [ "Parameters" ]
 
