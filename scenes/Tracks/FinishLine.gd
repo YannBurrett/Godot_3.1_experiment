@@ -1,4 +1,5 @@
 extends Spatial
 
 func _on_FinishLine_body_entered(body):
-	body.add_lap()
+	if body.has_method("add_lap"):
+		body.add_lap()
