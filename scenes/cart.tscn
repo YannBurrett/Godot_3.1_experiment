@@ -1,17 +1,14 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Cart.gd" type="Script" id=1]
 [ext_resource path="res://racing assets/Cart.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarBlack.material" type="Material" id=3]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarBlue.material" type="Material" id=4]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/CarWhite.material" type="Material" id=5]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=6]
-[ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=7]
-[ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=8]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/Evil.material" type="Material" id=9]
-[ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=10]
-[ext_resource path="res://textures/star_emoji.material" type="Material" id=11]
-[ext_resource path="res://SFX/horn.wav" type="AudioStream" id=12]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=3]
+[ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=5]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/Evil.material" type="Material" id=6]
+[ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=7]
+[ext_resource path="res://textures/star_emoji.material" type="Material" id=8]
+[ext_resource path="res://SFX/horn.wav" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -68,7 +65,7 @@ rings = 4
 
 [sub_resource type="PlaneMesh" id=3]
 
-material = ExtResource( 6 )
+material = ExtResource( 3 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
 size = Vector2( 24, 14 )
@@ -120,7 +117,7 @@ _sections_unfolded = [ "Flags", "Gravity", "Initial Velocity", "Resource" ]
 [sub_resource type="SphereMesh" id=6]
 
 lightmap_size_hint = Vector2( 1, 1 )
-material = ExtResource( 9 )
+material = ExtResource( 6 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 flip_faces = false
 radius = 0.12
@@ -173,7 +170,7 @@ player_id = 1
 MAX_ENGINE_FORCE = 50
 MAX_BRAKE_FORCE = 5.0
 MAX_STEER_ANGLE = 0.5
-steer_speed = 5.0
+steer_speed = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("..")
@@ -198,13 +195,12 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 2 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 3 )
-material/1 = ExtResource( 4 )
-material/2 = ExtResource( 4 )
-material/3 = ExtResource( 5 )
-material/4 = ExtResource( 5 )
-material/5 = ExtResource( 3 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+_sections_unfolded = [ "Geometry", "Transform", "material", "mesh" ]
 
 [node name="FlagPole" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 0.01, 0, 0, 0, 0.125, 0, 0, 0, 0.01, 0.555238, 0.267974, -0.288659 )
@@ -279,13 +275,13 @@ disabled = false
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelFrontLeft" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.083129, 0.17 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.0779323, 0.17 )
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.1
 wheel_radius = 0.1
-wheel_rest_length = 0.0225
-wheel_friction_slip = 0.9
+wheel_rest_length = 0.023
+wheel_friction_slip = 1.0
 suspension_travel = 0.05
 suspension_stiffness = 500.0
 suspension_max_force = 175.0
@@ -304,7 +300,40 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 7 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="WheelFrontRight" type="VehicleWheel" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222, 0.0779323, 0.172765 )
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.1
+wheel_radius = 0.1
+wheel_rest_length = 0.023
+wheel_friction_slip = 1.0
+suspension_travel = 0.5
+suspension_stiffness = 500.0
+suspension_max_force = 175.0
+damping_compression = 1.0
+damping_relaxation = 1.5
+_sections_unfolded = [ "Suspension", "Transform", "Wheel" ]
+
+[node name="Tire" type="MeshInstance" parent="WheelFrontRight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111389, 0, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -312,13 +341,13 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelRearRight" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222391, 0.083129, -0.244815 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222391, 0.0779323, -0.244815 )
 use_as_traction = true
 use_as_steering = false
 wheel_roll_influence = 0.1
 wheel_radius = 0.1
-wheel_rest_length = 0.0225
-wheel_friction_slip = 0.9
+wheel_rest_length = 0.023
+wheel_friction_slip = 1.25
 suspension_travel = 0.5
 suspension_stiffness = 500.0
 suspension_max_force = 175.0
@@ -337,7 +366,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 7 )
+mesh = ExtResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -345,13 +374,13 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelRearLeft" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.083129, -0.250988 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.0779323, -0.250988 )
 use_as_traction = true
 use_as_steering = false
 wheel_roll_influence = 0.1
 wheel_radius = 0.1
-wheel_rest_length = 0.0225
-wheel_friction_slip = 1.0
+wheel_rest_length = 0.023
+wheel_friction_slip = 1.5
 suspension_travel = 0.5
 suspension_stiffness = 500.0
 suspension_max_force = 175.0
@@ -370,40 +399,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 7 )
-skeleton = NodePath("..")
-material/0 = null
-material/1 = null
-material/2 = null
-_sections_unfolded = [ "Transform" ]
-
-[node name="WheelFrontRight" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222, 0.083129, 0.172765 )
-use_as_traction = true
-use_as_steering = true
-wheel_roll_influence = 0.1
-wheel_radius = 0.1
-wheel_rest_length = 0.0225
-wheel_friction_slip = 1.0
-suspension_travel = 0.5
-suspension_stiffness = 500.0
-suspension_max_force = 175.0
-damping_compression = 1.0
-damping_relaxation = 1.5
-_sections_unfolded = [ "Transform", "Wheel" ]
-
-[node name="Tire" type="MeshInstance" parent="WheelFrontRight"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111389, 0, 0 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 7 )
+mesh = ExtResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -411,7 +407,7 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="EngineSound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 5 )
 attenuation_model = 0
 unit_db = 20.0
 unit_size = 1.0
@@ -461,7 +457,7 @@ draw_pass_1 = SubResource( 6 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform", "draw_pass_1" ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CheckpointParticles"]
-stream = ExtResource( 10 )
+stream = ExtResource( 7 )
 attenuation_model = 0
 unit_db = 5.0
 unit_size = 1.0
@@ -493,11 +489,11 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 7 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 11 )
+material/0 = ExtResource( 8 )
 _sections_unfolded = [ "Matrix", "Transform", "Visibility", "material" ]
 
 [node name="Horn" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource( 9 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 1.0

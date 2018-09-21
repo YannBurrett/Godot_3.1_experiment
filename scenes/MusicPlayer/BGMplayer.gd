@@ -4,6 +4,7 @@ var menu_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Title
 var level_1_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 1.wav")
 var level_2_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav")
 var level_3_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 3.wav")
+
 var jukebox = [level_1_music, level_2_music, level_3_music]
 
 func _ready():

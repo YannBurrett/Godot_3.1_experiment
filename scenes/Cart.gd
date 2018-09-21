@@ -16,7 +16,7 @@ export var MAX_ENGINE_FORCE = 50
 export var MAX_BRAKE_FORCE = 5.0
 export var MAX_STEER_ANGLE = 0.5
 
-export var steer_speed = 5.0
+export var steer_speed = 5
 
 var steer_target = 0.0
 var steer_angle = 0.0
@@ -38,13 +38,13 @@ func _ready():
 
 
 func apply_custom_colour():
-	var cart = 4
-	var underside = 6
-	var helmet = 3
-	var suit = 1
+	var cart = 2
+	var helmet = 1
+	var suit = 0
+#	var underside = 4
 
 	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
-	$MeshInstance.set_surface_material(underside, load(ApplyCustomization.Cart_material[player_id]))
+#	$MeshInstance.set_surface_material(underside, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
 	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])

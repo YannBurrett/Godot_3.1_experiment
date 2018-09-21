@@ -296,7 +296,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View2/ViewportContainer/Viewport"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.75, 0.25, 2 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.75, 0.25, 2 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = ExtResource( 5 )
@@ -433,7 +433,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View3/ViewportContainer/Viewport"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.25, 4.72 )
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0.25, 4.72 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -572,7 +572,7 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Camera" type="Camera" parent="VBoxContainer/GridContainer/View4/ViewportContainer/Viewport"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.75, 0.25, 2 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.75, 0.25, 2 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

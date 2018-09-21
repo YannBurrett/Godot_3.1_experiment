@@ -43,9 +43,9 @@ func update_player_view():
 
 
 func recolour(player):
-	var cart = 4
-	var helmet = 3
-	var suit = 1
+	var cart = 2
+	var helmet = 1
+	var suit = 0
 	
 	var Cart = ("Carts/Cart%s"  %player +"/")
 	
