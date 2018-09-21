@@ -143,7 +143,6 @@ collision_layer = 2
 collision_mask = 3
 mode = 0
 mass = 50.0
-physics_material_override = null
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = false
@@ -166,6 +165,7 @@ brake = 0.0
 steering = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Axis Lock", "Collision", "Motion" ]
+path = null
 player_id = 1
 MAX_ENGINE_FORCE = 50
 MAX_BRAKE_FORCE = 5.0
@@ -219,7 +219,7 @@ material/0 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="Flag" type="SoftBody" parent="MeshInstance/FlagPole"]
-transform = Transform( -4.3688e-008, -12.5, 0, -4.3688e-008, 2.38835e-014, 0.086418, -0.999466, 5.46391e-007, -3.77745e-009, 0, 0.396102, -12.2653 )
+transform = Transform( -4.3688e-08, -12.5, 0, -4.3688e-08, 2.38835e-14, 0.086418, -0.999466, 5.46391e-07, -3.77745e-09, 0, 0.396102, -12.2653 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -247,25 +247,25 @@ pose_matching_coefficient = 0.0
 pinned_points = [ 12, 13, 20, 27, 34, 41, 48 ]
 attachments/0/point_index = 12
 attachments/0/spatial_attachment_path = NodePath("..")
-attachments/0/offset = Vector3( 3.49504e-007, 0.799386, -4.26957 )
+attachments/0/offset = Vector3( 3.49504e-07, 0.799386, -4.26957 )
 attachments/1/point_index = 13
 attachments/1/spatial_attachment_path = NodePath("..")
-attachments/1/offset = Vector3( 5.24256e-007, 0.799387, -0.271708 )
+attachments/1/offset = Vector3( 5.24256e-07, 0.799387, -0.271708 )
 attachments/2/point_index = 20
 attachments/2/spatial_attachment_path = NodePath("..")
-attachments/2/offset = Vector3( 5.24256e-007, 0.597744, -0.271708 )
+attachments/2/offset = Vector3( 5.24256e-07, 0.597744, -0.271708 )
 attachments/3/point_index = 27
 attachments/3/spatial_attachment_path = NodePath("..")
-attachments/3/offset = Vector3( 5.24256e-007, 0.396102, -0.271708 )
+attachments/3/offset = Vector3( 5.24256e-07, 0.396102, -0.271708 )
 attachments/4/point_index = 34
 attachments/4/spatial_attachment_path = NodePath("..")
-attachments/4/offset = Vector3( 5.24256e-007, 0.19446, -0.271708 )
+attachments/4/offset = Vector3( 5.24256e-07, 0.19446, -0.271708 )
 attachments/5/point_index = 41
 attachments/5/spatial_attachment_path = NodePath("..")
-attachments/5/offset = Vector3( 5.24256e-007, -0.00718156, -0.271708 )
+attachments/5/offset = Vector3( 5.24256e-07, -0.00718156, -0.271708 )
 attachments/6/point_index = 48
 attachments/6/spatial_attachment_path = NodePath("..")
-attachments/6/offset = Vector3( 5.24256e-007, -0.208824, -0.271708 )
+attachments/6/offset = Vector3( 5.24256e-07, -0.208824, -0.271708 )
 _sections_unfolded = [ "Collision", "Geometry", "attachments/0", "attachments/1", "attachments/2", "attachments/3", "attachments/4", "attachments/5", "attachments/6", "material", "mesh", "pinned_points" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -290,7 +290,7 @@ damping_relaxation = 1.5
 _sections_unfolded = [ "Damping", "Suspension", "Transform", "Wheel" ]
 
 [node name="Tire" type="MeshInstance" parent="WheelFrontLeft"]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.116091, 0, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.116091, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -389,7 +389,7 @@ damping_relaxation = 1.5
 _sections_unfolded = [ "Transform", "Wheel" ]
 
 [node name="Tire" type="MeshInstance" parent="WheelRearLeft"]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.116091, 0, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.116091, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -428,7 +428,7 @@ doppler_tracking = 2
 _sections_unfolded = [ "Attenuation Filter", "Doppler", "Emission Angle" ]
 
 [node name="CheckpointParticles" type="Particles" parent="."]
-transform = Transform( -1, 7.01632e-008, 8.69062e-014, 8.99731e-014, 4.37114e-008, 1, 7.01632e-008, 1, -4.37114e-008, 0, -0.0475219, -0.37189 )
+transform = Transform( -1, 7.01632e-08, 8.69062e-14, 8.99731e-14, 4.37114e-08, 1, 7.01632e-08, 1, -4.37114e-08, 0, -0.0475219, -0.37189 )
 layers = 1
 material_override = null
 cast_shadow = 1
