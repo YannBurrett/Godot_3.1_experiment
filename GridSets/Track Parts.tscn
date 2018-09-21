@@ -17,7 +17,7 @@
 [ext_resource path="res://racing assets/track-pit-exit-large.obj" type="ArrayMesh" id=15]
 [ext_resource path="res://racing assets/track-pit-exitlane-small.obj" type="ArrayMesh" id=16]
 
-[sub_resource type="PhysicsMaterial" id=1]
+[sub_resource type="PhysicsMaterial" id=157]
 
 friction = 1.0
 rough = false
@@ -149,7 +149,7 @@ input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
 collision_mask = 1
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 157 )
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
 

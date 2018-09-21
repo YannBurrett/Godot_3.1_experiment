@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-var menu_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Title Screen.wav")
+var menu = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Title Screen.wav")
 var level_1_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 1.wav")
 var level_2_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 2.wav")
 var level_3_music = preload("res://SFX/Juhani Junkala [Retro Game Music Pack] Level 3.wav")
@@ -12,7 +12,7 @@ func _ready():
 
 func menu_music():
 	stop()
-	stream = menu_music
+	stream = menu
 	play()
 
 func race_music():
