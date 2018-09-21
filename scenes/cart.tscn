@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/ChararcterCustomisation/CustomDecals/hearts.material" type="Material" id=6]
 [ext_resource path="res://racing assets/AF_Wheel.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://SFX/engine_sound.ogg" type="AudioStream" id=8]
-[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/rainbow.material" type="Material" id=9]
+[ext_resource path="res://scenes/ChararcterCustomisation/CustomMaterials/Evil.material" type="Material" id=9]
 [ext_resource path="res://SFX/checkpoint.ogg" type="AudioStream" id=10]
 [ext_resource path="res://textures/star_emoji.material" type="Material" id=11]
 [ext_resource path="res://SFX/horn.wav" type="AudioStream" id=12]
@@ -458,7 +458,7 @@ draw_order = 1
 process_material = SubResource( 5 )
 draw_passes = 1
 draw_pass_1 = SubResource( 6 )
-_sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform", "draw_pass_1", "process_material" ]
+_sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform", "draw_pass_1" ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CheckpointParticles"]
 stream = ExtResource( 10 )
