@@ -1,5 +1,6 @@
 extends VehicleBody
 
+export (NodePath) var path = null
 export var player_id = 1
 
 var respawn_point
@@ -24,6 +25,27 @@ var steer_direction = 1
 var stored_engine_force
 
 ############################################################
+# Path info
+
+func get_offset_from_starting_line():
+	if path:
+		var p = get_node(path)
+		
+		# get our carts position in the paths local space
+		var pos = p.global_transform.xform_inv(global_transform.origin)
+		
+		# get our curve
+		var c = p.curve
+		
+		# and our offset
+		var offset = c.get_closest_offset(pos)
+		
+		# we need to add a protection when we're nearing the finish line that we don't cycle around to 0 before we cross it
+		return offset
+	else:
+		return 0
+
+############################################################
 # Input
 
 
@@ -35,7 +57,6 @@ func _ready():
 	$CheckpointParticles/ThoughtBubble.hide()
 	add_lap()
 	respawn_point = translation
-
 
 func apply_custom_colour():
 	var cart = 2
@@ -94,6 +115,8 @@ func _physics_process(delta):
 	if translation.y <0:
 		respawn()
 
+	if path:
+		print("Offset " + get_name() + ": " + str(get_offset_from_starting_line()))
 
 func lock():
 	stored_engine_force = MAX_ENGINE_FORCE
