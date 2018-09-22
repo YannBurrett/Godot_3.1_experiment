@@ -1,28 +1,17 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/SplitScreen.gd" type="Script" id=1]
 [ext_resource path="res://GFX/DefaultTheme.tres" type="Theme" id=2]
 [ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://scenes/Camera.gd" type="Script" id=4]
-[ext_resource path="res://GFX/UI/PNG/blue_button05.png" type="Texture" id=5]
-[ext_resource path="res://scenes/Tracks/StatusBar.gd" type="Script" id=6]
-[ext_resource path="res://GFX/fonts/Kenney Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://scenes/Tracks/VictoryPopup.tscn" type="PackedScene" id=8]
-[ext_resource path="res://SFX/go.ogg" type="AudioStream" id=9]
-[ext_resource path="res://scenes/Tracks/StartTimer.gd" type="Script" id=10]
-[ext_resource path="res://SFX/3.ogg" type="AudioStream" id=11]
-[ext_resource path="res://SFX/2.ogg" type="AudioStream" id=12]
-[ext_resource path="res://SFX/1.ogg" type="AudioStream" id=13]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 16
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 7 )
-_sections_unfolded = [ "Font", "Settings" ]
+[ext_resource path="res://scenes/UI/StatusBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/UI/VictoryPopup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SFX/go.ogg" type="AudioStream" id=7]
+[ext_resource path="res://scenes/Tracks/StartTimer.gd" type="Script" id=8]
+[ext_resource path="res://SFX/3.ogg" type="AudioStream" id=9]
+[ext_resource path="res://SFX/2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://SFX/1.ogg" type="AudioStream" id=11]
+[ext_resource path="res://GFX/fonts/Kenney Bold.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="Animation" id=2]
 
@@ -39,7 +28,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 9 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:playing")
@@ -87,7 +76,7 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 7 )
+font_data = ExtResource( 12 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="TrackName" type="Control"]
@@ -198,91 +187,7 @@ target_height = 0.5
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Splitter/ViewportContainer1/Viewport/Camera1"]
 environment = ExtResource( 3 )
 
-[node name="StatusBar1" type="NinePatchRect" parent="Splitter/ViewportContainer1" groups=[
-"gamestate",
-]]
-anchor_left = 0.5
-anchor_top = 0.0
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -200.0
-margin_top = 10.0
-margin_right = 200.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-texture = ExtResource( 5 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-script = ExtResource( 6 )
-_sections_unfolded = [ "Margin", "Patch Margin", "Rect", "Size Flags" ]
-player_id = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Splitter/ViewportContainer1/StatusBar1"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 120
-alignment = 1
-_sections_unfolded = [ "Margin", "custom_constants" ]
-
-[node name="Name" type="Label" parent="Splitter/ViewportContainer1/StatusBar1/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 3.0
-margin_right = 134.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Player 1"
-align = 2
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Lap" type="Label" parent="Splitter/ViewportContainer1/StatusBar1/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 254.0
-margin_top = 3.0
-margin_right = 378.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Lap X of Y"
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+[node name="StatusBar1" parent="Splitter/ViewportContainer1/Viewport" instance=ExtResource( 5 )]
 
 [node name="ViewportContainer2" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -301,92 +206,6 @@ size_flags_vertical = 3
 stretch = true
 stretch_shrink = 1
 _sections_unfolded = [ "Size Flags" ]
-
-[node name="StatusBar2" type="NinePatchRect" parent="Splitter/ViewportContainer2" groups=[
-"gamestate",
-]]
-anchor_left = 0.5
-anchor_top = 0.0
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -200.0
-margin_top = 10.0
-margin_right = 200.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-texture = ExtResource( 5 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-script = ExtResource( 6 )
-_sections_unfolded = [ "Margin", "Patch Margin", "Rect", "Size Flags" ]
-player_id = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Splitter/ViewportContainer2/StatusBar2"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 120
-alignment = 1
-_sections_unfolded = [ "Margin", "custom_constants" ]
-
-[node name="Name" type="Label" parent="Splitter/ViewportContainer2/StatusBar2/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 3.0
-margin_right = 134.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Player 1"
-align = 2
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Lap" type="Label" parent="Splitter/ViewportContainer2/StatusBar2/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 254.0
-margin_top = 3.0
-margin_right = 378.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Lap X of Y"
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="Viewport" type="Viewport" parent="Splitter/ViewportContainer2"]
 arvr = false
@@ -434,6 +253,10 @@ _sections_unfolded = [ "Transform" ]
 follow_this_path = NodePath("../../../../../TrackName/Splitter/ViewportContainer1/Viewport/Track2/Cart2")
 target_distance = 1.5
 target_height = 0.5
+
+[node name="StatusBar2" parent="Splitter/ViewportContainer2" instance=ExtResource( 5 )]
+region_rect = Rect2( 309, 4.25, 37.75, 29.5 )
+player_id = 2
 
 [node name="ViewportContainer3" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -500,91 +323,8 @@ follow_this_path = NodePath("../../../../../TrackName/Splitter/ViewportContainer
 target_distance = 1.5
 target_height = 0.5
 
-[node name="StatusBar3" type="NinePatchRect" parent="Splitter/ViewportContainer3" groups=[
-"gamestate",
-]]
-anchor_left = 0.5
-anchor_top = 0.0
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -200.0
-margin_top = 10.0
-margin_right = 200.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-texture = ExtResource( 5 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-script = ExtResource( 6 )
-_sections_unfolded = [ "Margin", "Patch Margin", "Rect", "Size Flags" ]
+[node name="StatusBar3" parent="Splitter/ViewportContainer3" instance=ExtResource( 5 )]
 player_id = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Splitter/ViewportContainer3/StatusBar3"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 120
-alignment = 1
-_sections_unfolded = [ "Margin", "custom_constants" ]
-
-[node name="Name" type="Label" parent="Splitter/ViewportContainer3/StatusBar3/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 3.0
-margin_right = 134.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Player 1"
-align = 2
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Lap" type="Label" parent="Splitter/ViewportContainer3/StatusBar3/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 254.0
-margin_top = 3.0
-margin_right = 378.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Lap X of Y"
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="ViewportContainer4" type="ViewportContainer" parent="Splitter"]
 anchor_left = 0.0
@@ -604,92 +344,6 @@ size_flags_vertical = 3
 stretch = true
 stretch_shrink = 1
 _sections_unfolded = [ "Size Flags" ]
-
-[node name="StatusBar4" type="NinePatchRect" parent="Splitter/ViewportContainer4" groups=[
-"gamestate",
-]]
-anchor_left = 0.5
-anchor_top = 0.0
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -200.0
-margin_top = 10.0
-margin_right = 200.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-texture = ExtResource( 5 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-script = ExtResource( 6 )
-_sections_unfolded = [ "Margin", "Patch Margin", "Rect", "Size Flags" ]
-player_id = 4
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Splitter/ViewportContainer4/StatusBar4"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 120
-alignment = 1
-_sections_unfolded = [ "Margin", "custom_constants" ]
-
-[node name="Name" type="Label" parent="Splitter/ViewportContainer4/StatusBar4/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 3.0
-margin_right = 134.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Player 1"
-align = 2
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Lap" type="Label" parent="Splitter/ViewportContainer4/StatusBar4/HBoxContainer"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 254.0
-margin_top = 3.0
-margin_right = 378.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Lap X of Y"
-valign = 3
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="Viewport" type="Viewport" parent="Splitter/ViewportContainer4"]
 arvr = false
@@ -738,18 +392,21 @@ follow_this_path = NodePath("../../../../../TrackName/Splitter/ViewportContainer
 target_distance = 1.5
 target_height = 0.5
 
-[node name="VictoryPopup" parent="." instance=ExtResource( 8 )]
+[node name="StatusBar4" parent="Splitter/ViewportContainer4" instance=ExtResource( 5 )]
+player_id = 4
+
+[node name="VictoryPopup" parent="." instance=ExtResource( 6 )]
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 7 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 stream_paused = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 10 )
+script = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AudioStreamPlayer"]
 root_node = NodePath("..")

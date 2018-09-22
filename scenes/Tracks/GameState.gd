@@ -7,11 +7,23 @@ var total_checkpoints
 
 var race_won = false
 
+var offsets = {0:0, 1:0, 2:0, 3:0, 4:0}
+
 
 func _ready():
 	count_checkpoints()
 	lap_target = ApplyCustomization.laps
 
+
+func update_placement(player, offset):
+	offsets[player] = offset
+	var my_place = 1
+	for i in offsets:
+		if not offsets[i] == 0:
+			if not i == player:
+				if offsets[i] > offsets[player]:
+					my_place += 1
+	return my_place
 
 func count_checkpoints():
 	total_checkpoints = $Checkpoints.get_child_count()

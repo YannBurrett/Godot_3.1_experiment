@@ -8,6 +8,9 @@ var last_checkpoint = 0
 var total_checkpoints
 var lap = 0
 
+var my_position = 1
+var my_last_position = 1
+
 var star = preload("res://textures/star_emoji.material")
 
 ############################################################
@@ -41,7 +44,8 @@ func get_offset_from_starting_line():
 		var offset = c.get_closest_offset(pos)
 		
 		# we need to add a protection when we're nearing the finish line that we don't cycle around to 0 before we cross it
-		return offset
+		var lap_offset = lap * 1000
+		return offset + lap_offset
 	else:
 		return 0
 
@@ -90,6 +94,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("horn_%s" % player_id) and not $Horn.is_playing():
 		$Horn.play()
+		if path:
+			print("Offset " + get_name() + ": " + str(get_offset_from_starting_line()))
+
 	
 	engine_force = throttle_val * MAX_ENGINE_FORCE
 	brake = brake_val * MAX_BRAKE_FORCE
@@ -114,10 +121,18 @@ func _physics_process(delta):
 
 	if translation.y <0:
 		respawn()
+	
+	var my_offset = get_offset_from_starting_line()
+	my_position = get_node("..").update_placement(player_id, my_offset)
+	if not my_position == my_last_position:
+		if my_position < my_last_position:
+			be_happy()
+		else:
+			be_sad()
+		my_last_position = my_position
+		get_tree().call_group("gamestate", "placement", player_id, my_position)
 
-	if path:
-		print("Offset " + get_name() + ": " + str(get_offset_from_starting_line()))
-
+	
 func lock():
 	stored_engine_force = MAX_ENGINE_FORCE
 	MAX_ENGINE_FORCE = 0
@@ -169,5 +184,9 @@ func pickup_reverser():
 	add_child(reverserobject)
 
 
+func be_happy():
+	print("Player " + str(player_id) + " says HOORAY!")
 
 
+func be_sad():
+		print("Player " + str(player_id) + " says boooo!")
