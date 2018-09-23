@@ -11,7 +11,7 @@ var lap = 0
 var my_position = 1
 var my_last_position = 1
 
-var star = preload("res://textures/star_emoji.material")
+#var star = preload("res://textures/star_emoji.material")
 
 ############################################################
 # behaviour values
@@ -94,9 +94,6 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("horn_%s" % player_id) and not $Horn.is_playing():
 		$Horn.play()
-		if path:
-			print("Offset " + get_name() + ": " + str(get_offset_from_starting_line()))
-
 	
 	engine_force = throttle_val * MAX_ENGINE_FORCE
 	brake = brake_val * MAX_BRAKE_FORCE
