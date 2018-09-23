@@ -58,7 +58,7 @@ func _ready():
 	if player_id > ApplyCustomization.player_count:
 		call_deferred("queue_free")
 	apply_custom_colour()
-	$CheckpointParticles/ThoughtBubble.hide()
+	$ThoughtBubble.hide()
 	add_lap()
 	respawn_point = translation
 
@@ -127,6 +127,8 @@ func _physics_process(delta):
 		else:
 			be_sad()
 		my_last_position = my_position
+		if not $AnimationPlayer.is_playing():
+			$AnimationPlayer.play("show_emotion")
 		get_tree().call_group("gamestate", "placement", player_id, my_position)
 
 	
@@ -153,7 +155,6 @@ func checkpoint(spawn_point, checkpoint_id):
 	elif checkpoint_id == (last_checkpoint +1):
 		respawn_point = spawn_point
 		last_checkpoint = checkpoint_id
-		$AnimationPlayer.play("checkpoint")
 	else:
 		respawn()
 
@@ -162,7 +163,6 @@ func add_lap():
 	if last_checkpoint == total_checkpoints:
 		lap += 1
 		last_checkpoint = 0
-		$CheckpointParticles.emitting = true
 	elif last_checkpoint == 0:
 		pass
 	else: respawn()
@@ -182,8 +182,8 @@ func pickup_reverser():
 
 
 func be_happy():
-	print("Player " + str(player_id) + " says HOORAY!")
+	$ThoughtBubble.be_happy()
 
 
 func be_sad():
-		print("Player " + str(player_id) + " says boooo!")
+	$ThoughtBubble.be_sad()
