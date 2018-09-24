@@ -211,7 +211,7 @@ blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.0115564, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45969, 0.0115564, 0 )
 layers = 1
 material_override = null
 cast_shadow = 0
@@ -297,13 +297,13 @@ attachments/6/offset = Vector3( 5.24256e-007, -0.208824, -0.271708 )
 _sections_unfolded = [ "Collision", "Geometry", "attachments/0", "attachments/1", "attachments/2", "attachments/3", "attachments/4", "attachments/5", "attachments/6", "material", "mesh", "pinned_points" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.194924, -0.0349127 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403097, 0.194924, -0.0349127 )
 shape = SubResource( 4 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelFrontLeft" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.0779323, 0.17 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188791, 0.0779323, 0.17 )
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.1
@@ -336,7 +336,7 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelFrontRight" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222, 0.0779323, 0.172765 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18169, 0.0779323, 0.172765 )
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.1
@@ -369,7 +369,7 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelRearRight" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222391, 0.0779323, -0.244815 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182081, 0.0779323, -0.244815 )
 use_as_traction = true
 use_as_steering = false
 wheel_roll_influence = 0.1
@@ -402,7 +402,7 @@ material/2 = null
 _sections_unfolded = [ "Transform" ]
 
 [node name="WheelRearLeft" type="VehicleWheel" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148481, 0.0779323, -0.250988 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188791, 0.0779323, -0.250988 )
 use_as_traction = true
 use_as_steering = false
 wheel_roll_influence = 0.1
@@ -456,7 +456,7 @@ doppler_tracking = 2
 _sections_unfolded = [ "Attenuation Filter", "Doppler", "Emission Angle" ]
 
 [node name="ThoughtBubble" type="MeshInstance" parent="."]
-transform = Transform( 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.0176389, 0.645273, -0.019233 )
+transform = Transform( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0226708, 0.645273, -0.019233 )
 layers = 1
 material_override = null
 cast_shadow = 1

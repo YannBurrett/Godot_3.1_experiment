@@ -2,12 +2,12 @@ extends Spatial
 
 var lap_target
 
-var lap_tracker = {}
+var lap_tracker = {0:0, 1:0, 2:0, 3:0, 4:0}
 var total_checkpoints
 
 var race_won = false
 
-var offsets = {0:0, 1:0, 2:0, 3:0, 4:0}
+var offsets = {}
 
 
 func _ready():
@@ -19,10 +19,9 @@ func update_placement(player, offset):
 	offsets[player] = offset
 	var my_place = 1
 	for i in offsets:
-		if not offsets[i] == 0:
-			if not i == player:
-				if offsets[i] > offsets[player]:
-					my_place += 1
+		if not offsets[i] == 0 and not i == player:
+			if offsets[i] > offsets[player]:
+				my_place += 1
 	return my_place
 
 func count_checkpoints():

@@ -27,6 +27,31 @@ var steer_angle = 0.0
 var steer_direction = 1
 var stored_engine_force
 
+
+############################################################
+# Input
+
+
+func _ready():
+	call_deferred("respawn_point = translation")
+	if player_id > ApplyCustomization.player_count:
+		call_deferred("queue_free")
+	apply_custom_colour()
+	$ThoughtBubble.hide()
+	add_lap()
+	respawn_point = translation
+	create_position_timer()
+
+
+
+func create_position_timer():
+	var timer = Timer.new()
+	timer.connect("timeout",self,"get_placement")
+	timer.wait_time = 0.5
+	add_child(timer)
+	timer.start()
+
+
 ############################################################
 # Path info
 
@@ -45,31 +70,17 @@ func get_offset_from_starting_line():
 		
 		# we need to add a protection when we're nearing the finish line that we don't cycle around to 0 before we cross it
 		var lap_offset = lap * 1000
-		return offset + lap_offset
+		return stepify((offset + lap_offset), 2)
 	else:
 		return 0
 
-############################################################
-# Input
-
-
-func _ready():
-	call_deferred("respawn_point = translation")
-	if player_id > ApplyCustomization.player_count:
-		call_deferred("queue_free")
-	apply_custom_colour()
-	$ThoughtBubble.hide()
-	add_lap()
-	respawn_point = translation
 
 func apply_custom_colour():
 	var cart = 2
 	var helmet = 1
 	var suit = 0
-#	var underside = 4
 
 	$MeshInstance.set_surface_material(cart, load(ApplyCustomization.Cart_material[player_id]))
-#	$MeshInstance.set_surface_material(underside, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(helmet, load(ApplyCustomization.Cart_material[player_id]))
 	$MeshInstance.set_surface_material(suit, load(ApplyCustomization.Player_material[player_id]))
 	$MeshInstance/FlagPole/Flag.material_override = load(ApplyCustomization.Decal_material[player_id])
@@ -118,18 +129,7 @@ func _physics_process(delta):
 
 	if translation.y <0:
 		respawn()
-	
-	var my_offset = get_offset_from_starting_line()
-	my_position = get_node("..").update_placement(player_id, my_offset)
-	if not my_position == my_last_position:
-		if my_position < my_last_position:
-			be_happy()
-		else:
-			be_sad()
-		my_last_position = my_position
-		if not $AnimationPlayer.is_playing():
-			$AnimationPlayer.play("show_emotion")
-		get_tree().call_group("gamestate", "placement", player_id, my_position)
+
 
 	
 func lock():
@@ -179,6 +179,19 @@ func pickup_reverser():
 	var reverser = load("res://scenes/Pickups/Reverser.tscn")
 	var reverserobject = reverser.instance()
 	add_child(reverserobject)
+
+func get_placement():
+	var my_offset = get_offset_from_starting_line()
+	my_position = get_node("..").update_placement(player_id, my_offset)
+	if not my_position == my_last_position:
+		if my_position < my_last_position:
+			be_happy()
+		elif my_position > my_last_position:
+			be_sad()
+		my_last_position = my_position
+		if not $AnimationPlayer.is_playing():
+			$AnimationPlayer.play("show_emotion")
+		get_tree().call_group("gamestate", "placement", player_id, my_position)
 
 
 func be_happy():

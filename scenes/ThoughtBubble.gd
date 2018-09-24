@@ -24,31 +24,31 @@ func get_happy_materials():
 #			happy_materials[happy_materials_count] = (path+file)
 #			happy_materials_count += 1
 
-	happy_materials = ["res://GFX/emotes/happy/Materials/1.material",
-			"res://GFX/emotes/happy/Materials/2.material",
-			"res://GFX/emotes/happy/Materials/3.material",
-			"res://GFX/emotes/happy/Materials/4.material",
-			"res://GFX/emotes/happy/Materials/5.material",
-			"res://GFX/emotes/happy/Materials/6.material",
-			"res://GFX/emotes/happy/Materials/7.material",
-			"res://GFX/emotes/happy/Materials/8.material",
-			"res://GFX/emotes/happy/Materials/9.material"
+	happy_materials = [preload("res://GFX/emotes/happy/Materials/1.material"),
+			preload("res://GFX/emotes/happy/Materials/2.material"),
+			preload("res://GFX/emotes/happy/Materials/3.material"),
+			preload("res://GFX/emotes/happy/Materials/4.material"),
+			preload("res://GFX/emotes/happy/Materials/5.material"),
+			preload("res://GFX/emotes/happy/Materials/6.material"),
+			preload("res://GFX/emotes/happy/Materials/7.material"),
+			preload("res://GFX/emotes/happy/Materials/8.material"),
+			preload("res://GFX/emotes/happy/Materials/9.material")
 			]
 
 
 func get_sad_materials():
-	sad_materials = ["res://GFX/emotes/sad/Materials/1.material",
-			"res://GFX/emotes/sad/Materials/10.material",
-			"res://GFX/emotes/sad/Materials/11.material",
-			"res://GFX/emotes/sad/Materials/12.material",
-			"res://GFX/emotes/sad/Materials/2.material",
-			"res://GFX/emotes/sad/Materials/3.material",
-			"res://GFX/emotes/sad/Materials/4.material",
-			"res://GFX/emotes/sad/Materials/5.material",
-			"res://GFX/emotes/sad/Materials/6.material",
-			"res://GFX/emotes/sad/Materials/7.material",
-			"res://GFX/emotes/sad/Materials/8.material",
-			"res://GFX/emotes/sad/Materials/9.material"
+	sad_materials = [preload("res://GFX/emotes/sad/Materials/1.material"),
+			preload("res://GFX/emotes/sad/Materials/10.material"),
+			preload("res://GFX/emotes/sad/Materials/11.material"),
+			preload("res://GFX/emotes/sad/Materials/12.material"),
+			preload("res://GFX/emotes/sad/Materials/2.material"),
+			preload("res://GFX/emotes/sad/Materials/3.material"),
+			preload("res://GFX/emotes/sad/Materials/4.material"),
+			preload("res://GFX/emotes/sad/Materials/5.material"),
+			preload("res://GFX/emotes/sad/Materials/6.material"),
+			preload("res://GFX/emotes/sad/Materials/7.material"),
+			preload("res://GFX/emotes/sad/Materials/8.material"),
+			preload("res://GFX/emotes/sad/Materials/9.material")
 			]
 
 
@@ -67,4 +67,4 @@ func show_emotion():
 		current_material = happy_materials[randi() % happy_materials.size()]
 	else:
 		current_material = sad_materials[randi() % sad_materials.size()]
-	set_surface_material(0, load(current_material))
+	set_surface_material(0, current_material)
